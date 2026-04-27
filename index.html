@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad LID.IA | Crea tu avatar con IA - Lidia Contreras</title>
+    <meta name="description"
+        content="Únete a la Comunidad LID.IA y aprende a crear tu avatar con IA desde cero. Primer curso: de la idea al vídeo final, paso a paso y a tu ritmo.">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Comunidad LID.IA | Crea tu avatar con IA - Lidia Contreras">
+    <meta property="og:description"
+        content="Aprende a crear tu avatar con IA desde cero. Paso a paso, a tu ritmo. &Uacute;nete a la lista de espera de la Comunidad LID.IA.">
+    <meta property="og:image" content="https://liconoc.github.io/assets/logo_negro.png">
+    <meta property="og:url" content="https://liconoc.github.io/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo_negro.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fira+Code:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="theme-home">
+    <canvas id="particleCanvas"></canvas> <!-- Background -->
+
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/logo_negro.png" alt="Lidia Contreras Logo">
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="center-menu">
+                <a href="index.html">Inicio</a> |
+                <a href="cv.html">CV</a> |
+                <a href="libros.html">Libros</a> |
+                <a href="musica.html">M&uacute;sica</a>
+            </nav>
+            <a href="index.html#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
+        </div>
+        <nav class="mobile-menu">
+            <a href="index.html">Inicio</a>
+            <a href="cv.html">CV</a>
+            <a href="libros.html">Libros</a>
+            <a href="musica.html">M&uacute;sica</a>
+            <a href="index.html#waitlist" class="btn skool-btn-nav" style="display: block; text-align: center;">Comunidad LID.IA</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- INTRO -->
+        <section class="parallax-section hero snap-section" style="min-height: 100vh;">
+            <div class="parallax-bg bg-intro"></div>
+            <div class="parallax-content" style="max-width: 800px; text-align: center;">
+                <img src="assets/liconoc_ia.png" alt="Logo Neon" class="hero-logo mx-auto" style="display: block; margin: 0 auto 1.5rem auto;">
+                <h1 class="orbitron page-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">Crea tu avatar con IA desde cero</h1>
+                <p class="subtitle inter" style="font-weight: 600; font-size: 1.15rem; color: #fff; max-width: 620px; margin: 1rem auto 0 auto;">
+                    Crea v&iacute;deos profesionales con avatares IA, sin saber edici&oacute;n ni dise&ntilde;o. Ideal para marca personal, portfolio o vender servicios.
+                </p>
+                <a href="#waitlist" class="btn primary-btn hero-cta">&Uacute;nete a la comunidad &rarr;</a>
+                <p class="inter hero-trust">
+                    Doctora en IA &middot; 8.&ordf; mejor docente de Espa&ntilde;a &middot; <i class="fa-brands fa-tiktok"></i> @lidiaconia
+                </p>
+                <div class="scroll-indicator mt-4" style="display: inline-flex; gap: 0.75rem; font-size: 1.6rem; color: var(--page-primary); margin-top: 1.5rem;">
+                    <span aria-hidden="true">&darr;</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÓDULOS HORIZONTALES -->
+        <section class="modules-horizontal-section" aria-label="Módulos del curso">
+            <div class="modules-sticky">
+                <div id="modules-track" class="modules-track">
+
+        <!-- MÓDULO 1 -->
+        <section id="module1" class="parallax-section snap-section narrative-module">
+            <div class="parallax-bg bg-m1"></div>
+            <div class="giant-bg-number orbitron">01</div>
+            <div class="parallax-content module-split" data-shape-mask>
+                 <div class="split-left">
+                     <div class="video-container">
+                         <video muted loop playsinline controls class="module-video mini-video">
+                              <source src="assets/infotemporal/m1.mp4" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+                 <div class="split-right">
+                     <h2 class="orbitron"><span class="highlight-text">M1.</span> Crea tu personaje</h2>
+                     <p class="inter mb-4">Decides si el personaje nace de una foto tuya o solo de descripción, generas su primera imagen y defines quién es: propósito, audiencia, personalidad y referencias bien elegidas. La identidad base, todavía sin dirección de arte.</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 2 -->
+        <section id="module2" class="parallax-section snap-section narrative-module">
+            <div class="parallax-bg bg-m2"></div>
+            <div class="giant-bg-number orbitron">02</div>
+            <div class="parallax-content module-split" data-shape-mask>
+                 <div class="split-left">
+                     <div class="video-container">
+                         <video muted loop playsinline controls class="module-video mini-video">
+                              <source src="assets/infotemporal/m2.mp4" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+                 <div class="split-right">
+                     <h2 class="orbitron"><span class="highlight-text">M2.</span> Dirección de Arte</h2>
+                     <p class="inter mb-4">La identidad visual de tu avatar: estilo, paleta, outfits, setups y consistencia visual. Domina los Gems de iluminación, ángulos y planos que harán que se vea profesional y reconocible.</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 3 -->
+        <section id="module3" class="parallax-section snap-section narrative-module">
+            <div class="parallax-bg bg-m3" id="m3-bg-layer"></div>
+            <div class="giant-bg-number orbitron">03</div>
+            <div class="parallax-content module-split" data-shape-mask>
+                 <div class="split-left">
+                     <div class="video-container">
+                         <video muted loop playsinline controls class="module-video mini-video">
+                              <source src="assets/infotemporal/m3.mp4" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+                 <div class="split-right">
+                     <h2 class="orbitron"><span class="highlight-text">M3.</span> Voz y Expresión</h2>
+                     <p class="inter mb-4">Tu avatar habla. Elige o crea su voz, sincroniza sus labios, crea movimiento desde texto y controla sus gestos. La diferencia entre una simulación y un avatar con vida real.</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 4 -->
+        <section id="module4" class="parallax-section snap-section narrative-module">
+            <div class="parallax-bg bg-m4"></div>
+            <div class="giant-bg-number orbitron">04</div>
+            <div class="parallax-content module-split" data-shape-mask>
+                 <div class="split-left">
+                     <div class="video-container">
+                         <video muted loop playsinline controls class="module-video mini-video">
+                              <source src="assets/infotemporal/m4.mp4" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+                 <div class="split-right">
+                     <h2 class="orbitron"><span class="highlight-text">M4.</span> Herramientas</h2>
+                     <p class="inter mb-4">Conoce Kling, Hedra, Freepik y Google Flow. Cuándo usar cada herramienta según el objetivo, cómo fluir de idea a resultado final, y cómo evaluar nuevas herramientas cuando salgan.</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 5 -->
+        <section id="module5" class="parallax-section snap-section narrative-module">
+            <div class="parallax-bg bg-m5"></div>
+            <div class="giant-bg-number orbitron">05</div>
+            <div class="parallax-content module-split" data-shape-mask>
+                 <div class="split-left">
+                     <div class="video-container">
+                         <video muted loop playsinline controls class="module-video mini-video">
+                              <source src="assets/infotemporal/m5.mp4" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+                 <div class="split-right">
+                     <h2 class="orbitron"><span class="highlight-text">M5.</span> Vídeo y Contenido</h2>
+                     <p class="inter mb-4">Edita y monta todo lo creado con CapCut o Canva. Aprende formatos (TikTok, Reels, Shorts), guiones rápidos con gancho y CTA, y cómo producir varios vídeos sin agotarte.</p>
+                 </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 6 -->
+        <section id="module6" class="parallax-section snap-section narrative-module">
+            <div class="parallax-bg bg-m6"></div>
+            <div class="giant-bg-number orbitron">06</div>
+            <div class="parallax-content module-split" data-shape-mask>
+                 <div class="split-left">
+                     <div class="video-container">
+                         <video muted loop playsinline controls class="module-video mini-video">
+                              <source src="assets/infotemporal/m6.mp4" type="video/mp4">
+                         </video>
+                     </div>
+                 </div>
+                 <div class="split-right">
+                     <h2 class="orbitron"><span class="highlight-text">M6.</span> Estrategia y Monetización</h2>
+                     <p class="inter mb-4">Contenido exclusivo de la comunidad LID.IA: cómo crecer con avatares, modelos de monetización, vender sin parecer vendedor, y qué ofrecer después del curso. Solo dentro.</p>
+                 </div>
+            </div>
+        </section>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MÓDULO 7 + PROYECTO FINAL -->
+        <section id="module-bonus" class="process-section" style="scroll-snap-align: start;">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Proyecto Final</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto 3rem; background: rgba(10,10,10,0.6); border: 1px solid rgba(0,212,255,0.2); border-radius: 16px; padding: 2rem 2.5rem;">
+                <h3 class="orbitron" style="font-size: 1.4rem; color: var(--blue); margin-bottom: 1rem;">
+                    <span style="color: var(--page-primary);">M7.</span> Tu proyecto final
+                </h3>
+                <div class="video-container" style="max-width: 700px; margin: 1.5rem auto; border-radius: 16px;">
+                    <video muted loop playsinline controls class="module-video mini-video">
+                        <source src="assets/infotemporal/m7.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="inter" style="color: #ccc; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Aqu&iacute; lo juntas todo. Dise&ntilde;as el personaje desde cero, lo construyes visualmente,
+                    le das voz y movimiento, y generas tu primer v&iacute;deo completo. Al final lo presentas
+                    en la comunidad y recibes feedback real.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span class="service-tag"><i class="fa-solid fa-palette"></i> Personaje final</span>
+                    <span class="service-tag"><i class="fa-solid fa-microphone"></i> Voz y movimiento</span>
+                    <span class="service-tag"><i class="fa-solid fa-film"></i> V&iacute;deo completo</span>
+                    <span class="service-tag"><i class="fa-solid fa-comments"></i> Feedback en comunidad</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMUNIDAD LID.IA -->
+        <section id="module-final" class="community-section">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">La Comunidad LID.IA</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center" style="margin-bottom: 2rem;">Te presento c&oacute;mo ser&aacute; estar dentro.</p>
+            <div class="video-container" style="max-width: 700px; margin: 0 auto;">
+                <video muted playsinline controls class="module-video community-video">
+                    <source src="assets/infotemporal/mcomunidad.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- TIERS -->
+        <section id="tiers" class="tiers-section" style="scroll-snap-align: start;">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Elige tu camino en LID.IA</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center" style="margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">Cada tier está diseñado para un nivel diferente de compromiso. Desde aprender a tu ritmo hasta estar a la vanguardia con acceso directo a mí.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+                <!-- TIER 1: APRENDE -->
+                <div style="background: rgba(0,212,255,0.06); border: 2px solid rgba(0,212,255,0.25); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; hover: transform translateY(-5px);">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,212,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                            <i class="fa-solid fa-graduation-cap" style="color: var(--blue);"></i>
+                        </div>
+                        <div>
+                            <h3 class="orbitron" style="font-size: 1.5rem; color: var(--blue); margin: 0;">APRENDE</h3>
+                            <p style="color: #8ab; margin: 0; font-size: 0.9rem;">Aprende a tu ritmo</p>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <p style="color: #fff; font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;"><span style="color: var(--blue);">9€</span><span style="color: #888; font-size: 1rem;">/mes</span></p>
+                        <p style="color: #8ab; font-size: 0.9rem; margin: 0.5rem 0;">o 89€/año (ahorra 19€)</p>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Todos los tutoriales en vídeo</span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Tutoriales escritos paso a paso</span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Actualizaciones de contenido</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="btn" style="background: rgba(0,212,255,0.15); color: var(--blue); border: 1px solid rgba(0,212,255,0.4); text-align: center; display: block; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">Elige APRENDE</a>
+                </div>
+
+                <!-- TIER 2: CREA -->
+                <div style="background: rgba(100,200,255,0.08); border: 2px solid rgba(100,200,255,0.35); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease; transform: translateY(-10px);">
+                    <div style="position: absolute; top: -12px; left: 20px; background: linear-gradient(135deg, var(--blue), #00d4ff); color: #000; padding: 4px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em;">MÁS POPULAR</div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(100,200,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                            <i class="fa-solid fa-rocket" style="color: #64c8ff;"></i>
+                        </div>
+                        <div>
+                            <h3 class="orbitron" style="font-size: 1.5rem; color: #64c8ff; margin: 0;">CREA</h3>
+                            <p style="color: #8ab; margin: 0; font-size: 0.9rem;">Crea resultados reales</p>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <p style="color: #fff; font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;"><span style="color: #64c8ff;">19€</span><span style="color: #888; font-size: 1rem;">/mes</span></p>
+                        <p style="color: #8ab; font-size: 0.9rem; margin: 0.5rem 0;">o 189€/año (ahorra 39€)</p>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Todo del tier <strong>Aprende</strong></span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span><strong>Biblioteca de prompts</strong> probados</span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Instrucciones de Google Gems y Freepik</span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Actualizaciones de nuevos prompts</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="btn" style="background: linear-gradient(135deg, rgba(100,200,255,0.2), rgba(100,200,255,0.1)); color: #64c8ff; border: 1px solid rgba(100,200,255,0.5); text-align: center; display: block; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">Elige CREA</a>
+                </div>
+
+                <!-- TIER 3: LIDERA -->
+                <div style="background: rgba(138,43,226,0.08); border: 2px solid rgba(138,43,226,0.35); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(138,43,226,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
+                            <i class="fa-solid fa-crown" style="color: var(--purple);"></i>
+                        </div>
+                        <div>
+                            <h3 class="orbitron" style="font-size: 1.5rem; color: var(--purple); margin: 0;">LIDERA</h3>
+                            <p style="color: #8ab; margin: 0; font-size: 0.9rem;">Mi tiempo y experiencia</p>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <p style="color: #fff; font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;"><span style="color: var(--purple);">39€</span><span style="color: #888; font-size: 1rem;">/mes</span></p>
+                        <p style="color: #da96ff; font-size: 0.9rem; margin: 0.5rem 0;">o 389€/año (ahorra 79€)</p>
+                        <p style="color: #da96ff; font-size: 0.85rem; margin: 0.75rem 0 0 0; font-weight: 600;"><i class="fa-solid fa-star" style="color: var(--page-primary);"></i> Fundadores: 29€/mes</p>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Todo de los tiers <strong>Aprende y Crea</strong></span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span><strong>Tutorías semanales en directo conmigo</strong> para resolver tus dudas</span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span><strong>Yo pruebo herramientas por ti</strong> y te muestro si valen la pena antes de que gastes dinero</span>
+                        </li>
+                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                            <span>Videos exclusivos con mis validaciones de herramientas nuevas</span>
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="btn" style="background: rgba(138,43,226,0.15); color: var(--purple); border: 1px solid rgba(138,43,226,0.4); text-align: center; display: block; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">Elige LIDERA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIBLIOTECA CREA -->
+        <section id="biblioteca" class="process-section" style="scroll-snap-align: start;">
+            <div style="max-width: 800px; margin: 0 auto 3rem; background: rgba(100,200,255,0.08); border: 1px solid rgba(100,200,255,0.35); border-radius: 16px; padding: 2rem 2.5rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <h3 class="orbitron" style="font-size: 1.4rem; color: #64c8ff; margin: 0;">Biblioteca CREA</h3>
+                    <span style="background: rgba(100,200,255,0.2); color: #64c8ff; border: 1px solid rgba(100,200,255,0.4); border-radius: 99px; font-size: 0.75rem; padding: 3px 12px; font-weight: 600;">A partir de CREA</span>
+                </div>
+                <div class="video-container" style="max-width: 700px; margin: 1.5rem auto; border-radius: 16px;">
+                    <video muted loop playsinline controls class="module-video mini-video">
+                        <source src="assets/infotemporal/mbiblio.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="inter" style="color: #ccc; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Acceso desde el d&iacute;a 1 a una librer&iacute;a de recursos exclusivos: Gems listos para usar,
+                    prompts avanzados, plantillas y packs que te ahorran horas de trabajo.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem;">
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de iluminaci&oacute;n y &aacute;ngulos</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de outfits y variaciones</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de escenarios y setups</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de expresiones faciales</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-code" style="color:#64c8ff;"></i> Prompts reutilizables por estilo</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-file-lines" style="color:#64c8ff;"></i> Plantillas de brief de personaje</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-list-check" style="color:#64c8ff;"></i> Checklist de consistencia visual</div>
+                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-bolt" style="color:#64c8ff;"></i> Packs de prompts avanzados</div>
+                </div>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(100,200,255,0.2);">
+                    <a href="#waitlist" class="btn" style="background: rgba(100,200,255,0.15); color: #64c8ff; border: 1px solid rgba(100,200,255,0.4);">Quiero acceso CREA &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIDERA EXCLUSIVO: TUTORÍAS + TRENDS -->
+        <section id="lidera-exclusive" class="process-section" style="scroll-snap-align: start;">
+            <div class="section-header">
+                <span class="section-number" style="color: var(--purple);"></span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Beneficios Exclusivos LIDERA</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p style="text-align: center; color: #da96ff; font-weight: 600; margin-bottom: 2rem; font-size: 0.95rem;">
+                <i class="fa-solid fa-crown" style="color: var(--page-primary);"></i> Solo para miembros del tier LIDERA
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <!-- Tutorías -->
+                <div style="background: rgba(138,43,226,0.08); border: 1px solid rgba(138,43,226,0.35); border-radius: 16px; padding: 2rem;">
+                    <h3 class="orbitron" style="font-size: 1.2rem; color: var(--purple); margin-bottom: 1rem;">Tutorías Semanales en Directo</h3>
+                    <div class="video-container" style="max-width: 100%; margin-bottom: 1.5rem; border-radius: 12px;">
+                        <video muted loop playsinline controls style="width: 100%; height: auto; max-height: 250px; border-radius: 12px;">
+                            <source src="assets/infotemporal/mtutorias.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="inter" style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">Cada semana nos conectamos en directo: yo resuelvo tus dudas específicas y la comunidad comparte experiencias. Avanzas sin quedarte atrapado, con el apoyo de todos.</p>
+                </div>
+                
+                <!-- Trends -->
+                <div style="background: rgba(138,43,226,0.08); border: 1px solid rgba(138,43,226,0.35); border-radius: 16px; padding: 2rem;">
+                    <h3 class="orbitron" style="font-size: 1.2rem; color: var(--purple); margin-bottom: 1rem;">Módulo Trends: Novedades</h3>
+                    <div class="video-container" style="max-width: 100%; margin-bottom: 1.5rem; border-radius: 12px;">
+                        <video muted loop playsinline controls style="width: 100%; height: auto; max-height: 250px; border-radius: 12px;">
+                            <source src="assets/infotemporal/mtrends.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="inter" style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">Yo pruebo cada herramienta nueva de IA. Valido si realmente funciona, si vale la pena pagar, y si es mejor que las alternativas. Te ahorro tiempo y dinero con mi experiencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LISTA DE ESPERA -->
+        <section id="waitlist" class="waitlist-section" loading="lazy" style="scroll-snap-align: start;">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Reserva tu plaza en la Comunidad LID.IA</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center waitlist-subtitle">La Comunidad LID.IA est&aacute; en creaci&oacute;n. Deja tu email y te avisar&eacute; en cuanto abramos plazas del primer curso: <strong style="color: var(--blue);">Crea tu avatar con IA</strong>. Las personas de la lista entrar&aacute;n con <strong style="color: var(--page-primary);">precio especial de fundadora en LIDERA: 29€/mes en lugar de 39€</strong> &mdash; s&oacute;lo para los primeros 100.</p>
+            <p class="inter text-center" style="font-size: 0.95rem; color: var(--page-primary); font-weight: 600; margin-bottom: 2rem; letter-spacing: 0.03em;">
+    <i class="fa-solid fa-calendar-days"></i>&nbsp; <strong>¡Muy pronto!</strong> • <strong>Primavera/Verano 2026</strong> &mdash; plazas limitadas a las primeras 100 personas
+</p>
+
+            <div class="waitlist-container" data-shape-mask>
+                <div class="waitlist-benefits">
+                    <ul>
+                        <li> Aviso prioritario cuando
+                            comience el curso</li>
+                        <li> Precio de fundador/a exclusivo
+                            para la lista</li>
+                        <li> Acceso al foro de la Comunidad
+                            LID.IA</li>
+                        <li> Curso a tu ritmo +
+                            tutor&iacute;as grupales semanales en directo</li>
+                    </ul>
+                </div>
+
+                <div class="waitlist-form-wrapper">
+                    <!-- ⚠️ PENDIENTE: Sustituir action con tu endpoint de Formspree real: https://formspree.io/f/TU_ID -->
+                    <form id="waitlistForm" class="waitlist-form" action="https://formspree.io/f/mwvwblkv"
+                        method="POST">
+                        <div class="input-group">
+                            <input type="text" id="waitlistName" name="nombre" placeholder="Tu nombre..." required
+                                class="neon-input">
+                        </div>
+                        <div class="input-group" style="display: flex; gap: 1rem;">
+                            <input type="email" id="waitlistEmail" name="email" placeholder="Tu mejor email..." required
+                                class="neon-input" style="flex: 2;">
+                            <input type="text" id="waitlistCountry" name="pais" placeholder="Tu pa&iacute;s..." required
+                                class="neon-input" style="flex: 1;">
+                        </div>
+                        <div class="input-group">
+                            <select id="waitlistReason" name="motivo" required class="neon-input"
+                                style="appearance: none; cursor: pointer;">
+                                <option value="" disabled selected>¿Para qu&eacute; quieres crear avatares?</option>
+                                <option value="Marca Personal">Crear mi Marca Personal</option>
+                                <option value="Vender Servicios">Vender a Clientes/Empresas</option>
+                                <option value="Docencia">Material Educativo / Alumnos</option>
+                                <option value="Hobby">Hobby y Curiosidad</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <select id="waitlistTier" name="tier" required class="neon-input"
+                                style="appearance: none; cursor: pointer;">
+                                <option value="" disabled selected>¿Cu&aacute;l ser&iacute;a tu tier ideal?</option>
+                                <option value="APRENDE">APRENDE (9€/mes) - Todos los m&oacute;dulos</option>
+                                <option value="CREA">CREA (19€/mes) - M&aacute;s popular + Biblioteca</option>
+                                <option value="LIDERA">LIDERA (39€/mes) - Acceso completo + Tutor&iacute;as</option>
+                            </select>
+                            <div class="legal-checkbox"
+                                style="display: flex; align-items: flex-start; gap: 0.5rem; text-align: left; font-size: 0.8rem; color: #ccc; margin-top: 1rem;">
+                                <input type="checkbox" id="privacy" required
+                                    style="margin-top: 0.2rem; transform: scale(1.2); accent-color: var(--blue);">
+                                <label for="privacy">He le&iacute;do y acepto la <a href="legal.html" target="_blank" rel="noopener noreferrer"
+                                        style="color: var(--blue);">Pol&iacute;tica de Privacidad</a>.</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn danger-btn submit-btn" style="margin-top: 1rem;">AV&Iacute;SAME
+                            CUANDO EL CURSO EST&Eacute; LISTO</button>
+                    </form>
+
+                    <div id="waitlistSuccess" class="success-message" style="display: none;">
+                        &excl;Gracias! Te avisamos cuando el curso esté creado.
+                    </div>
+                    <div id="waitlistError" class="error-message" style="display: none;">
+                        Por favor, ingresa un email v&aacute;lido.
+                    </div>
+
+                    <div class="urgency-counter" style="color: #aaa; font-size: 0.9rem;">
+                        <i>Plazas limitadas para poder resolver todas las dudas.</i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-carousel text-center mt-4">
+                <div class="testimonial-slide active">
+                    <p class="inter"><i>"Muy claro Lidia! Nuevo seguidor! Sigue asi"</i></p>
+                    <span class="testimonial-author">&mdash; @PhotoRacerTV, en TikTok</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="inter"><i>"Genial Lidia ...muy bien explicado, tranquila y con pausas 👍🏻suscrito"</i></p>
+                    <span class="testimonial-author">&mdash; @franloriasmusic, en TikTok</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="inter"><i>"Te felicito por tu forma pausada y clara de explicar. No solo en este video también en los anteriores. Y el de Ramón Llull, muy top."</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @jesusarrebola, en TikTok</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="inter"><i>"Me gusta mucho cómo explicas. Gracias"</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @la.figa.ta.tia, en TikTok</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="inter"><i>"en estos tiempos que todo va tan rápido, da gusto escuchar a alguien sin prisa por acabar y explica así de bien 👌"</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @megustaelcine1, en TikTok</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="inter"><i>"Tú das cursos ? Eres la más !!!🖤🔥👌"</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @zarina.limpiezaenergetic, en TikTok</span>
+                </div>
+                 <div class="testimonial-slide">
+                    <p class="inter"><i>"Me flipan tus vídeos… 👏👏👏"</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @victito74, en TikTok</span>
+                </div>
+                 <div class="testimonial-slide">
+                    <p class="inter"><i>"nuevo suscriptor,genial lo que enseñas y como lo enseñas"</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @leosagi14, en TikTok</span>
+                </div>
+                 <div class="testimonial-slide">
+                    <p class="inter"><i>"que locura de contenido la verdad un nuevo seguidor esta cuenta debe de ser más viral la verdad"</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @twichdiablo, en TikTok</span>
+                </div>
+                <div class="testimonial-slide">
+                    <p class="inter"><i>"Independientemente de lo útil que es tu video, destaca la habilidad para crear un tutorial. Está muy bien explicado. Gracias por producir contenido valioso."</i>
+                    </p>
+                    <span class="testimonial-author">&mdash; @vmasalla, en TikTok</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="about" class="about-section" style="scroll-snap-align: start;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">¿Quién es Lid.IA?</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text-wrapper">
+                    <div class="about-intro">
+                        <p class="about-body-text">Soy Doctora en Inform&aacute;tica, especializada en IA, con m&aacute;s de 10 a&ntilde;os de experiencia docente en universidades y ciclos formativos, y reconocida como <strong>8.&ordf; mejor docente de Espa&ntilde;a</strong> seg&uacute;n los Premios EDUCA ABANCA. En mis tutoriales explico a un ritmo claro y pausado para que avances sin frustraci&oacute;n.</p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10">0</div>
+                            <div class="stat-label">A&ntilde;os Experiencia en IA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="8">0</div>
+                            <div class="stat-label">8.&ordf; en Premios EDUCA ABANCA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Ponencias y cursos</div>
+                        </div>
+                    </div>
+
+                    <div class="social-links" style="margin-top: 2rem; margin-bottom: 1.5rem;">
+                        <a href="https://www.tiktok.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="social-btn tiktok-neon">TikTok</a>
+                        <a href="https://www.youtube.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="social-btn youtube-neon">YouTube</a>
+                        <a href="https://www.twitch.tv/liconoc_IA" target="_blank" rel="noopener noreferrer" class="social-btn">Twitch</a>
+                    </div>
+
+                    <a href="cv.html" class="btn primary-btn" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">Ver CV</a>
+                </div>
+
+                <div class="about-image-wrapper">
+                    <div class="about-image-container">
+                        <img src="assets/lidia_fondoclase.png" alt="Lidia Contreras" class="about-photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MIS TUTORIALES EN TIKTOK -->
+        <section id="videos" class="videos-section" style="scroll-snap-align: start;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Mis tutoriales en TikTok</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="tiktok-grid">
+                <!-- TikTok embeds -->
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lidiaconia/video/7596739623167069472"
+                    data-video-id="7596739623167069472" style="max-width: 500px;min-width: 280px;" data-shape-mask>
+                    <section></section>
+                </blockquote>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lidiaconia/video/7598283386230197526"
+                    data-video-id="7598283386230197526" style="max-width: 500px;min-width: 280px;" data-shape-mask>
+                    <section></section>
+                </blockquote>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lidiaconia/video/7608630038992260385"
+                    data-video-id="7608630038992260385" style="max-width: 500px;min-width: 280px;" data-shape-mask>
+                    <section></section>
+                </blockquote>
+
+            </div>
+        </section>
+
+    <footer class="text-center" data-shape-mask
+        style="padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 2rem; background: var(--black); z-index: 10; position: relative; scroll-snap-align: start;">
+        <div class="footer-socials" style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+                <a href="https://www.tiktok.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link tiktok"><i
+                    class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="https://www.youtube.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link youtube"><i
+                    class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.instagram.com/lidia.conia" target="_blank" rel="noopener noreferrer" class="footer-link instagram"><i
+                    class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.linkedin.com/in/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link linkedin"><i
+                    class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/liconoc" target="_blank" rel="noopener noreferrer" class="footer-link github"><i
+                    class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://x.com/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link twitter"><i
+                    class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+                <a href="https://www.twitch.tv/liconoc_IA" target="_blank" rel="noopener noreferrer" class="footer-link"><i
+                    class="fa-brands fa-twitch"></i> Twitch</a>
+        </div>
+        <p class="inter" style="color: #666;">&copy; 2026 Lidia Contreras - Todos los derechos reservados. | <a
+                href="legal.html" style="color: #888;">Legal y Privacidad</a></p>
+    </footer>
+    </main>
+
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
