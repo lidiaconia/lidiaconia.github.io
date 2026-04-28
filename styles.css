@@ -232,6 +232,24 @@ section {
     flex-wrap: wrap;
 }
 
+.hero-cta {
+    margin-top: 1.25rem;
+}
+
+.hero-trust {
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .hero-cta {
+        margin-top: 1rem;
+    }
+
+    .hero-trust {
+        margin-top: 0.9rem;
+    }
+}
+
 /* Problem vs Solution */
 .problem-section {
     padding: 6rem 2rem;
@@ -2607,6 +2625,30 @@ main {
     transform: skewY(8deg);
 }
 
+/* Uniform dark backdrop in horizontal modules to avoid any visible seams */
+#modules-track .parallax-bg {
+    background: rgba(5, 8, 16, 0.9) !important;
+}
+
+#modules-track .bg-m1::after,
+#modules-track .bg-m2::after,
+#modules-track .bg-m3::after,
+#modules-track .bg-m4::after,
+#modules-track .bg-m5::after,
+#modules-track .bg-m6::after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: none;
+    background: rgba(7, 12, 22, 0.78);
+    opacity: 1;
+}
+
+#modules-track .narrative-module::before {
+    display: none;
+}
+
 .bg-community {
     background: linear-gradient(to top, rgba(167,139,250,0.2) 0%, transparent 100%), var(--black);
 }
@@ -2677,4 +2719,190 @@ main {
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
     max-width: none !important;
+}
+
+/* Horizontal modules: big video area + bottom description strip */
+.modules-track > .snap-section .parallax-content.module-split {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-items: stretch;
+    gap: 1rem;
+    width: min(1320px, 100%);
+    height: calc(100vh - var(--header-offset, 80px));
+    padding: clamp(0.75rem, 1.4vw, 1.25rem) clamp(1rem, 2vw, 2rem);
+}
+
+.modules-track > .snap-section .split-left,
+.modules-track > .snap-section .split-right {
+    flex: initial;
+}
+
+.modules-track > .snap-section .split-left {
+    min-height: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.modules-track > .snap-section .split-left .video-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0;
+    border-radius: 20px;
+}
+
+.modules-track > .snap-section .split-left .module-video,
+.modules-track > .snap-section .split-left .mini-video {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+}
+
+.modules-track > .snap-section .split-right {
+    width: min(1160px, 100%);
+    margin: 0 auto;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    background: rgba(8, 12, 26, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.modules-track > .snap-section .split-right h2 {
+    margin-bottom: 0.35rem;
+}
+
+.modules-track > .snap-section .split-right p {
+    margin-bottom: 0;
+    line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+    .modules-track > .snap-section .parallax-content.module-split {
+        width: 100%;
+        height: calc(100vh - var(--header-offset, 80px));
+        grid-template-rows: minmax(0, 0.74fr) auto;
+        gap: 0.75rem;
+        align-content: center;
+        justify-items: center;
+        padding: 0.6rem 0.8rem 0.9rem;
+    }
+
+    .modules-track > .snap-section .split-left {
+        order: 1;
+        width: 100%;
+    }
+
+    .modules-track > .snap-section .split-right {
+        order: 2;
+        width: min(92vw, 760px);
+        max-height: 30vh;
+        overflow: auto;
+        text-align: center;
+        padding: 0.7rem 0.85rem;
+        border-radius: 12px;
+    }
+
+    .modules-track > .snap-section .split-left .video-container {
+        width: min(92vw, 760px);
+        border-radius: 14px;
+    }
+
+    .modules-track > .snap-section .split-right h2 {
+        font-size: clamp(1rem, 4vw, 1.25rem);
+        line-height: 1.15;
+        margin-bottom: 0.25rem;
+    }
+
+    .modules-track > .snap-section .split-right p {
+        font-size: clamp(0.82rem, 3.4vw, 0.92rem);
+        line-height: 1.38;
+        text-align: center;
+    }
+}
+
+/* ===============================
+   Standalone video sizing
+   =============================== */
+#module-bonus .showcase-video-container,
+#module-final .showcase-video-container,
+#biblioteca .showcase-video-container {
+    max-width: min(1200px, 100%) !important;
+    width: 100%;
+    margin-inline: auto !important;
+}
+
+#module-bonus .showcase-wide-card,
+#biblioteca .showcase-wide-card {
+    max-width: min(1240px, 100%) !important;
+    width: 100%;
+    padding: clamp(1.15rem, 2.2vw, 2rem) clamp(1rem, 2.4vw, 2.5rem) !important;
+}
+
+#module-bonus .showcase-video,
+#module-final .showcase-video,
+#biblioteca .showcase-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: clamp(320px, 52vh, 620px);
+    object-fit: cover;
+}
+
+/* LIDERA keeps two cards but with larger video area */
+#lidera-exclusive .lidera-grid {
+    grid-template-columns: repeat(2, minmax(320px, 1fr)) !important;
+    max-width: 1140px !important;
+}
+
+#lidera-exclusive .lidera-video {
+    width: 100% !important;
+    max-height: 320px !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    #module-bonus .showcase-wide-card,
+    #biblioteca .showcase-wide-card {
+        padding: 1rem 0.9rem !important;
+    }
+
+    #module-bonus .showcase-video,
+    #module-final .showcase-video,
+    #biblioteca .showcase-video {
+        min-height: clamp(210px, 38vh, 340px);
+    }
+
+    #lidera-exclusive .lidera-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+    }
+
+    #lidera-exclusive .lidera-video {
+        max-height: 260px !important;
+    }
+}
+
+/* Waitlist: equal column widths for benefits and form */
+.waitlist-container {
+    max-width: min(1240px, 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.waitlist-benefits,
+.waitlist-form-wrapper {
+    min-width: 0;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .waitlist-container {
+        grid-template-columns: 1fr;
+    }
 }
