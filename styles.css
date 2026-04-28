@@ -2937,6 +2937,15 @@ main {
     border-color: rgba(125, 211, 252, 0.22);
 }
 
+.cv-summary-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(125, 211, 252, 0.35);
+    margin-bottom: 0.75rem;
+}
+
 .cv-summary-card p {
     color: #cbd5e1;
     font-size: 0.95rem;
@@ -3047,6 +3056,15 @@ main {
 .cv-service-card {
     padding: 1.2rem;
     border-color: rgba(125, 211, 252, 0.22);
+}
+
+.cv-service-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(125, 211, 252, 0.32);
+    margin-bottom: 0.75rem;
 }
 
 .cv-service-card p {
@@ -3207,12 +3225,20 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .cv-summary-image {
+        height: 170px;
+    }
+
     .cv-entry-grid {
         grid-template-columns: 1fr;
     }
 
     .cv-services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cv-service-image {
+        height: 170px;
     }
 
     .cv-detail-grid {
