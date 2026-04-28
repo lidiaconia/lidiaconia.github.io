@@ -2921,6 +2921,17 @@ main {
     gap: 1rem;
 }
 
+.cv-summary-cta-wrap {
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.cv-summary-cta {
+    background: var(--page-primary);
+    color: #081221;
+    border: 1px solid rgba(125, 211, 252, 0.55);
+}
+
 .cv-summary-card {
     padding: 1.25rem;
     border-color: rgba(125, 211, 252, 0.22);
@@ -2934,6 +2945,90 @@ main {
 
 .cv-accordion {
     margin-top: 1.25rem;
+}
+
+.cv-accordion-stack {
+    margin-top: 1.25rem;
+}
+
+.cv-panel-content {
+    margin-top: 1rem;
+    padding: 0.2rem 0.1rem;
+}
+
+.cv-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.cv-entry-card {
+    padding: 1rem 1.1rem;
+    border-color: rgba(125, 211, 252, 0.2);
+}
+
+.cv-entry-card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.cv-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.65rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.9rem;
+}
+
+.cv-data-table thead tr {
+    border-bottom: 1px solid rgba(125, 211, 252, 0.28);
+}
+
+.cv-data-table th {
+    font-family: var(--font-code);
+    color: #a5b4fc;
+    text-align: left;
+    padding: 0.45rem 0.4rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+    font-weight: 500;
+}
+
+.cv-data-table td {
+    color: #cbd5e1;
+    padding: 0.52rem 0.4rem;
+    border-bottom: 1px solid rgba(51, 65, 85, 0.45);
+    vertical-align: top;
+}
+
+.cv-table-note {
+    color: #94a3b8;
+    font-size: 0.84rem;
+    margin-bottom: 1rem;
+}
+
+.cv-long-list,
+.cv-mini-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.55rem 0 0 0;
+}
+
+.cv-long-list li,
+.cv-mini-list li {
+    position: relative;
+    color: #cbd5e1;
+    line-height: 1.62;
+    padding-left: 1rem;
+    margin-bottom: 0.45rem;
+}
+
+.cv-long-list li::before,
+.cv-mini-list li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0;
+    color: #7dd3fc;
 }
 
 .cv-services-intro {
@@ -3109,6 +3204,10 @@ main {
 
 @media (max-width: 900px) {
     .cv-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-entry-grid {
         grid-template-columns: 1fr;
     }
 
