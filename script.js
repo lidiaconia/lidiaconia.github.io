@@ -619,21 +619,47 @@ document.addEventListener('DOMContentLoaded', () => {
    Video Autoplay on Scroll
    =============================== */
 document.addEventListener('DOMContentLoaded', () => {
-    const videoObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            const video = entry.target;
-            if (entry.isIntersecting) {
-                video.play().catch(() => {
-                    // Si el autoplay falla (por restricciones del navegador), el usuario puede hacer clic
-                });
-            } else {
-                video.pause();
-            }
-        });
-    }, { threshold: 0.5 });
+  const videos = document.querySelectorAll('.module-video, .community-video, .lidera-video');
 
-    // Observar todos los videos de módulos y comunidad
-    document.querySelectorAll('.module-video, .community-video').forEach(video => {
-        videoObserver.observe(video);
+  const ensureMobileAutoplayAttrs = (video) => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('autoplay', '');
+    if (!video.getAttribute('preload')) {
+      video.setAttribute('preload', 'metadata');
+    }
+  };
+
+  const tryPlay = (video) => {
+    const playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {
+        // Si el autoplay falla por política del navegador (p.ej. modo ahorro), queda el control manual.
+      });
+    }
+  };
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        tryPlay(video);
+      } else {
+        video.pause();
+      }
     });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -10% 0px'
+  });
+
+  videos.forEach((video) => {
+    ensureMobileAutoplayAttrs(video);
+    videoObserver.observe(video);
+  });
 });
