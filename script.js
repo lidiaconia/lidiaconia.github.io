@@ -429,190 +429,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/* ===============================
-   Fake Demos Interactivity
-   =============================== */
-document.addEventListener('DOMContentLoaded', () => {
-
-    // M1: Lore Generator
-    const m1Btn = document.getElementById('m1-btn');
-    const m1Name = document.getElementById('m1-name');
-    const m1Output = document.getElementById('m1-output');
-    if (m1Btn && m1Output) {
-        m1Btn.addEventListener('click', () => {
-            const name = m1Name.value.trim() || 'Desconocido';
-            m1Output.innerHTML = `<span class="highlight-text">Generando lore...</span>`;
-            setTimeout(() => {
-                m1Output.innerHTML = `> Nombre: ${name}<br>> Origen: Neo-Tokyo subterráneo.<br>> Misión: Encontrar el último servidor sin formatear.`;
-            }, 800);
-        });
-    }
-
-    // M2: Sliders
-    const sliders = document.querySelectorAll('.m2-slider');
-    const m2Output = document.getElementById('m2-output');
-    if (sliders.length > 0 && m2Output) {
-        const updatePersonality = () => {
-            const total = parseInt(sliders[0].value) + parseInt(sliders[1].value);
-            if (total < 60) m2Output.innerText = "🥶 Frío y calculador";
-            else if (total < 120) m2Output.innerText = "🤖 Neutral";
-            else if (total < 160) m2Output.innerText = "😎 Sarcástico y audaz";
-            else m2Output.innerText = "🤪 Caos total";
-        };
-        sliders.forEach(s => s.addEventListener('input', updatePersonality));
-    }
-
-    // M4: Audio visualizer
-    const m4Btn = document.getElementById('m4-play-btn');
-    const m4Vis = document.getElementById('m4-visualizer');
-    if (m4Btn && m4Vis) {
-        m4Btn.addEventListener('click', () => {
-            if (m4Vis.classList.contains('visualizer-active')) {
-                m4Vis.classList.remove('visualizer-active');
-                m4Btn.innerText = '▶ PLAY AUDIO';
-            } else {
-                m4Vis.classList.add('visualizer-active');
-                m4Btn.innerText = '⏸ PAUSE AUDIO';
-            }
-        });
-    }
-
-    // M5: Timeline animation via IntersectionObserver
-    const workflowSteps = document.querySelectorAll('.workflow-timeline .step');
-    const workflowLines = document.querySelectorAll('.workflow-timeline .step-line');
-    if (workflowSteps.length > 0) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    let delay = 0;
-                    workflowSteps.forEach((step, i) => {
-                        setTimeout(() => step.classList.add('active'), delay);
-                        if (i < workflowLines.length) {
-                            setTimeout(() => workflowLines[i].classList.add('filled'), delay + 500);
-                        }
-                        delay += 1000;
-                    });
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        const timelineEl = document.querySelector('.workflow-timeline');
-        if(timelineEl) observer.observe(timelineEl);
-    }
-
-    // M6: TikTok Mockup
-    const m6Btn = document.getElementById('m6-publish-btn');
-    const ttBody = document.getElementById('m6-tt-body');
-    if (m6Btn && ttBody) {
-        m6Btn.addEventListener('click', () => {
-            ttBody.classList.add('tiktok-published');
-            ttBody.innerHTML = `<i class="fas fa-check-circle fa-3x" style="color:#00ffcc"></i><p class="mt-2 inter">¡Publicado!</p>`;
-            m6Btn.innerText = "TikTok Enviado";
-            m6Btn.disabled = true;
-
-            // Heart animation
-            const heartsContainer = document.createElement('div');
-            heartsContainer.className = 'hearts-container';
-            ttBody.appendChild(heartsContainer);
-            for(let i=0; i<8; i++) {
-                setTimeout(() => {
-                    const heart = document.createElement('div');
-                    heart.className = 'floating-heart';
-                    heart.innerText = '❤️';
-                    heart.style.left = Math.random() * 80 + '%';
-                    heartsContainer.appendChild(heart);
-                }, i * 200);
-            }
-        });
-    }
-
-});
-
-// Global for M3
-window.changeBgM3 = function(color) {
-    const layer = document.getElementById('m3-bg-layer');
-    if (layer) {
-        layer.style.backgroundColor = color;
-        // Blend mode to mix with the radial gradient overlay from theme
-        layer.style.backgroundBlendMode = 'overlay';
-    }
-};
 
 /* ===============================
-   Horizontal Modules Logic
+   Course Modules Scroll Reveal
    =============================== */
 document.addEventListener('DOMContentLoaded', () => {
-    const modulesSection = document.querySelector('.modules-horizontal-section');
-    const modulesTrack = document.getElementById('modules-track');
-    const sections = Array.from(document.querySelectorAll('#modules-track .snap-section[id]'));
+    const modules = document.querySelectorAll('.course-module');
+    if (modules.length === 0) return;
 
-    const setupHorizontalModules = () => {
-      if (!modulesSection || !modulesTrack || sections.length === 0) return;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
 
-      const header = document.querySelector('.sticky-header');
-      const headerOffset = header ? Math.round(header.getBoundingClientRect().height) : 80;
-      document.documentElement.style.setProperty('--header-offset', `${headerOffset}px`);
-
-      const stickyViewport = Math.max(window.innerHeight - headerOffset, 1);
-      const viewportWidth = Math.max(modulesSection.clientWidth, 1);
-      const trackWidth = viewportWidth * sections.length;
-      sections.forEach((section) => {
-        section.style.width = `${viewportWidth}px`;
-        section.style.flex = `0 0 ${viewportWidth}px`;
-      });
-      modulesTrack.style.width = `${trackWidth}px`;
-
-      const maxTranslate = Math.max(trackWidth - viewportWidth, 0);
-      const totalScrollDistance = Math.max(maxTranslate, 1);
-
-      // This virtual height is what keeps the section pinned while horizontal motion happens.
-      modulesSection.style.setProperty('--modules-scroll-height', `${stickyViewport + totalScrollDistance}px`);
-
-      const sectionStart = modulesSection.offsetTop - headerOffset;
-      const scrolled = window.scrollY - sectionStart;
-      const clamped = Math.min(Math.max(scrolled, 0), totalScrollDistance);
-      const progress = clamped / totalScrollDistance;
-      const travelX = progress * maxTranslate;
-
-      modulesTrack.style.transform = `translate3d(${-travelX}px, 0, 0)`;
-
-      const moduleFloat = maxTranslate > 0 ? travelX / window.innerWidth : 0;
-
-      const bgFactor = window.innerWidth < 900 ? 55 : 95;
-      const contentFactor = window.innerWidth < 900 ? -28 : -52;
-      const numberFactor = window.innerWidth < 900 ? 90 : 150;
-      const orbFactor = window.innerWidth < 900 ? 32 : 68;
-
-      sections.forEach((section, index) => {
-        const bg = section.querySelector('.parallax-bg');
-        const relative = moduleFloat - index;
-        const depth = Math.min(Math.abs(relative), 1.8);
-
-        if (bg) {
-          bg.style.transform = `translate3d(${relative * bgFactor}px, 0, 0) scale(${1.08 + depth * 0.05})`;
-          bg.style.filter = `brightness(${1 - depth * 0.08})`;
-        }
-
-        const content = section.querySelector('.parallax-content');
-        if (content) {
-          content.style.transform = `translate3d(${relative * contentFactor}px, 0, 0)`;
-        }
-
-        const giantNumber = section.querySelector('.giant-bg-number');
-        if (giantNumber) {
-          giantNumber.style.transform = `translate(calc(-50% + ${relative * numberFactor}px), -50%) scale(${1 - Math.min(depth * 0.08, 0.16)})`;
-          giantNumber.style.opacity = `${Math.max(0.015, 0.05 - depth * 0.015)}`;
-        }
-
-        section.style.setProperty('--orb-shift', `${relative * orbFactor}px`);
-      });
-    };
-
-    if (modulesSection && modulesTrack && sections.length) {
-      setupHorizontalModules();
-      window.addEventListener('scroll', setupHorizontalModules, { passive: true });
-      window.addEventListener('resize', setupHorizontalModules);
-    }
+    modules.forEach(module => observer.observe(module));
 });
 
 /* ===============================
