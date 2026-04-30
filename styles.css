@@ -3303,7 +3303,9 @@ main {
 }
 
 .nav-img,
-.nav-img-r {
+.nav-img-r,
+.nav-img-intro,
+.nav-img-r-intro {
     position: absolute;
     top: 0; left: 0;
     width: 100%;
@@ -3315,7 +3317,9 @@ main {
 }
 
 .nav-img.active,
-.nav-img-r.active { opacity: 1; }
+.nav-img-r.active,
+.nav-img-intro.active,
+.nav-img-r-intro.active { opacity: 1; }
 
 .narrative-label {
     font-family: var(--font-code);

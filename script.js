@@ -504,10 +504,22 @@ document.addEventListener('DOMContentLoaded', () => {
         var panels = document.querySelectorAll('.narrative-panel');
         if (!panels.length) return;
 
-        var imgsL = document.querySelectorAll('.nav-img');
-        var imgsR = document.querySelectorAll('.nav-img-r');
+        var imgsL      = document.querySelectorAll('.nav-img');
+        var imgsR      = document.querySelectorAll('.nav-img-r');
+        var introL     = document.querySelectorAll('.nav-img-intro');
+        var introR     = document.querySelectorAll('.nav-img-r-intro');
+        var activeCount = 0; // cuántos paneles están visibles
+
+        function showIntro() {
+            introL.forEach(function (i) { i.classList.add('active'); });
+            introR.forEach(function (i) { i.classList.add('active'); });
+            imgsL.forEach(function (i) { i.classList.remove('active'); });
+            imgsR.forEach(function (i) { i.classList.remove('active'); });
+        }
 
         function setActive(idx) {
+            introL.forEach(function (i) { i.classList.remove('active'); });
+            introR.forEach(function (i) { i.classList.remove('active'); });
             imgsL.forEach(function (img) {
                 img.classList.toggle('active', +img.dataset.idx === idx);
             });
@@ -516,12 +528,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        var visiblePanels = new Map();
+
         var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                    setActive(+entry.target.dataset.idx);
+                    visiblePanels.set(entry.target, +entry.target.dataset.idx);
+                } else {
+                    visiblePanels.delete(entry.target);
                 }
             });
+
+            if (visiblePanels.size === 0) {
+                showIntro();
+            } else {
+                // Muestra el módulo con el índice más bajo visible
+                var minIdx = Math.min.apply(null, Array.from(visiblePanels.values()));
+                setActive(minIdx);
+            }
         }, { threshold: 0.4 });
 
         panels.forEach(function (panel) { observer.observe(panel); });
