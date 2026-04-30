@@ -497,3 +497,33 @@ document.addEventListener('DOMContentLoaded', () => {
     videoObserver.observe(video);
   });
 });
+
+// Scroll narrative — crossfade de avatares por módulo
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        var panels = document.querySelectorAll('.narrative-panel');
+        if (!panels.length) return;
+
+        var imgsL = document.querySelectorAll('.nav-img');
+        var imgsR = document.querySelectorAll('.nav-img-r');
+
+        function setActive(idx) {
+            imgsL.forEach(function (img) {
+                img.classList.toggle('active', +img.dataset.idx === idx);
+            });
+            imgsR.forEach(function (img) {
+                img.classList.toggle('active', +img.dataset.idx === idx);
+            });
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    setActive(+entry.target.dataset.idx);
+                }
+            });
+        }, { threshold: 0.4 });
+
+        panels.forEach(function (panel) { observer.observe(panel); });
+    });
+})();
