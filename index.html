@@ -137,13 +137,10 @@
     <main>
 
         <!-- ① HERO -->
-        <section class="parallax-section hero snap-section hero-3col" style="min-height: 100vh;">
+        <section class="parallax-section hero snap-section hero-combo" style="min-height: 100vh;">
             <div class="parallax-bg bg-intro"></div>
-            <div class="hero-avatar-col hero-avatar-left" aria-hidden="true">
-                <img src="assets/lidia_fondoclase.png" alt="" class="hero-avatar-img">
-                <span class="hero-avatar-badge">Lid.IA</span>
-            </div>
-            <div class="parallax-content" style="max-width: 560px; text-align: center;">
+            <img src="assets/infotemporal/img/combo_hero.png" alt="" class="hero-combo-img" aria-hidden="true">
+            <div class="parallax-content hero-combo-content" style="max-width: 700px; text-align: center;">
                 <img src="assets/liconoc_ia.png" alt="LID.IA — Comunidad de IA de Lidia Contreras" class="hero-logo mx-auto" style="display: block; margin: 0 auto 1.5rem auto;">
                 <h1 class="orbitron page-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">Crea tu avatar o influencer con IA desde cero</h1>
                 <p class="subtitle inter" style="font-weight: 600; font-size: 1.15rem; color: #fff; max-width: 520px; margin: 1rem auto 0 auto;">
@@ -156,13 +153,67 @@
                     <span aria-hidden="true">&darr;</span>
                 </div>
             </div>
-            <div class="hero-avatar-col hero-avatar-right" aria-hidden="true">
-                <img src="assets/profile.png" alt="" class="hero-avatar-img">
-                <span class="hero-avatar-badge">Nyxia</span>
+        </section>
+
+        <!-- ② COMUNIDAD LID.IA — vídeo de presentación -->
+        <section id="comunidad" class="community-section">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">La Comunidad LID.IA</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center" style="margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
+                Una comunidad donde aprender IA paso a paso, con personas que crean como t&uacute; y con alguien que resuelve tus dudas. <strong style="color: var(--page-primary);">Ahora mismo en construcci&oacute;n.</strong>
+            </p>
+            <div class="video-container showcase-video-container" style="max-width: 700px; margin: 0 auto;">
+                <!--
+                <video muted playsinline controls class="module-video community-video showcase-video">
+                    <source src="assets/infotemporal/mcomunidad.mp4" type="video/mp4">
+                </video>
+                -->
+                <img src="assets/infotemporal/comunidad.png" alt="Vista previa de la comunidad LID.IA" class="module-video community-video showcase-video" loading="lazy">
             </div>
         </section>
 
-        <!-- ② SCROLL NARRATIVO — avatares + módulos -->
+        <!-- ③ QUÉ PASA DENTRO -->
+        <section id="inside" class="process-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Qu&eacute; pasa dentro de la comunidad</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="inside-grid">
+                <div class="inside-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3 class="orbitron">Curso estructurado</h3>
+                    <p class="inter">7 m&oacute;dulos en v&iacute;deo para crear tu avatar de la idea al v&iacute;deo final. A tu ritmo, dentro de Skool.</p>
+                </div>
+                <div class="inside-card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3 class="orbitron">Comunidad activa</h3>
+                    <p class="inter">Foro, feedback de proyectos y personas que crean como t&uacute;. No vas sola.</p>
+                </div>
+                <div class="inside-card">
+                    <i class="fa-solid fa-video"></i>
+                    <h3 class="orbitron">Directos semanales <i class="fa-solid fa-crown" style="font-size: 0.85rem; color: var(--purple); vertical-align: middle;"></i></h3>
+                    <p class="inter">Tutor&iacute;as grupales en directo para resolver dudas y avanzar sin quedarte atascada.</p>
+                </div>
+                <div class="inside-card">
+                    <i class="fa-solid fa-rotate"></i>
+                    <h3 class="orbitron">Siempre actualizado <i class="fa-solid fa-crown" style="font-size: 0.85rem; color: var(--purple); vertical-align: middle;"></i></h3>
+                    <p class="inter">La IA evoluciona r&aacute;pido. El contenido se actualiza para que siempre tengas lo que funciona hoy.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ④ SCROLL NARRATIVO — avatares + módulos -->
         <section id="scroll-modulos" class="scroll-narrative-section process-section">
             <div class="section-header">
                 <span class="section-number">02</span>
@@ -182,13 +233,13 @@
                 <!-- Lid.IA — sticky izquierda -->
                 <div class="narrative-col-side narrative-col-left">
                     <div class="narrative-avatar-wrap">
-                        <img class="nav-img active" data-idx="0" src="assets/modulo1.png" alt="Lid.IA — Crea tu personaje">
-                        <img class="nav-img" data-idx="1" src="assets/modulo2.png" alt="Lid.IA — Direcci&oacute;n de Arte">
-                        <img class="nav-img" data-idx="2" src="assets/modulo3.png" alt="Lid.IA — Voz y Expresi&oacute;n">
-                        <img class="nav-img" data-idx="3" src="assets/modulo4.png" alt="Lid.IA — Herramientas">
-                        <img class="nav-img" data-idx="4" src="assets/modulo5.png" alt="Lid.IA — V&iacute;deo y Contenido">
-                        <img class="nav-img" data-idx="5" src="assets/modulo6.png" alt="Lid.IA — Estrategia">
-                        <img class="nav-img" data-idx="6" src="assets/modulo6.png" alt="Lid.IA — Proyecto final">
+                        <img class="nav-img active" data-idx="0" src="assets/infotemporal/img/lidia_m1.png" alt="Lid.IA — Crea tu personaje">
+                        <img class="nav-img" data-idx="1" src="assets/infotemporal/img/lidia_m2.png" alt="Lid.IA — Direcci&oacute;n de Arte">
+                        <img class="nav-img" data-idx="2" src="assets/infotemporal/img/lidia_m3.png" alt="Lid.IA — Voz y Expresi&oacute;n">
+                        <img class="nav-img" data-idx="3" src="assets/infotemporal/img/lidia_m4.png" alt="Lid.IA — Herramientas">
+                        <img class="nav-img" data-idx="4" src="assets/infotemporal/img/lidia_m5.png" alt="Lid.IA — V&iacute;deo y Contenido">
+                        <img class="nav-img" data-idx="5" src="assets/infotemporal/img/lidia_m6.png" alt="Lid.IA — Estrategia">
+                        <img class="nav-img" data-idx="6" src="assets/infotemporal/img/lidia_m7.png" alt="Lid.IA — Proyecto final">
                     </div>
                     <span class="narrative-label">Lid.IA</span>
                 </div>
@@ -270,75 +321,17 @@
                 <!-- Nyxia — sticky derecha -->
                 <div class="narrative-col-side narrative-col-right">
                     <div class="narrative-avatar-wrap">
-                        <img class="nav-img-r active" data-idx="0" src="assets/modulo1.png" alt="Nyxia — Crea tu personaje">
-                        <img class="nav-img-r" data-idx="1" src="assets/modulo2.png" alt="Nyxia — Direcci&oacute;n de Arte">
-                        <img class="nav-img-r" data-idx="2" src="assets/modulo3.png" alt="Nyxia — Voz y Expresi&oacute;n">
-                        <img class="nav-img-r" data-idx="3" src="assets/modulo4.png" alt="Nyxia — Herramientas">
-                        <img class="nav-img-r" data-idx="4" src="assets/modulo5.png" alt="Nyxia — V&iacute;deo y Contenido">
-                        <img class="nav-img-r" data-idx="5" src="assets/modulo6.png" alt="Nyxia — Estrategia">
-                        <img class="nav-img-r" data-idx="6" src="assets/modulo6.png" alt="Nyxia — Proyecto final">
+                        <img class="nav-img-r active" data-idx="0" src="assets/infotemporal/img/nyxia_m1.png" alt="Nyxia — Crea tu personaje">
+                        <img class="nav-img-r" data-idx="1" src="assets/infotemporal/img/nyxia_m2.png" alt="Nyxia — Direcci&oacute;n de Arte">
+                        <img class="nav-img-r" data-idx="2" src="assets/infotemporal/img/nyxia_m3.png" alt="Nyxia — Voz y Expresi&oacute;n">
+                        <img class="nav-img-r" data-idx="3" src="assets/infotemporal/img/nyxia_m4.png" alt="Nyxia — Herramientas">
+                        <img class="nav-img-r" data-idx="4" src="assets/infotemporal/img/nyxia_m5.png" alt="Nyxia — V&iacute;deo y Contenido">
+                        <img class="nav-img-r" data-idx="5" src="assets/infotemporal/img/nyxia_m6.png" alt="Nyxia — Estrategia">
+                        <img class="nav-img-r" data-idx="6" src="assets/infotemporal/img/nyxia_m7.png" alt="Nyxia — Proyecto final">
                     </div>
                     <span class="narrative-label">Nyxia</span>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- ③ COMUNIDAD LID.IA — vídeo de presentación -->
-        <section id="comunidad" class="community-section">
-            <div class="section-header">
-                <span class="section-number">01</span>
-                <h2 class="section-title">
-                    <span class="title-bracket">&lt;</span>
-                    <span class="title-text">La Comunidad LID.IA</span>
-                    <span class="title-bracket">/&gt;</span>
-                </h2>
-                <div class="section-line"></div>
-            </div>
-            <p class="subtitle inter text-center" style="margin-bottom: 2rem; max-width: 680px; margin-left: auto; margin-right: auto;">
-                Una comunidad donde aprender IA paso a paso, con personas que crean como t&uacute; y con alguien que resuelve tus dudas. <strong style="color: var(--page-primary);">Ahora mismo en construcci&oacute;n.</strong>
-            </p>
-            <div class="video-container showcase-video-container" style="max-width: 700px; margin: 0 auto;">
-                <!--
-                <video muted playsinline controls class="module-video community-video showcase-video">
-                    <source src="assets/infotemporal/mcomunidad.mp4" type="video/mp4">
-                </video>
-                -->
-                <img src="assets/infotemporal/comunidad.png" alt="Vista previa de la comunidad LID.IA" class="module-video community-video showcase-video" loading="lazy">
-            </div>
-        </section>
-
-        <!-- ④ QUÉ PASA DENTRO -->
-        <section id="inside" class="process-section">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-bracket">&lt;</span>
-                    <span class="title-text">Qu&eacute; pasa dentro de la comunidad</span>
-                    <span class="title-bracket">/&gt;</span>
-                </h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="inside-grid">
-                <div class="inside-card">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <h3 class="orbitron">Curso estructurado</h3>
-                    <p class="inter">7 m&oacute;dulos en v&iacute;deo para crear tu avatar de la idea al v&iacute;deo final. A tu ritmo, dentro de Skool.</p>
-                </div>
-                <div class="inside-card">
-                    <i class="fa-solid fa-users"></i>
-                    <h3 class="orbitron">Comunidad activa</h3>
-                    <p class="inter">Foro, feedback de proyectos y personas que crean como t&uacute;. No vas sola.</p>
-                </div>
-                <div class="inside-card">
-                    <i class="fa-solid fa-video"></i>
-                    <h3 class="orbitron">Directos semanales <i class="fa-solid fa-crown" style="font-size: 0.85rem; color: var(--purple); vertical-align: middle;"></i></h3>
-                    <p class="inter">Tutor&iacute;as grupales en directo para resolver dudas y avanzar sin quedarte atascada.</p>
-                </div>
-                <div class="inside-card">
-                    <i class="fa-solid fa-rotate"></i>
-                    <h3 class="orbitron">Siempre actualizado <i class="fa-solid fa-crown" style="font-size: 0.85rem; color: var(--purple); vertical-align: middle;"></i></h3>
-                    <p class="inter">La IA evoluciona r&aacute;pido. El contenido se actualiza para que siempre tengas lo que funciona hoy.</p>
-                </div>
             </div>
         </section>
 
