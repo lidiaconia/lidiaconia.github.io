@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     setActive(+entry.target.dataset.idx);
                 }
             });
-        }, { threshold: 0.4 });
+        }, { threshold: 0, rootMargin: '-45% 0px -45% 0px' });
 
         panels.forEach(function (panel) { observer.observe(panel); });
     });
