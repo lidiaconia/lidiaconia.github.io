@@ -12,7 +12,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Música LID.IA | Lidia Contreras en Spotify">
     <meta property="og:description" content="La música que suena detrás de los tutoriales de avatares IA. Escúchala en Spotify.">
-    <meta property="og:image" content="https://lidiaconia.github.io/assets/logo_negro.png">
+    <meta property="og:image" content="https://lidiaconia.github.io/assets/logo_negro.webp">
     <meta property="og:url" content="https://lidiaconia.github.io/musica.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -23,7 +23,7 @@
     <meta name="twitter:site" content="@lidiaconia">
     <meta name="twitter:title" content="Música LID.IA | Lidia Contreras en Spotify">
     <meta name="twitter:description" content="La música que suena detrás de los tutoriales de avatares IA. Escúchala en Spotify.">
-    <meta name="twitter:image" content="https://lidiaconia.github.io/assets/logo_negro.png">
+    <meta name="twitter:image" content="https://lidiaconia.github.io/assets/logo_negro.webp">
 
     <!-- Robots -->
     <meta name="robots" content="index, follow">
@@ -46,7 +46,7 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo_negro.png">
+    <link rel="icon" type="image/webp" href="assets/logo_negro.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +62,7 @@
     <header class="sticky-header">
         <div class="header-container">
             <div class="logo">
-                <a href="index.html"><img src="assets/logo_negro.png" alt="Lidia Contreras Logo" style="filter: drop-shadow(0 0 4px #1DB954);"></a>
+                <a href="index.html"><img src="assets/logo_negro.webp" alt="Lidia Contreras Logo" style="filter: drop-shadow(0 0 4px #1DB954);"></a>
             </div>
             <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
@@ -70,7 +70,17 @@
                 <span></span>
             </button>
             <nav class="center-menu">
-                <a href="index.html">Inicio</a> |
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-dropdown-trigger">Curso <span class="nav-caret">&#9662;</span></a>
+                    <div class="nav-dropdown-panel">
+                        <a href="index.html#comunidad">La Comunidad</a>
+                        <a href="index.html#inside">Qu&eacute; incluye</a>
+                        <a href="index.html#scroll-modulos">Los M&oacute;dulos</a>
+                        <a href="index.html#tiers">Planes y precios</a>
+                        <a href="index.html#recursos">Recursos</a>
+                        <a href="index.html#waitlist">Lista de espera</a>
+                    </div>
+                </div> |
                 <a href="cv.html">CV</a> |
                 <a href="libros.html">Libros</a> |
                 <a href="musica.html" style="color: #1DB954; text-shadow: 0 0 10px #1DB954;">Música</a>
@@ -78,7 +88,17 @@
             <a href="index.html#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
         </div>
         <nav class="mobile-menu">
-            <a href="index.html">Inicio</a>
+            <div class="mobile-nav-group">
+            <button class="mobile-nav-trigger" aria-expanded="false">Curso <span class="nav-caret">&#9662;</span></button>
+            <div class="mobile-nav-submenu">
+                <a href="index.html#comunidad">La Comunidad</a>
+                <a href="index.html#inside">Qu&eacute; incluye</a>
+                <a href="index.html#scroll-modulos">Los M&oacute;dulos</a>
+                <a href="index.html#tiers">Planes y precios</a>
+                <a href="index.html#recursos">Recursos</a>
+                <a href="index.html#waitlist">Lista de espera</a>
+            </div>
+        </div>
             <a href="cv.html">CV</a>
             <a href="libros.html">Libros</a>
             <a href="musica.html" style="color: #1DB954; text-shadow: 0 0 10px #1DB954;">Música</a>

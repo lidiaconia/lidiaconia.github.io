@@ -15,7 +15,7 @@
     <meta property="og:title" content="Comunidad LID.IA | Crea tu avatar con IA - Lidia Contreras">
     <meta property="og:description"
         content="Aprende a crear tu avatar con IA desde cero. Paso a paso, a tu ritmo. &Uacute;nete a la lista de espera de la Comunidad LID.IA.">
-    <meta property="og:image" content="https://lidiaconia.github.io/assets/logo_negro.png">
+    <meta property="og:image" content="https://lidiaconia.github.io/assets/logo_negro.webp">
     <meta property="og:url" content="https://lidiaconia.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -27,7 +27,7 @@
     <meta name="twitter:creator" content="@lidiaconia">
     <meta name="twitter:title" content="Comunidad LID.IA | Crea tu avatar con IA - Lidia Contreras">
     <meta name="twitter:description" content="Aprende a crear tu avatar con IA desde cero. Paso a paso, a tu ritmo. &Uacute;nete a la lista de espera de la Comunidad LID.IA.">
-    <meta name="twitter:image" content="https://lidiaconia.github.io/assets/logo_negro.png">
+    <meta name="twitter:image" content="https://lidiaconia.github.io/assets/logo_negro.webp">
 
     <!-- Robots -->
     <meta name="robots" content="index, follow">
@@ -92,7 +92,7 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo_negro.png">
+    <link rel="icon" type="image/webp" href="assets/logo_negro.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,12 +105,21 @@
 </head>
 
 <body class="theme-home">
+
+    <!-- Loader de pantalla completa -->
+    <div id="page-loader" aria-hidden="true">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <div class="loader-logo">LID.IA</div>
+        </div>
+    </div>
+
     <canvas id="particleCanvas"></canvas>
 
     <header class="sticky-header">
         <div class="header-container">
             <div class="logo">
-                <img src="assets/logo_negro.png" alt="Lidia Contreras Logo">
+                <img src="assets/logo_negro.webp" alt="Lidia Contreras Logo">
             </div>
             <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
@@ -118,7 +127,17 @@
                 <span></span>
             </button>
             <nav class="center-menu">
-                <a href="index.html">Inicio</a> |
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-dropdown-trigger">Curso <span class="nav-caret">&#9662;</span></a>
+                    <div class="nav-dropdown-panel">
+                        <a href="index.html#comunidad">La Comunidad</a>
+                        <a href="index.html#inside">Qu&eacute; incluye</a>
+                        <a href="index.html#scroll-modulos">Los M&oacute;dulos</a>
+                        <a href="index.html#tiers">Planes y precios</a>
+                        <a href="index.html#recursos">Recursos</a>
+                        <a href="index.html#waitlist">Lista de espera</a>
+                    </div>
+                </div> |
                 <a href="cv.html">CV</a> |
                 <a href="libros.html">Libros</a> |
                 <a href="musica.html">M&uacute;sica</a>
@@ -126,7 +145,17 @@
             <a href="index.html#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
         </div>
         <nav class="mobile-menu">
-            <a href="index.html">Inicio</a>
+            <div class="mobile-nav-group">
+            <button class="mobile-nav-trigger" aria-expanded="false">Curso <span class="nav-caret">&#9662;</span></button>
+            <div class="mobile-nav-submenu">
+                <a href="index.html#comunidad">La Comunidad</a>
+                <a href="index.html#inside">Qu&eacute; incluye</a>
+                <a href="index.html#scroll-modulos">Los M&oacute;dulos</a>
+                <a href="index.html#tiers">Planes y precios</a>
+                <a href="index.html#recursos">Recursos</a>
+                <a href="index.html#waitlist">Lista de espera</a>
+            </div>
+        </div>
             <a href="cv.html">CV</a>
             <a href="libros.html">Libros</a>
             <a href="musica.html">M&uacute;sica</a>
@@ -139,9 +168,9 @@
         <!-- ① HERO -->
         <section class="parallax-section hero snap-section hero-combo" style="min-height: 100vh;">
             <div class="parallax-bg bg-intro"></div>
-            <img src="assets/infotemporal/img/combo_hero.png" alt="" class="hero-combo-img" aria-hidden="true">
+            <img src="assets/infotemporal/img/combo_hero.webp" alt="" class="hero-combo-img" aria-hidden="true">
             <div class="parallax-content hero-combo-content" style="max-width: 700px; text-align: center;">
-                <img src="assets/liconoc_ia.png" alt="LID.IA — Comunidad de IA de Lidia Contreras" class="hero-logo mx-auto" style="display: block; margin: 0 auto 1.5rem auto;">
+                <img src="assets/liconoc_ia.webp" alt="LID.IA — Comunidad de IA de Lidia Contreras" class="hero-logo mx-auto" style="display: block; margin: 0 auto 1.5rem auto;">
                 <h1 class="orbitron page-title" style="font-size: clamp(2rem, 4vw, 3.5rem);">Crea tu avatar o influencer con IA desde cero</h1>
                 <p class="inter hero-subtitle-main">
                     Crea v&iacute;deos profesionales con avatares IA,<br>sin saber edici&oacute;n ni dise&ntilde;o.
@@ -199,7 +228,7 @@
                     <source src="assets/infotemporal/mcomunidad.mp4" type="video/mp4">
                 </video>
                 -->
-                <img src="assets/infotemporal/comunidad.png" alt="Vista previa de la comunidad LID.IA" class="module-video community-video showcase-video" loading="lazy">
+                <img src="assets/infotemporal/comunidad.webp" alt="Vista previa de la comunidad LID.IA" class="module-video community-video showcase-video" loading="lazy">
             </div>
         </section>
 
@@ -257,13 +286,13 @@
                 <!-- Lid.IA — sticky izquierda -->
                 <div class="narrative-col-side narrative-col-left">
                     <div class="narrative-avatar-wrap">
-                        <img class="nav-img active" data-idx="0" src="assets/infotemporal/img/lidia_m1.png" alt="Lid.IA — Crea tu personaje">
-                        <img class="nav-img" data-idx="1" src="assets/infotemporal/img/lidia_m2.png" alt="Lid.IA — Direcci&oacute;n de Arte">
-                        <img class="nav-img" data-idx="2" src="assets/infotemporal/img/lidia_m3.png" alt="Lid.IA — Voz y Expresi&oacute;n">
-                        <img class="nav-img" data-idx="3" src="assets/infotemporal/img/lidia_m4.png" alt="Lid.IA — Herramientas">
-                        <img class="nav-img" data-idx="4" src="assets/infotemporal/img/lidia_m5.png" alt="Lid.IA — V&iacute;deo y Contenido">
-                        <img class="nav-img" data-idx="5" src="assets/infotemporal/img/lidia_m6.png" alt="Lid.IA — Estrategia">
-                        <img class="nav-img" data-idx="6" src="assets/infotemporal/img/lidia_m7.png" alt="Lid.IA — Proyecto final">
+                        <img class="nav-img active" data-idx="0" src="assets/infotemporal/img/lidia_m1.webp" alt="Lid.IA — Crea tu personaje" loading="lazy">
+                        <img class="nav-img" data-idx="1" src="assets/infotemporal/img/lidia_m2.webp" alt="Lid.IA — Direcci&oacute;n de Arte" loading="lazy">
+                        <img class="nav-img" data-idx="2" src="assets/infotemporal/img/lidia_m3.webp" alt="Lid.IA — Voz y Expresi&oacute;n" loading="lazy">
+                        <img class="nav-img" data-idx="3" src="assets/infotemporal/img/lidia_m4.webp" alt="Lid.IA — Herramientas" loading="lazy">
+                        <img class="nav-img" data-idx="4" src="assets/infotemporal/img/lidia_m5.webp" alt="Lid.IA — V&iacute;deo y Contenido" loading="lazy">
+                        <img class="nav-img" data-idx="5" src="assets/infotemporal/img/lidia_m6.webp" alt="Lid.IA — Estrategia" loading="lazy">
+                        <img class="nav-img" data-idx="6" src="assets/infotemporal/img/lidia_m7.webp" alt="Lid.IA — Proyecto final" loading="lazy">
                     </div>
                     <span class="narrative-label">Lid.IA</span>
                 </div>
@@ -345,13 +374,13 @@
                 <!-- Nyxia — sticky derecha -->
                 <div class="narrative-col-side narrative-col-right">
                     <div class="narrative-avatar-wrap">
-                        <img class="nav-img-r active" data-idx="0" src="assets/infotemporal/img/nyxia_m1.png" alt="Nyxia — Crea tu personaje">
-                        <img class="nav-img-r" data-idx="1" src="assets/infotemporal/img/nyxia_m2.png" alt="Nyxia — Direcci&oacute;n de Arte">
-                        <img class="nav-img-r" data-idx="2" src="assets/infotemporal/img/nyxia_m3.png" alt="Nyxia — Voz y Expresi&oacute;n">
-                        <img class="nav-img-r" data-idx="3" src="assets/infotemporal/img/nyxia_m4.png" alt="Nyxia — Herramientas">
-                        <img class="nav-img-r" data-idx="4" src="assets/infotemporal/img/nyxia_m5.png" alt="Nyxia — V&iacute;deo y Contenido">
-                        <img class="nav-img-r" data-idx="5" src="assets/infotemporal/img/nyxia_m6.png" alt="Nyxia — Estrategia">
-                        <img class="nav-img-r" data-idx="6" src="assets/infotemporal/img/nyxia_m7.png" alt="Nyxia — Proyecto final">
+                        <img class="nav-img-r active" data-idx="0" src="assets/infotemporal/img/nyxia_m1.webp" alt="Nyxia — Crea tu personaje" loading="lazy">
+                        <img class="nav-img-r" data-idx="1" src="assets/infotemporal/img/nyxia_m2.webp" alt="Nyxia — Direcci&oacute;n de Arte" loading="lazy">
+                        <img class="nav-img-r" data-idx="2" src="assets/infotemporal/img/nyxia_m3.webp" alt="Nyxia — Voz y Expresi&oacute;n" loading="lazy">
+                        <img class="nav-img-r" data-idx="3" src="assets/infotemporal/img/nyxia_m4.webp" alt="Nyxia — Herramientas" loading="lazy">
+                        <img class="nav-img-r" data-idx="4" src="assets/infotemporal/img/nyxia_m5.webp" alt="Nyxia — V&iacute;deo y Contenido" loading="lazy">
+                        <img class="nav-img-r" data-idx="5" src="assets/infotemporal/img/nyxia_m6.webp" alt="Nyxia — Estrategia" loading="lazy">
+                        <img class="nav-img-r" data-idx="6" src="assets/infotemporal/img/nyxia_m7.webp" alt="Nyxia — Proyecto final" loading="lazy">
                     </div>
                     <span class="narrative-label">Nyxia</span>
                 </div>
@@ -401,7 +430,7 @@
 
                 <div class="about-image-wrapper">
                     <div class="about-image-container">
-                        <img src="assets/lidiaconia.png" alt="Lidia Contreras" class="about-photo">
+                        <img src="assets/lidiaconia.webp" alt="Lidia Contreras" class="about-photo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -597,82 +626,65 @@
             </div>
         </section>
 
-        <!-- BIBLIOTECA CREA -->
-        <section id="biblioteca" class="process-section">
+        <!-- RECURSOS EXCLUSIVOS -->
+        <section id="recursos" class="process-section">
             <div class="section-header">
                 <h2 class="section-title">
                     <span class="title-bracket">&lt;</span>
-                    <span class="title-text">Recursos exclusivos CREA</span>
+                    <span class="title-text">Recursos Exclusivos</span>
                     <span class="title-bracket">/&gt;</span>
                 </h2>
                 <div class="section-line"></div>
             </div>
-            <p style="text-align: center; color: #64c8ff; font-weight: 600; margin-bottom: 2rem; font-size: 0.95rem;">
-                <i class="fa-solid fa-rocket" style="color: #64c8ff;"></i> A partir del tier CREA
-            </p>
-            <div class="showcase-wide-card" style="max-width: 800px; margin: 0 auto 3rem; background: rgba(100,200,255,0.08); border: 1px solid rgba(100,200,255,0.35); border-radius: 16px; padding: 2rem 2.5rem;">
-                <div class="video-container showcase-video-container" style="max-width: 700px; margin: 1.5rem auto; border-radius: 16px;">
-                    <video muted loop playsinline controls class="module-video mini-video showcase-video">
-                        <source src="assets/infotemporal/mbiblio.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <p class="inter" style="color: #ccc; line-height: 1.8; margin-bottom: 1.5rem;">
-                    Acceso desde el d&iacute;a 1 a una librer&iacute;a de recursos exclusivos: Gems/GPTs listos para usar e instrucciones para crearlos,
-                    prompts avanzados, plantillas y packs que te ahorran horas de trabajo.
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem;">
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de iluminaci&oacute;n y &aacute;ngulos</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de outfits y variaciones</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de escenarios y setups</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de expresiones faciales</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-code" style="color:#64c8ff;"></i> Prompts reutilizables por estilo</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-file-lines" style="color:#64c8ff;"></i> Plantillas de brief de personaje</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-list-check" style="color:#64c8ff;"></i> Checklist de consistencia visual</div>
-                    <div style="display:flex;align-items:center;gap:0.6rem;color:#ccc;font-size:0.9rem;"><i class="fa-solid fa-bolt" style="color:#64c8ff;"></i> Packs de prompts avanzados</div>
-                </div>
-                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(100,200,255,0.2);">
-                    <a href="#waitlist" class="btn" style="background: rgba(100,200,255,0.15); color: #64c8ff; border: 1px solid rgba(100,200,255,0.4);">Quiero acceso CREA &rarr;</a>
-                </div>
-            </div>
-        </section>
 
-        <!-- LIDERA EXCLUSIVO: TUTORÍAS + TRENDS -->
-        <section id="lidera-exclusive" class="process-section">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <span class="title-bracket">&lt;</span>
-                    <span class="title-text">Beneficios Exclusivos LIDERA</span>
-                    <span class="title-bracket">/&gt;</span>
-                </h2>
-                <div class="section-line"></div>
-            </div>
-            <p style="text-align: center; color: #da96ff; font-weight: 600; margin-bottom: 2rem; font-size: 0.95rem;">
-                <i class="fa-solid fa-crown" style="color: var(--page-primary);"></i> Solo para miembros del tier LIDERA
-            </p>
+            <div class="recursos-grid">
 
-            <div class="lidera-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
-                <div class="lidera-card" style="background: rgba(138,43,226,0.08); border: 1px solid rgba(138,43,226,0.35); border-radius: 16px; padding: 2rem;">
-                    <h3 class="orbitron" style="font-size: 1.2rem; color: var(--purple); margin-bottom: 1rem;">Tutorías grupales semanales en directo</h3>
-                    <div class="video-container lidera-video-container" style="max-width: 100%; margin-bottom: 1.5rem; border-radius: 12px;">
-                        <video muted loop playsinline controls class="lidera-video" style="width: 100%; height: auto; max-height: 250px; border-radius: 12px;">
-                            <source src="assets/infotemporal/mtutorias.mp4" type="video/mp4">
-                        </video>
+                <!-- CREA -->
+                <div class="recursos-card recursos-crea">
+                    <div class="recursos-tier-badge" style="color:#64c8ff; border-color: rgba(100,200,255,0.4); background: rgba(100,200,255,0.08);">
+                        <i class="fa-solid fa-rocket"></i> A partir de CREA
                     </div>
-                    <p class="inter" style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">Cada semana nos conectamos en directo: yo resuelvo tus dudas específicas y la comunidad comparte experiencias. Avanzas sin quedarte atrapado, con el apoyo de todos.</p>
+                    <h3 class="orbitron" style="font-size: 1.15rem; color: #64c8ff; margin-bottom: 0.5rem;">Librer&iacute;a de recursos</h3>
+                    <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                        Gems/GPTs listos para usar, prompts avanzados, plantillas y packs que te ahorran horas de trabajo desde el d&iacute;a&nbsp;1.
+                    </p>
+                    <div class="recursos-items">
+                        <div><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de iluminaci&oacute;n y &aacute;ngulos</div>
+                        <div><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de outfits y variaciones</div>
+                        <div><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de escenarios y setups</div>
+                        <div><i class="fa-solid fa-gem" style="color:#64c8ff;"></i> Gems de expresiones faciales</div>
+                        <div><i class="fa-solid fa-code" style="color:#64c8ff;"></i> Prompts reutilizables por estilo</div>
+                        <div><i class="fa-solid fa-file-lines" style="color:#64c8ff;"></i> Plantillas de brief de personaje</div>
+                        <div><i class="fa-solid fa-list-check" style="color:#64c8ff;"></i> Checklist de consistencia visual</div>
+                        <div><i class="fa-solid fa-bolt" style="color:#64c8ff;"></i> Packs de prompts avanzados</div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="#waitlist" class="btn" style="background: rgba(100,200,255,0.12); color: #64c8ff; border: 1px solid rgba(100,200,255,0.4);">Quiero acceso CREA &rarr;</a>
+                    </div>
                 </div>
 
-                <div class="lidera-card" style="background: rgba(138,43,226,0.08); border: 1px solid rgba(138,43,226,0.35); border-radius: 16px; padding: 2rem;">
-                    <h3 class="orbitron" style="font-size: 1.2rem; color: var(--purple); margin-bottom: 1rem;">Módulo Trends: Novedades</h3>
-                    <div class="video-container lidera-video-container" style="max-width: 100%; margin-bottom: 1.5rem; border-radius: 12px;">
-                        <video muted loop playsinline controls class="lidera-video" style="width: 100%; height: auto; max-height: 250px; border-radius: 12px;">
-                            <source src="assets/infotemporal/mtrends.mp4" type="video/mp4">
-                        </video>
+                <!-- LIDERA -->
+                <div class="recursos-card recursos-lidera">
+                    <div class="recursos-tier-badge" style="color:#da96ff; border-color: rgba(167,139,250,0.4); background: rgba(138,43,226,0.08);">
+                        <i class="fa-solid fa-crown"></i> Solo LIDERA
                     </div>
-                    <p class="inter" style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">Yo pruebo cada herramienta nueva de IA. Valido si realmente funciona, si vale la pena pagar, y si es mejor que las alternativas. Te ahorro tiempo y dinero con mi experiencia.</p>
+                    <h3 class="orbitron" style="font-size: 1.15rem; color: var(--purple); margin-bottom: 0.5rem;">Beneficios premium</h3>
+                    <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                        Acceso directo a Lidia cada semana y actualizaciones constantes sobre herramientas IA nuevas, validadas antes de que lleguen al mainstream.
+                    </p>
+                    <div class="recursos-items">
+                        <div><i class="fa-solid fa-video" style="color:#da96ff;"></i> Tutor&iacute;as grupales semanales en directo</div>
+                        <div><i class="fa-solid fa-comments" style="color:#da96ff;"></i> Resoluci&oacute;n de dudas personalizadas</div>
+                        <div><i class="fa-solid fa-users" style="color:#da96ff;"></i> Comunidad y experiencias compartidas</div>
+                        <div><i class="fa-solid fa-fire" style="color:#da96ff;"></i> M&oacute;dulo Trends: novedades IA validadas</div>
+                        <div><i class="fa-solid fa-flask" style="color:#da96ff;"></i> Herramientas probadas y filtradas por Lidia</div>
+                        <div><i class="fa-solid fa-piggy-bank" style="color:#da96ff;"></i> Ahorras tiempo y dinero en pruebas</div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="#waitlist" class="btn" style="background: rgba(138,43,226,0.12); color: var(--purple); border: 1px solid rgba(138,43,226,0.4);">Quiero acceso LIDERA &rarr;</a>
+                    </div>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 2.5rem;">
-                <a href="#waitlist" class="btn" style="background: rgba(138,43,226,0.15); color: var(--purple); border: 1px solid rgba(138,43,226,0.4);">Quiero acceso LIDERA &rarr;</a>
+
             </div>
         </section>
 

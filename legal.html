@@ -7,7 +7,7 @@
     <meta name="description" content="Información legal y política de privacidad de Lidia Contreras.">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo_negro.png">
+    <link rel="icon" type="image/webp" href="assets/logo_negro.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
     <header class="sticky-header">
         <div class="header-container">
             <div class="logo">
-                <a href="index.html"><img src="assets/logo_negro.png" alt="Lidia Contreras Logo" style="filter: drop-shadow(0 0 4px var(--purple));"></a>
+                <a href="index.html"><img src="assets/logo_negro.webp" alt="Lidia Contreras Logo" style="filter: drop-shadow(0 0 4px var(--purple));"></a>
             </div>
             <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
@@ -55,7 +55,17 @@
                 <span></span>
             </button>
             <nav class="center-menu">
-                <a href="index.html">Inicio</a> | 
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-dropdown-trigger">Curso <span class="nav-caret">&#9662;</span></a>
+                    <div class="nav-dropdown-panel">
+                        <a href="index.html#comunidad">La Comunidad</a>
+                        <a href="index.html#inside">Qu&eacute; incluye</a>
+                        <a href="index.html#scroll-modulos">Los M&oacute;dulos</a>
+                        <a href="index.html#tiers">Planes y precios</a>
+                        <a href="index.html#recursos">Recursos</a>
+                        <a href="index.html#waitlist">Lista de espera</a>
+                    </div>
+                </div> | 
                 <a href="cv.html">CV</a> | 
                 <a href="libros.html">Libros</a> |
                 <a href="musica.html">M&uacute;sica</a>
@@ -63,7 +73,17 @@
             <a href="index.html#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
         </div>
         <nav class="mobile-menu">
-            <a href="index.html">Inicio</a>
+            <div class="mobile-nav-group">
+            <button class="mobile-nav-trigger" aria-expanded="false">Curso <span class="nav-caret">&#9662;</span></button>
+            <div class="mobile-nav-submenu">
+                <a href="index.html#comunidad">La Comunidad</a>
+                <a href="index.html#inside">Qu&eacute; incluye</a>
+                <a href="index.html#scroll-modulos">Los M&oacute;dulos</a>
+                <a href="index.html#tiers">Planes y precios</a>
+                <a href="index.html#recursos">Recursos</a>
+                <a href="index.html#waitlist">Lista de espera</a>
+            </div>
+        </div>
             <a href="cv.html">CV</a>
             <a href="libros.html">Libros</a>
             <a href="musica.html">M&uacute;sica</a>

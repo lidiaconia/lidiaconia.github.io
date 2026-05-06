@@ -1,16 +1,38 @@
+// Page Loader
+(function () {
+    var loader = document.getElementById('page-loader');
+    if (!loader) return;
+    window.addEventListener('load', function () {
+        loader.classList.add('hidden');
+    });
+    // Fallback: ocultar tras 5s si load no dispara
+    setTimeout(function () { loader.classList.add('hidden'); }, 5000);
+})();
+
 // Hamburger Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
-    
+
+    // Mobile submenu accordion
+    document.querySelectorAll('.mobile-nav-trigger').forEach(function(trigger) {
+        trigger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const submenu = trigger.nextElementSibling;
+            const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+            trigger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+            submenu.classList.toggle('open', !isOpen);
+        });
+    });
+
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', function() {
       const isOpen = hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
       hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
-        
-        // Close menu when a link is clicked
+
+        // Close menu when a link is clicked (not the accordion trigger)
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function() {
                 hamburger.classList.remove('active');
@@ -365,13 +387,20 @@ function triggerWave(x, y) {
   setTimeout(function() { maskOverride = false; }, delay * 1000);
 }
 
-initCanvasGrid();
-rafId = requestAnimationFrame(tick);
+var isMobile = window.innerWidth <= 768;
 
-window.addEventListener('resize', initCanvasGrid);
-window.addEventListener('pointermove', onMove);
-window.addEventListener('click', onClick);
-triggerWave();
+if (!isMobile) {
+    initCanvasGrid();
+    rafId = requestAnimationFrame(tick);
+    window.addEventListener('resize', function () {
+        isMobile = window.innerWidth <= 768;
+        if (!isMobile) initCanvasGrid();
+        else if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    });
+    window.addEventListener('pointermove', onMove);
+    window.addEventListener('click', onClick);
+    triggerWave();
+}
 
 // Waitlist Form Validation and Submission
 const waitlistForm = document.getElementById('waitlistForm');
