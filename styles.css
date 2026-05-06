@@ -314,10 +314,9 @@ section {
 
 /* Process Section */
 .process-section {
-    padding: 6rem 2rem;
-    padding-top: 6rem;
+    padding: 3.5rem 2rem;
     max-width: 1400px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -398,9 +397,9 @@ section {
 
 /* About Section */
 .about-section {
-    padding: 4rem 2rem;
+    padding: 3.5rem 2rem;
     max-width: 1400px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -565,9 +564,9 @@ section {
 
 /* Videos Section */
 .community-section {
-    padding: 6rem 2rem;
+    padding: 3.5rem 2rem;
     max-width: 1400px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -578,10 +577,9 @@ section {
 }
 
 .videos-section {
-    padding: 6rem 2rem;
-    padding-top: 6rem;
+    padding: 3.5rem 2rem;
     max-width: 1400px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -2112,7 +2110,7 @@ footer {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .section-number {
@@ -3641,13 +3639,13 @@ main {
 }
 
 .narrative-panel {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 4rem 2.5rem;
+    padding: 2.5rem 2.5rem;
     border-bottom: 1px solid rgba(148,163,184,0.07);
 }
 
