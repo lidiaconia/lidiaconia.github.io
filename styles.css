@@ -3802,7 +3802,7 @@ main {
     .narrative-video-wrap { max-width: 100%; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .narrative-col-side { display: none; }
 
     .panel-mobile-img {
