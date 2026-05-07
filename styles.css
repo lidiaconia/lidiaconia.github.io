@@ -2896,6 +2896,93 @@ main {
     margin: 0;
 }
 
+.inside-grid-wide {
+    max-width: 900px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Para quién */
+.for-who-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+}
+
+.for-who-col {
+    border-radius: 16px;
+    padding: 1.5rem 1.75rem;
+}
+
+.for-who-yes {
+    background: rgba(103, 232, 249, 0.05);
+    border: 1px solid rgba(103, 232, 249, 0.25);
+}
+
+.for-who-no {
+    background: rgba(148, 163, 184, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.for-who-title {
+    font-size: 0.9rem !important;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.for-who-yes .for-who-title { color: var(--blue); }
+.for-who-no .for-who-title { color: var(--text-muted); }
+
+.for-who-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.for-who-list li {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.for-who-yes .for-who-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+.for-who-no .for-who-list li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+}
+
+.tech-note {
+    display: block;
+    font-size: 0.76rem;
+    color: rgba(148, 163, 184, 0.55);
+    margin-top: 0.4rem;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .for-who-block {
+        grid-template-columns: 1fr;
+    }
+    .inside-grid-wide {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* ===============================
    Standalone video sizing
