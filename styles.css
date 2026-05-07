@@ -166,7 +166,7 @@ section {
     width: 100%;
     max-width: 1400px;
     padding: 2rem 2rem;
-    margin: 3rem auto 3rem auto;
+    margin: 1.5rem auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -314,7 +314,7 @@ section {
 
 /* Process Section */
 .process-section {
-    padding: 3.5rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1400px;
     margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
@@ -397,7 +397,7 @@ section {
 
 /* About Section */
 .about-section {
-    padding: 3.5rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1400px;
     margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
@@ -564,7 +564,7 @@ section {
 
 /* Videos Section */
 .community-section {
-    padding: 3.5rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1400px;
     margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
@@ -577,7 +577,7 @@ section {
 }
 
 .videos-section {
-    padding: 3.5rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1400px;
     margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
@@ -792,10 +792,9 @@ footer {
    Waitlist Section
    =============================== */
 .waitlist-section {
-    padding: 6rem 2rem;
-    padding-top: 6rem;
+    padding: 3rem 2rem;
     max-width: 1400px;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 1.5rem auto;
     background: rgba(8, 12, 26, 0.60);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -815,7 +814,7 @@ footer {
 .waitlist-subtitle {
     color: #ccc;
     font-size: 1.2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .waitlist-container {
@@ -940,7 +939,7 @@ footer {
 .testimonial-carousel {
     position: relative;
     height: 80px;
-    margin-top: 4rem;
+    margin-top: 2rem;
     overflow: hidden;
 }
 
@@ -3590,7 +3589,7 @@ main {
     bottom: 0;
     left: auto;
     right: 0;
-    height: 80vh;
+    height: 70vh;
     width: auto;
     max-width: none;
 }
@@ -3599,7 +3598,7 @@ main {
 .narrative-col-right .nav-img-r-intro {
     bottom: 0;
     left: 0;
-    height: 80vh;
+    height: 70vh;
     width: auto;
     max-width: none;
 }
@@ -3610,7 +3609,7 @@ main {
 .nav-img-r-intro {
     position: absolute;
     bottom: 0;
-    height: 80vh;
+    height: 70vh;
     width: auto;
     max-width: none;
     object-fit: contain;
@@ -3645,7 +3644,7 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2.5rem 2.5rem;
+    padding: 2rem 2.5rem;
     border-bottom: 1px solid rgba(148,163,184,0.07);
 }
 
@@ -3674,9 +3673,9 @@ main {
 .narrative-mod-desc {
     font-size: 1.05rem;
     color: var(--text-muted);
-    line-height: 1.85;
+    line-height: 1.7;
     max-width: 680px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
 }
 
 .narrative-cta {
@@ -3732,7 +3731,7 @@ main {
 
     .narrative-panel {
         min-height: auto;
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
         text-align: center;
         align-items: center;
     }
