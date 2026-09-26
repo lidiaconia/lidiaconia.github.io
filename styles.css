@@ -3053,6 +3053,13 @@ main {
     object-fit: cover;
 }
 
+#comunidad .showcase-embed {
+    display: block;
+    height: auto;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9;
+}
+
 #biblioteca .showcase-video-container {
     max-width: 480px !important;
 }
