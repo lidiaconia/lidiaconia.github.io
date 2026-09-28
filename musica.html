@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Música | LID.IA by Lidia Contreras</title>
-    <meta name="description" content="La banda sonora de los tutoriales de Lidia Contreras. Música generativa creada con IA, disponible en Spotify.">
+    <meta name="description" content="Nyxia presenta Origen, su nuevo disco creado con IA: 13 de octubre de 2026. Adelantos y la música de los tutoriales de Lidia Contreras.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://lidiaconia.com/musica.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Música LID.IA | Lidia Contreras en Spotify">
-    <meta property="og:description" content="La música que suena detrás de los tutoriales de avatares IA. Escúchala en Spotify.">
-    <meta property="og:image" content="https://lidiaconia.com/assets/logo_negro.webp">
+    <meta property="og:title" content="Nyxia · Origen | Nuevo disco el 13 de octubre">
+    <meta property="og:description" content="El nuevo disco de Nyxia, creado con IA. Mira los adelantos.">
+    <meta property="og:image" content="https://lidiaconia.com/assets/musica/nyxia-origen/origen-og.jpg">
     <meta property="og:url" content="https://lidiaconia.com/musica.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
@@ -21,9 +21,9 @@
     <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@lidiaconia">
-    <meta name="twitter:title" content="Música LID.IA | Lidia Contreras en Spotify">
-    <meta name="twitter:description" content="La música que suena detrás de los tutoriales de avatares IA. Escúchala en Spotify.">
-    <meta name="twitter:image" content="https://lidiaconia.com/assets/logo_negro.webp">
+    <meta name="twitter:title" content="Nyxia · Origen | Nuevo disco el 13 de octubre">
+    <meta name="twitter:description" content="El nuevo disco de Nyxia, creado con IA. Mira los adelantos.">
+    <meta name="twitter:image" content="https://lidiaconia.com/assets/musica/nyxia-origen/origen-og.jpg">
 
     <!-- Robots -->
     <meta name="robots" content="index, follow">
@@ -116,10 +116,52 @@
             </div>
         </section>
 
+        <!-- NUEVO LANZAMIENTO: NYXIA · ORIGEN -->
+        <section id="origen" class="process-section">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Nuevo lanzamiento</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="nyxia-release">
+                <img src="assets/musica/nyxia-origen/origen-portada.webp" alt="Portada de Origen, el nuevo disco de Nyxia" class="nyxia-release-cover" width="720" height="1280" loading="lazy">
+                <div>
+                    <span class="nyxia-release-badge"><i class="fa-solid fa-compact-disc"></i> Nuevo disco</span>
+                    <h2 class="orbitron">NYXIA<span>ORIGEN</span></h2>
+                    <p class="nyxia-release-date inter"><i class="fa-regular fa-calendar"></i> 13 de octubre de 2026</p>
+                    <p class="nyxia-release-text inter">El nuevo disco de Nyxia, creado con inteligencia artificial. Aqu&iacute; ir&aacute;s viendo los adelantos antes del lanzamiento.</p>
+                    <div class="nyxia-countdown" id="origen-countdown" data-release="2026-10-13T00:00:00+02:00" aria-live="polite">
+                        <div><strong data-unit="d">--</strong><small>d&iacute;as</small></div>
+                        <div><strong data-unit="h">--</strong><small>horas</small></div>
+                        <div><strong data-unit="m">--</strong><small>min</small></div>
+                        <div><strong data-unit="s">--</strong><small>seg</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teasers: añadir un <figure class="nyxia-teaser"> por cada nuevo adelanto -->
+            <div class="nyxia-teasers">
+                <h3>// Adelantos</h3>
+                <div class="nyxia-teaser-grid">
+                    <figure class="nyxia-teaser">
+                        <video controls playsinline preload="none" poster="assets/musica/nyxia-origen/origen-portada.webp">
+                            <source src="assets/musica/nyxia-origen/origen-teaser-01.mp4" type="video/mp4">
+                        </video>
+                        <figcaption class="inter">Primer adelanto</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
         <!-- REPRODUCTOR PRINCIPAL -->
         <section class="process-section text-center">
             <div class="section-header">
-                    <span class="section-number">01</span>
+                    <span class="section-number">02</span>
                     <h2 class="section-title">
                         <span class="title-bracket">&lt;</span>
                         <span class="title-text">Escucha el disco completo</span>
@@ -150,7 +192,7 @@
         <!-- POR QUÉ ESTA MÚSICA -->
         <section class="process-section">
             <div class="section-header">
-                <span class="section-number">02</span>
+                <span class="section-number">03</span>
                 <h2 class="section-title">
                     <span class="title-bracket">&lt;</span>
                     <span class="title-text">¿Por qué música creada con IA?</span>
@@ -187,6 +229,28 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        (function () {
+            var box = document.getElementById('origen-countdown');
+            if (!box) return;
+            var release = new Date(box.dataset.release).getTime();
+            var units = { d: 86400000, h: 3600000, m: 60000, s: 1000 };
+            function tick() {
+                var left = release - Date.now();
+                if (left <= 0) {
+                    box.innerHTML = '<p class="nyxia-release-date inter" style="margin:0;">&iexcl;Ya disponible!</p>';
+                    return;
+                }
+                Object.keys(units).forEach(function (u) {
+                    var mod = u === 'd' ? Infinity : (u === 'h' ? 24 : 60);
+                    var v = Math.floor(left / units[u]) % mod;
+                    box.querySelector('[data-unit="' + u + '"]').textContent = String(v).padStart(2, '0');
+                });
+                setTimeout(tick, 1000);
+            }
+            tick();
+        })();
+    </script>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

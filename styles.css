@@ -4156,3 +4156,166 @@ main {
 .mobile-nav-submenu a:active {
     color: var(--purple);
 }
+
+/* ===============================
+   Música — lanzamiento Nyxia: Origen
+   =============================== */
+.nyxia-release {
+    --nx-purple: #a78bfa;
+    --nx-violet: #7c3aed;
+    --nx-gold: #e6c36a;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+    padding: 2.5rem;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at 85% 10%, rgba(230, 195, 106, 0.12), transparent 45%),
+        radial-gradient(circle at 10% 90%, rgba(124, 58, 237, 0.22), transparent 50%),
+        rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.2);
+}
+
+.nyxia-release-cover {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid rgba(230, 195, 106, 0.35);
+    box-shadow: 0 12px 40px rgba(2, 6, 23, 0.6);
+    display: block;
+}
+
+.nyxia-release-badge {
+    display: inline-block;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--nx-gold);
+    border: 1px solid rgba(230, 195, 106, 0.45);
+    background: rgba(230, 195, 106, 0.08);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.nyxia-release h2 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    color: #f1f5f9;
+    margin: 0;
+}
+
+.nyxia-release h2 span {
+    display: block;
+    font-size: 0.55em;
+    letter-spacing: 0.3em;
+    color: var(--nx-purple);
+    margin-top: 0.4rem;
+}
+
+.nyxia-release-date {
+    color: var(--nx-gold);
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin: 1.25rem 0 0.75rem;
+}
+
+.nyxia-release-text {
+    color: #cbd5e1;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.nyxia-countdown {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.nyxia-countdown > div {
+    min-width: 72px;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.nyxia-countdown strong {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-size: 1.6rem;
+    color: #f1f5f9;
+}
+
+.nyxia-countdown small {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.nyxia-teasers {
+    max-width: 1000px;
+    margin: 3rem auto 0;
+}
+
+.nyxia-teasers h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--nx-purple, #a78bfa);
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.nyxia-teaser-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.nyxia-teaser {
+    width: min(100%, 280px);
+    margin: 0;
+}
+
+.nyxia-teaser video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    border-radius: 14px;
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    background: #020617;
+    display: block;
+}
+
+.nyxia-teaser figcaption {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.6rem;
+}
+
+@media (max-width: 760px) {
+    .nyxia-release {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .nyxia-release-cover { max-width: 280px; margin: 0 auto; }
+    .nyxia-countdown { justify-content: center; gap: 0.5rem; }
+    .nyxia-countdown > div { min-width: 60px; }
+    .nyxia-countdown strong { font-size: 1.35rem; }
+}
