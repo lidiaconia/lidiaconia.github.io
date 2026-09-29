@@ -3847,6 +3847,7 @@ main {
 
 .narrative-video-wrap .module-video {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 12px;
 }
