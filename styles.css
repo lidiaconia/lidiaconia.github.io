@@ -4292,7 +4292,8 @@ main {
     margin: 0;
 }
 
-.nyxia-teaser video {
+.nyxia-teaser video,
+.nyxia-teaser iframe {
     width: 100%;
     aspect-ratio: 9 / 16;
     border-radius: 14px;
