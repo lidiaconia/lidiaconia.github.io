@@ -77,9 +77,19 @@
         .empty h2 { font-size: 1.2rem; font-weight: 700; }
         .empty p { color: var(--muted); margin-top: 0.4rem; }
 
-        .gta h2 { font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 0.5rem; }
-        .gta h3 { font-family: 'Fira Code', monospace; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--purple); margin: 1.75rem 0 0.75rem; }
-        .gta .intro { color: var(--muted); }
+        .coleccion { border-radius: 18px; background: var(--card); border: 1px solid var(--border); margin-bottom: 1rem; transition: border-color .2s; }
+        .coleccion[open], .coleccion:hover { border-color: rgba(192, 132, 252, 0.55); }
+        .coleccion > summary { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; cursor: pointer; list-style: none; }
+        .coleccion > summary::-webkit-details-marker { display: none; }
+        .coleccion .cico { flex: 0 0 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; background: var(--gradient); color: #0f172a; font-size: 1.2rem; }
+        .coleccion .ctxt { flex: 1; min-width: 0; }
+        .coleccion .ctxt strong { display: block; font-size: 1.15rem; font-weight: 800; }
+        .coleccion .ctxt span { display: block; color: var(--muted); font-size: 0.88rem; }
+        .coleccion > summary .chev { color: var(--muted); transition: transform .2s; }
+        .coleccion[open] > summary .chev { transform: rotate(180deg); }
+        .coleccion .cbody { padding: 0 1.1rem 1.25rem; }
+        .coleccion h3 { font-family: 'Fira Code', monospace; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--purple); margin: 1.75rem 0 0.75rem; }
+        .coleccion .intro { color: var(--muted); }
         .howto { margin-top: 1.25rem; padding: 1.1rem 1.25rem; border-radius: 16px; background: var(--card); border: 1px solid var(--border); }
         .howto h3:first-child { margin-top: 0; }
         .howto ol, .howto ul { padding-left: 1.3rem; color: var(--text); }
@@ -125,8 +135,14 @@
             <p>Aqu&iacute; ir&aacute;n los prompts de los tutoriales. Todav&iacute;a no hay ninguno publicado.</p>
         </section>
 
-        <section class="gta" id="gta-vi" data-publish="2026-10-21T00:00:00+02:00" hidden>
-            <h2>Tu versi&oacute;n estilo GTA VI</h2>
+        <!-- Para a&ntilde;adir un carrusel nuevo: copia este bloque <details class="coleccion"> entero, cambia id, data-publish, t&iacute;tulo y prompts. -->
+        <details class="coleccion" id="gta-vi" data-publish="2026-10-21T00:00:00+02:00" hidden>
+            <summary>
+                <span class="cico"><i class="fa-solid fa-car-side"></i></span>
+                <span class="ctxt"><strong>Tu versi&oacute;n estilo GTA VI</strong><span>18 prompts &middot; ilustraci&oacute;n tipo pantalla de carga</span></span>
+                <i class="fa-solid fa-chevron-down chev"></i>
+            </summary>
+            <div class="cbody">
             <p class="intro">Convierte una foto tuya en una ilustraci&oacute;n inspirada en las pantallas de carga de GTA VI, manteniendo tu cara, en escenarios tipo Miami y con ropa que no se pasa de expl&iacute;cita.</p>
 
             <div class="howto">
@@ -294,7 +310,8 @@
 
             <p class="note">Im&aacute;genes de fan inspiradas en el estilo visual de GTA VI. No est&aacute;n afiliadas a Rockstar Games.</p>
             <p class="note">&iquest;Quieres aprender a crear im&aacute;genes y v&iacute;deos as&iacute; con IA? <a href="index.html#waitlist">Ap&uacute;ntate a la lista de espera de la Comunidad Lid.IA</a>.</p>
-        </section>
+            </div>
+        </details>
 
         <footer>
             &copy; 2026 Lidia Contreras &middot; <a href="legal.html">Legal y Privacidad</a>
@@ -302,10 +319,16 @@
     </main>
     <script>
         (function () {
-            var gta = document.getElementById('gta-vi');
             var empty = document.getElementById('lista-prompts');
-            var live = Date.now() >= new Date(gta.dataset.publish).getTime() || /[?&]preview\b/.test(location.search);
-            if (live) { gta.hidden = false; empty.hidden = true; }
+            var preview = /[?&]preview/.test(location.search);
+            var cols = document.querySelectorAll('.coleccion');
+            var anyLive = false;
+            cols.forEach(function (c) {
+                if (preview || Date.now() >= new Date(c.dataset.publish).getTime()) { c.hidden = false; anyLive = true; }
+            });
+            if (anyLive) empty.hidden = true;
+            var target = location.hash && document.querySelector('.coleccion' + location.hash);
+            if (target && !target.hidden) { target.open = true; target.scrollIntoView(); }
             document.querySelectorAll('.copy').forEach(function (b) {
                 b.addEventListener('click', function () {
                     var txt = b.parentNode.querySelector('pre').textContent;
