@@ -83,6 +83,7 @@
             background: var(--card); border: 1px solid var(--border); color: var(--text); text-decoration: none;
             transition: border-color .2s, transform .2s, box-shadow .2s;
         }
+        .link[hidden] { display: none; }
         .link:hover { border-color: rgba(192, 132, 252, 0.6); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(2, 6, 23, 0.4); }
         .link .ico {
             flex: 0 0 40px; height: 40px; border-radius: 10px; display: grid; place-items: center;
@@ -164,6 +165,11 @@
                 <span class="txt"><strong>Nyxia &middot; Origen en YouTube Music</strong><span>Esc&uacute;chalo tambi&eacute;n en YouTube Music</span></span>
                 <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
             </a>
+            <a class="link" id="link-gta" data-publish="2026-10-21T00:00:00+02:00" href="prompts.html#gta-vi" hidden>
+                <span class="ico pink"><i class="fa-solid fa-car-side"></i></span>
+                <span class="txt"><strong>Prompts estilo GTA VI</strong><span>18 prompts para crear tu versi&oacute;n con IA</span></span>
+                <i class="fa-solid fa-arrow-right arrow"></i>
+            </a>
         </div>
 
         <h2 class="gold">// Soy embajadora de</h2>
@@ -244,6 +250,12 @@
             &copy; 2026 Lidia Contreras &middot; <a href="legal.html">Legal y Privacidad</a>
         </footer>
     </main>
+    <script>
+        (function () {
+            var l = document.getElementById('link-gta');
+            if (Date.now() >= new Date(l.dataset.publish).getTime() || /[?&]preview\b/.test(location.search)) l.hidden = false;
+        })();
+    </script>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 
