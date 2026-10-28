@@ -94,7 +94,7 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/webp" href="assets/logo_negro.webp">
+    <link rel="icon" type="image/webp" href="assets/logo_negro_128.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,25 +103,17 @@
         rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=20261013">
+    <link rel="stylesheet" href="styles.css?v=20261028b">
 </head>
 
 <body class="theme-home">
-
-    <!-- Loader de pantalla completa -->
-    <div id="page-loader" aria-hidden="true">
-        <div class="loader-inner">
-            <div class="loader-ring"></div>
-            <div class="loader-logo">LID.IA</div>
-        </div>
-    </div>
 
     <canvas id="particleCanvas"></canvas>
 
     <header class="sticky-header">
         <div class="header-container">
             <div class="logo">
-                <img src="assets/logo_negro.webp" alt="Lidia Contreras Logo">
+                <img src="assets/logo_negro_128.webp" alt="Lidia Contreras Logo">
             </div>
             <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
@@ -223,18 +215,10 @@
                 Una comunidad donde aprender IA paso a paso, con personas que crean como t&uacute; y con acceso directo a m&iacute; para resolver tus dudas. <strong style="color: var(--page-primary);">Abrimos plazas en Verano/Otoño 2026 &mdash; ap&uacute;ntate ahora y entra con precio de fundador/a.</strong>
             </p>
             <div class="video-container showcase-video-container" style="max-width: 700px; margin: 0 auto;">
-                <!--
-                <video muted playsinline controls class="module-video community-video showcase-video">
-                    <source src="assets/infotemporal/mcomunidad.mp4" type="video/mp4">
-                </video>
-                -->
-                <iframe class="module-video showcase-video showcase-embed"
-                    src="https://www.youtube-nocookie.com/embed/jfeq8kR1Dio?rel=0&amp;modestbranding=1"
-                    title="Presentación del curso — Comunidad LID.IA"
-                    loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+                <button type="button" class="module-video showcase-video showcase-embed yt-lite" data-yt="jfeq8kR1Dio" aria-label="Reproducir: Presentaci&oacute;n del curso — Comunidad LID.IA">
+                    <img src="https://i.ytimg.com/vi_webp/jfeq8kR1Dio/maxresdefault.webp" alt="" loading="lazy">
+                    <span class="yt-lite-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+                </button>
             </div>
         </section>
 
@@ -272,7 +256,7 @@
                         <h3 class="orbitron narrative-mod-title">Crea tu personaje</h3>
                         <p class="inter narrative-mod-desc">Decides c&oacute;mo crear al personaje: a partir de una imagen o de una descripci&oacute;n. Generas su primera imagen y defines qui&eacute;n es: prop&oacute;sito, audiencia y personalidad.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo1_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 1 — Crea tu personaje"><source src="assets/modulos/modulo1.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo1_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 1 — Crea tu personaje"><source src="assets/modulos/modulo1.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <div class="narrative-panel" data-idx="1">
@@ -280,7 +264,7 @@
                         <h3 class="orbitron narrative-mod-title">Direcci&oacute;n de Arte</h3>
                         <p class="inter narrative-mod-desc">Dale personalidad visual a tu avatar: elige su estilo, sus colores, c&oacute;mo se viste y d&oacute;nde aparece. Controla la iluminaci&oacute;n, los &aacute;ngulos y los planos para que se vea profesional y reconocible en cada imagen que generes.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo2_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 2 — Direcci&oacute;n de Arte"><source src="assets/modulos/modulo2.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo2_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 2 — Direcci&oacute;n de Arte"><source src="assets/modulos/modulo2.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <div class="narrative-panel" data-idx="2">
@@ -288,7 +272,7 @@
                         <h3 class="orbitron narrative-mod-title">Voz y Expresi&oacute;n</h3>
                         <p class="inter narrative-mod-desc">Tu avatar habla y se mueve. Elige o crea su voz, an&iacute;malo para que sus labios se muevan al hablar y controla sus gestos. La diferencia entre una imagen est&aacute;tica y un avatar con vida real.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo3_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 3 — Voz y Expresi&oacute;n"><source src="assets/modulos/modulo3.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo3_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 3 — Voz y Expresi&oacute;n"><source src="assets/modulos/modulo3.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <div class="narrative-panel" data-idx="3">
@@ -296,7 +280,7 @@
                         <h3 class="orbitron narrative-mod-title">Herramientas</h3>
                         <p class="inter narrative-mod-desc">Aprende a elegir la opci&oacute;n adecuada para cada paso del proceso. C&oacute;mo fluir de la idea al resultado final y c&oacute;mo evaluar las nuevas opciones que van saliendo sin perderte.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo4_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 4 — Herramientas"><source src="assets/modulos/modulo4.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo4_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 4 — Herramientas"><source src="assets/modulos/modulo4.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <div class="narrative-panel" data-idx="4">
@@ -304,7 +288,7 @@
                         <h3 class="orbitron narrative-mod-title">V&iacute;deo y Contenido</h3>
                         <p class="inter narrative-mod-desc">Edita y monta todo sin experiencia previa. Aprende a crear guiones que enganchen desde el primer segundo y adapta tu contenido a distintas plataformas sin agotarte.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo5_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 5 — V&iacute;deo y Contenido"><source src="assets/modulos/modulo5.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo5_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 5 — V&iacute;deo y Contenido"><source src="assets/modulos/modulo5.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <div class="narrative-panel" data-idx="5">
@@ -312,7 +296,7 @@
                         <h3 class="orbitron narrative-mod-title">Estrategia y Monetizaci&oacute;n</h3>
                         <p class="inter narrative-mod-desc">Aprende a monetizar tu presencia en redes: afiliados, colaboraciones y c&oacute;mo generar ingresos con el contenido que ya est&aacute;s creando.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo6_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 6 — Estrategia y Monetizaci&oacute;n"><source src="assets/modulos/modulo6.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo6_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 6 — Estrategia y Monetizaci&oacute;n"><source src="assets/modulos/modulo6.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                     <div class="narrative-panel" data-idx="6">
@@ -320,7 +304,7 @@
                         <h3 class="orbitron narrative-mod-title">Tu proyecto final</h3>
                         <p class="inter narrative-mod-desc">Aqu&iacute; lo juntas todo. Dise&ntilde;as el personaje desde cero, lo construyes visualmente, le das voz y movimiento, y generas tu primer v&iacute;deo completo. Lo presentas en la comunidad y recibes feedback real.</p>
                         <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo7_poster.webp" muted loop playsinline preload="metadata" aria-label="M&oacute;dulo 7 — Tu proyecto final"><source src="assets/modulos/modulo7.mp4" type="video/mp4"></video>
+                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo7_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 7 — Tu proyecto final"><source src="assets/modulos/modulo7.mp4" type="video/mp4"></video>
                         </div>
                     </div>
                 </div>
@@ -388,7 +372,7 @@
 
                 <div class="about-image-wrapper">
                     <div class="about-image-container">
-                        <img src="assets/lidiaconia.webp" alt="Lidia Contreras" class="about-photo" loading="lazy">
+                        <img src="assets/lidiaconia_800.webp" alt="Lidia Contreras" class="about-photo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -476,114 +460,108 @@
             </div>
             <p class="subtitle inter text-center" style="margin-bottom: 1.5rem; max-width: 700px; margin-left: auto; margin-right: auto;">Cada tier está diseñado para un nivel diferente de compromiso. Desde aprender a tu ritmo hasta estar a la vanguardia con acceso directo a mí.</p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+            <div class="tier-grid">
                 <!-- TIER 1: APRENDE -->
-                <div style="background: rgba(0,212,255,0.06); border: 2px solid rgba(0,212,255,0.25); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(0,212,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
-                            <i class="fa-solid fa-graduation-cap" style="color: var(--blue);"></i>
-                        </div>
+                <div class="tier-card" style="--c: var(--blue); --c-rgb: 0,212,255; --bg-a: 0.06; --bd-a: 0.25; --icon-a: 0.15;">
+                    <div class="tier-head">
+                        <div class="tier-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                         <div>
-                            <h3 class="orbitron" style="font-size: 1.5rem; color: var(--blue); margin: 0;">APRENDE</h3>
-                            <p style="color: #8ab; margin: 0; font-size: 0.9rem;">Aprende a tu ritmo</p>
+                            <h3 class="orbitron">APRENDE</h3>
+                            <p class="tier-tagline">Aprende a tu ritmo</p>
                         </div>
                     </div>
-                    <div style="margin-bottom: 2rem;">
-                        <p style="color: #fff; font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;"><span style="color: var(--blue);">9€</span><span style="color: #888; font-size: 1rem;">/mes</span></p>
-                        <p style="color: #8ab; font-size: 0.9rem; margin: 0.5rem 0;">o 89€/año (ahorra 19€)</p>
+                    <div class="tier-price">
+                        <p class="tier-price-main"><span class="tier-amount">9€</span><span class="tier-period">/mes</span></p>
+                        <p class="tier-price-alt">o 89€/año (ahorra 19€)</p>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                    <ul class="tier-features">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Todos los tutoriales en vídeo</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Tutoriales escritos paso a paso</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Actualizaciones de contenido</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--blue); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Foro de la comunidad</span>
                         </li>
                     </ul>
-                    <a href="#waitlist" class="btn" style="background: rgba(0,212,255,0.15); color: var(--blue); border: 1px solid rgba(0,212,255,0.4); text-align: center; display: block; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">Reserva tu plaza en APRENDE</a>
+                    <a href="#waitlist" class="btn tier-btn">Reserva tu plaza en APRENDE</a>
                 </div>
 
                 <!-- TIER 2: CREA -->
-                <div style="background: rgba(100,200,255,0.08); border: 2px solid rgba(100,200,255,0.35); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(100,200,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
-                            <i class="fa-solid fa-rocket" style="color: #64c8ff;"></i>
-                        </div>
+                <div class="tier-card" style="--c: #64c8ff; --c-rgb: 100,200,255;">
+                    <div class="tier-head">
+                        <div class="tier-icon"><i class="fa-solid fa-rocket"></i></div>
                         <div>
-                            <h3 class="orbitron" style="font-size: 1.5rem; color: #64c8ff; margin: 0;">CREA</h3>
-                            <p style="color: #8ab; margin: 0; font-size: 0.9rem;">Crea resultados reales</p>
+                            <h3 class="orbitron">CREA</h3>
+                            <p class="tier-tagline">Crea resultados reales</p>
                         </div>
                     </div>
-                    <div style="margin-bottom: 2rem;">
-                        <p style="color: #fff; font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;"><span style="color: #64c8ff;">19€</span><span style="color: #888; font-size: 1rem;">/mes</span></p>
-                        <p style="color: #8ab; font-size: 0.9rem; margin: 0.5rem 0;">o 189€/año (ahorra 39€)</p>
+                    <div class="tier-price">
+                        <p class="tier-price-main"><span class="tier-amount">19€</span><span class="tier-period">/mes</span></p>
+                        <p class="tier-price-alt">o 189€/año (ahorra 39€)</p>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                    <ul class="tier-features">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Todo del tier <strong>Aprende</strong></span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span><strong>Biblioteca de prompts</strong> probados</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Skills y conectores listos para usar</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: #64c8ff; margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Plantillas, storyboards y todo lo que vayamos creando</span>
                         </li>
                     </ul>
-                    <a href="#waitlist" class="btn" style="background: linear-gradient(135deg, rgba(100,200,255,0.2), rgba(100,200,255,0.1)); color: #64c8ff; border: 1px solid rgba(100,200,255,0.5); text-align: center; display: block; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">Reserva tu plaza en CREA</a>
+                    <a href="#waitlist" class="btn tier-btn tier-btn-glow">Reserva tu plaza en CREA</a>
                 </div>
 
                 <!-- TIER 3: LIDERA -->
-                <div style="background: rgba(138,43,226,0.08); border: 2px solid rgba(138,43,226,0.35); border-radius: 16px; padding: 2.5rem; display: flex; flex-direction: column; position: relative; transition: all 0.3s ease;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(138,43,226,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.8rem;">
-                            <i class="fa-solid fa-crown" style="color: var(--purple);"></i>
-                        </div>
+                <div class="tier-card" style="--c: var(--purple); --c-rgb: 138,43,226;">
+                    <div class="tier-head">
+                        <div class="tier-icon"><i class="fa-solid fa-crown"></i></div>
                         <div>
-                            <h3 class="orbitron" style="font-size: 1.5rem; color: var(--purple); margin: 0;">LIDERA</h3>
-                            <p style="color: #8ab; margin: 0; font-size: 0.9rem;">Mi tiempo y experiencia</p>
+                            <h3 class="orbitron">LIDERA</h3>
+                            <p class="tier-tagline">Mi tiempo y experiencia</p>
                         </div>
                     </div>
-                    <div style="margin-bottom: 2rem;">
-                        <p style="color: #fff; font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0;"><span style="color: var(--purple);">39€</span><span style="color: #888; font-size: 1rem;">/mes</span></p>
-                        <p style="color: #da96ff; font-size: 0.9rem; margin: 0.5rem 0;">o 389€/año (ahorra 79€)</p>
+                    <div class="tier-price">
+                        <p class="tier-price-main"><span class="tier-amount">39€</span><span class="tier-period">/mes</span></p>
+                        <p class="tier-price-alt" style="color: #da96ff;">o 389€/año (ahorra 79€)</p>
                         <p style="color: #da96ff; font-size: 0.85rem; margin: 0.75rem 0 0 0; font-weight: 600;"><i class="fa-solid fa-star" style="color: var(--page-primary);"></i> Fundadores: 29€/mes</p>
                     </div>
-                    <ul style="list-style: none; padding: 0; margin-bottom: 2rem; flex-grow: 1;">
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                    <ul class="tier-features">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Todo de los tiers <strong>Aprende y Crea</strong></span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span><strong>Tutorías semanales en directo conmigo</strong> para resolver tus dudas</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span><strong>Yo pruebo herramientas por ti</strong> y te muestro si valen la pena antes de que gastes dinero</span>
                         </li>
-                        <li style="color: #ccc; margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-                            <i class="fa-solid fa-check" style="color: var(--purple); margin-top: 0.25rem; flex-shrink: 0;"></i>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
                             <span>Tutoriales para crear videos trending en RRSS con IA</span>
                         </li>
                     </ul>
-                    <a href="#waitlist" class="btn" style="background: rgba(138,43,226,0.15); color: var(--purple); border: 1px solid rgba(138,43,226,0.4); text-align: center; display: block; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">Reserva tu plaza en LIDERA</a>
+                    <a href="#waitlist" class="btn tier-btn">Reserva tu plaza en LIDERA</a>
                 </div>
             </div>
         </section>
@@ -672,76 +650,64 @@
             </div>
 
             <h3 class="tools-subheading">// Otras herramientas que uso</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div class="tool-grid">
 
-                <div style="background: rgba(0,212,255,0.05); border: 1px solid rgba(0,212,255,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(0,212,255,0.5)'" onmouseout="this.style.borderColor='rgba(0,212,255,0.2)'">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(0,212,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                        <i class="fa-solid fa-film" style="color: var(--blue);"></i>
-                    </div>
+                <div class="tool-card" style="--c: var(--blue); --c-rgb: 0,212,255;">
+                    <div class="tool-card-icon"><i class="fa-solid fa-film"></i></div>
                     <div>
-                        <h3 class="orbitron" style="font-size: 1.1rem; color: var(--blue); margin: 0 0 0.4rem;">Kling AI</h3>
-                        <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0;">Generaci&oacute;n de v&iacute;deo con IA y motion control. </p>
+                        <h3 class="orbitron">Kling AI</h3>
+                        <p class="inter">Generaci&oacute;n de v&iacute;deo con IA y motion control. </p>
                     </div>
-                    <a href="https://klingaiaffiliate.pxf.io/L0DrEV" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background: rgba(0,212,255,0.12); color: var(--blue); border: 1px solid rgba(0,212,255,0.35); padding: 0.6rem 1.2rem; font-size: 0.85rem; margin-top: auto;">Probar Kling &rarr;</a>
+                    <a href="https://klingaiaffiliate.pxf.io/L0DrEV" target="_blank" rel="sponsored noopener noreferrer" class="btn">Probar Kling &rarr;</a>
                 </div>
 
-                <div style="background: rgba(138,43,226,0.05); border: 1px solid rgba(138,43,226,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(138,43,226,0.5)'" onmouseout="this.style.borderColor='rgba(138,43,226,0.2)'">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(138,43,226,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                        <i class="fa-solid fa-music" style="color: var(--purple);"></i>
-                    </div>
+                <div class="tool-card" style="--c: var(--purple); --c-rgb: 138,43,226;">
+                    <div class="tool-card-icon"><i class="fa-solid fa-music"></i></div>
                     <div>
-                        <h3 class="orbitron" style="font-size: 1.1rem; color: var(--purple); margin: 0 0 0.4rem;">Suno</h3>
-                        <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0;">M&uacute;sica generada con IA. Crea la banda sonora de tu avatar o videoclip sin saber m&uacute;sica.</p>
+                        <h3 class="orbitron">Suno</h3>
+                        <p class="inter">M&uacute;sica generada con IA. Crea la banda sonora de tu avatar o videoclip sin saber m&uacute;sica.</p>
                     </div>
-                    <a href="https://suno.pxf.io/5kAX5N" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background: rgba(138,43,226,0.12); color: var(--purple); border: 1px solid rgba(138,43,226,0.35); padding: 0.6rem 1.2rem; font-size: 0.85rem; margin-top: auto;">Probar Suno &rarr;</a>
+                    <a href="https://suno.pxf.io/5kAX5N" target="_blank" rel="sponsored noopener noreferrer" class="btn">Probar Suno &rarr;</a>
                 </div>
 
-                <div style="background: rgba(100,200,255,0.05); border: 1px solid rgba(100,200,255,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(100,200,255,0.5)'" onmouseout="this.style.borderColor='rgba(100,200,255,0.2)'">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(100,200,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                        <i class="fa-solid fa-wand-magic-sparkles" style="color: #64c8ff;"></i>
-                    </div>
+                <div class="tool-card" style="--c: #64c8ff; --c-rgb: 100,200,255;">
+                    <div class="tool-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <div>
-                        <h3 class="orbitron" style="font-size: 1.1rem; color: #64c8ff; margin: 0 0 0.4rem;">PixVerse</h3>
-                        <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0;">Generaci&oacute;n de v&iacute;deo IA con resultados cinematogr&aacute;ficos. </p>
+                        <h3 class="orbitron">PixVerse</h3>
+                        <p class="inter">Generaci&oacute;n de v&iacute;deo IA con resultados cinematogr&aacute;ficos. </p>
                     </div>
-                    <a href="https://motivaiprivatelimited.sjv.io/7XyWbg" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background: rgba(100,200,255,0.12); color: #64c8ff; border: 1px solid rgba(100,200,255,0.35); padding: 0.6rem 1.2rem; font-size: 0.85rem; margin-top: auto;">Probar PixVerse &rarr;</a>
+                    <a href="https://motivaiprivatelimited.sjv.io/7XyWbg" target="_blank" rel="sponsored noopener noreferrer" class="btn">Probar PixVerse &rarr;</a>
                 </div>
 
-                <div style="background: rgba(255,100,60,0.05); border: 1px solid rgba(255,100,60,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(255,100,60,0.5)'" onmouseout="this.style.borderColor='rgba(255,100,60,0.2)'">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(255,100,60,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                        <i class="fa-solid fa-clapperboard" style="color: #ff643c;"></i>
-                    </div>
+                <div class="tool-card" style="--c: #ff643c; --c-rgb: 255,100,60;">
+                    <div class="tool-card-icon"><i class="fa-solid fa-clapperboard"></i></div>
                     <div>
-                        <h3 class="orbitron" style="font-size: 1.1rem; color: #ff643c; margin: 0 0 0.4rem;">InVideo AI</h3>
-                        <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0;">Crea v&iacute;deos completos con IA de forma autom&aacute;tica. Ahora con AI Twin: genera contenido con tu avatar sin salir a c&aacute;mara.</p>
+                        <h3 class="orbitron">InVideo AI</h3>
+                        <p class="inter">Crea v&iacute;deos completos con IA de forma autom&aacute;tica. Ahora con AI Twin: genera contenido con tu avatar sin salir a c&aacute;mara.</p>
                     </div>
-                    <a href="https://invideo.sjv.io/E0ynXW" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background: rgba(255,100,60,0.12); color: #ff643c; border: 1px solid rgba(255,100,60,0.35); padding: 0.6rem 1.2rem; font-size: 0.85rem; margin-top: auto;">Probar InVideo &rarr;</a>
+                    <a href="https://invideo.sjv.io/E0ynXW" target="_blank" rel="sponsored noopener noreferrer" class="btn">Probar InVideo &rarr;</a>
                 </div>
             </div>
 
             <h3 class="tools-subheading">// Mi equipo</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+            <div class="tool-grid">
 
-                <div style="background: rgba(255,77,77,0.05); border: 1px solid rgba(255,77,77,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(255,77,77,0.5)'" onmouseout="this.style.borderColor='rgba(255,77,77,0.2)'">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(255,77,77,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                        <i class="fa-solid fa-laptop" style="color: #ff4d4d;"></i>
-                    </div>
+                <div class="tool-card" style="--c: #ff4d4d; --c-rgb: 255,77,77;">
+                    <div class="tool-card-icon"><i class="fa-solid fa-laptop"></i></div>
                     <div>
-                        <h3 class="orbitron" style="font-size: 1.1rem; color: #ff4d4d; margin: 0 0 0.4rem;">Mi port&aacute;til &middot; MSI Cyborg 15</h3>
-                        <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0;">Parte de mi equipo para crear con IA.</p>
+                        <h3 class="orbitron">Mi port&aacute;til &middot; MSI Cyborg 15</h3>
+                        <p class="inter">Parte de mi equipo para crear con IA.</p>
                     </div>
-                    <a href="https://www.awin1.com/cread.php?awinmid=121410&amp;awinaffid=3107674&amp;ued=https%3A%2F%2Fes-store.msi.com%2Fproducts%2Fcyborg-15-b13wfkg-810xes-portatiles" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background: rgba(255,77,77,0.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,0.35); padding: 0.6rem 1.2rem; font-size: 0.85rem; margin-top: auto;">Ver port&aacute;til &rarr;</a>
+                    <a href="https://www.awin1.com/cread.php?awinmid=121410&amp;awinaffid=3107674&amp;ued=https%3A%2F%2Fes-store.msi.com%2Fproducts%2Fcyborg-15-b13wfkg-810xes-portatiles" target="_blank" rel="sponsored noopener noreferrer" class="btn">Ver port&aacute;til &rarr;</a>
                 </div>
 
-                <div style="background: rgba(255,77,77,0.05); border: 1px solid rgba(255,77,77,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; transition: border-color 0.3s ease;" onmouseover="this.style.borderColor='rgba(255,77,77,0.5)'" onmouseout="this.style.borderColor='rgba(255,77,77,0.2)'">
-                    <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(255,77,77,0.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                        <i class="fa-solid fa-display" style="color: #ff4d4d;"></i>
-                    </div>
+                <div class="tool-card" style="--c: #ff4d4d; --c-rgb: 255,77,77;">
+                    <div class="tool-card-icon"><i class="fa-solid fa-display"></i></div>
                     <div>
-                        <h3 class="orbitron" style="font-size: 1.1rem; color: #ff4d4d; margin: 0 0 0.4rem;">Mi monitor &middot; MSI MAG 345CQRF E20</h3>
-                        <p class="inter" style="color: #aaa; font-size: 0.9rem; line-height: 1.6; margin: 0;">Parte de mi equipo de trabajo.</p>
+                        <h3 class="orbitron">Mi monitor &middot; MSI MAG 345CQRF E20</h3>
+                        <p class="inter">Parte de mi equipo de trabajo.</p>
                     </div>
-                    <a href="https://www.awin1.com/cread.php?awinmid=121410&amp;awinaffid=3107674&amp;ued=https%3A%2F%2Fes-store.msi.com%2Fproducts%2Fmag-345cqrf-e20-monitores-gaming" target="_blank" rel="sponsored noopener noreferrer" class="btn" style="background: rgba(255,77,77,0.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,0.35); padding: 0.6rem 1.2rem; font-size: 0.85rem; margin-top: auto;">Ver monitor &rarr;</a>
+                    <a href="https://www.awin1.com/cread.php?awinmid=121410&amp;awinaffid=3107674&amp;ued=https%3A%2F%2Fes-store.msi.com%2Fproducts%2Fmag-345cqrf-e20-monitores-gaming" target="_blank" rel="sponsored noopener noreferrer" class="btn">Ver monitor &rarr;</a>
                 </div>
 
             </div>
@@ -837,8 +803,7 @@
     </footer>
     </main>
 
-    <script async src="https://www.tiktok.com/embed.js"></script>
-    <script src="script.js?v=20261013"></script>
+    <script src="script.js?v=20261028b"></script>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 

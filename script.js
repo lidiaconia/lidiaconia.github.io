@@ -1,14 +1,3 @@
-// Page Loader
-(function () {
-    var loader = document.getElementById('page-loader');
-    if (!loader) return;
-    window.addEventListener('load', function () {
-        loader.classList.add('hidden');
-    });
-    // Fallback: ocultar tras 5s si load no dispara
-    setTimeout(function () { loader.classList.add('hidden'); }, 5000);
-})();
-
 // Hamburger Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
@@ -65,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollTarget = window;
 
     const toggleVisibility = function() {
-      const scrollY = mainContainer ? mainContainer.scrollTop : window.scrollY;
+      const scrollY = window.scrollY;
       if (scrollY > 300) {
         scrollTopBtn.classList.add('visible');
       } else {
@@ -482,19 +471,18 @@ document.addEventListener('DOMContentLoaded', () => {
    Video Autoplay on Scroll
    =============================== */
 document.addEventListener('DOMContentLoaded', () => {
-  const videos = document.querySelectorAll('.module-video, .community-video, .lidera-video');
+  const videos = document.querySelectorAll('video.module-video, video.community-video, video.lidera-video');
 
   const ensureMobileAutoplayAttrs = (video) => {
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
-    video.autoplay = true;
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
-    video.setAttribute('autoplay', '');
+    // Sin autoplay: el observer lo reproduce al entrar en pantalla, así no se descarga antes de tiempo
     if (!video.getAttribute('preload')) {
-      video.setAttribute('preload', 'metadata');
+      video.setAttribute('preload', 'none');
     }
   };
 
@@ -526,6 +514,35 @@ document.addEventListener('DOMContentLoaded', () => {
     videoObserver.observe(video);
   });
 });
+
+// YouTube ligero: carga el reproductor solo al pulsar la miniatura
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.yt-lite');
+  if (!btn) return;
+  const iframe = document.createElement('iframe');
+  iframe.className = btn.className.replace('yt-lite', '').trim();
+  iframe.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?rel=0&modestbranding=1&autoplay=1';
+  iframe.title = btn.getAttribute('aria-label').replace('Reproducir: ', '');
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+  iframe.allowFullscreen = true;
+  btn.replaceWith(iframe);
+});
+
+// TikTok: carga embed.js solo al acercarse a la sección de vídeos
+(function () {
+  const grid = document.querySelector('.tiktok-grid');
+  if (!grid) return;
+  const obs = new IntersectionObserver((entries) => {
+    if (!entries.some((e) => e.isIntersecting)) return;
+    obs.disconnect();
+    const s = document.createElement('script');
+    s.src = 'https://www.tiktok.com/embed.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }, { rootMargin: '800px 0px' });
+  obs.observe(grid);
+})();
 
 // Scroll narrative — crossfade de avatares por módulo
 (function () {
