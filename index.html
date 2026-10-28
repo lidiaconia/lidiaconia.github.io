@@ -103,7 +103,7 @@
         rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=20261028e">
+    <link rel="stylesheet" href="styles.css?v=20261028f">
 </head>
 
 <body class="theme-home">
@@ -223,7 +223,7 @@
         </section>
 
         <!-- ④ SCROLL NARRATIVO — avatares + módulos -->
-        <section id="scroll-modulos" class="scroll-narrative-section process-section">
+        <section id="scroll-modulos" class="process-section plato-section">
             <div class="section-header">
                 <span class="section-number">02</span>
                 <h2 class="section-title">
@@ -233,97 +233,62 @@
                 </h2>
                 <div class="section-line"></div>
             </div>
-            <div class="narrative-track">
+            <p class="subtitle inter text-center plato-intro">Siete canales, uno por m&oacute;dulo. Lid.IA y Nyxia presentan cada uno con su look.</p>
 
-                <!-- Lid.IA — sticky izquierda -->
-                <div class="narrative-col-side narrative-col-left">
-                    <div class="narrative-avatar-wrap">
-                        <img class="nav-img active" data-idx="0" src="assets/infotemporal/img/lidia_m1.webp" alt="Lid.IA — Crea tu personaje" loading="lazy">
-                        <img class="nav-img" data-idx="1" src="assets/infotemporal/img/lidia_m2.webp" alt="Lid.IA — Direcci&oacute;n de Arte" loading="lazy">
-                        <img class="nav-img" data-idx="2" src="assets/infotemporal/img/lidia_m3.webp" alt="Lid.IA — Voz y Expresi&oacute;n" loading="lazy">
-                        <img class="nav-img" data-idx="3" src="assets/infotemporal/img/lidia_m4.webp" alt="Lid.IA — Herramientas" loading="lazy">
-                        <img class="nav-img" data-idx="4" src="assets/infotemporal/img/lidia_m5.webp" alt="Lid.IA — V&iacute;deo y Contenido" loading="lazy">
-                        <img class="nav-img" data-idx="5" src="assets/infotemporal/img/lidia_m6.webp" alt="Lid.IA — Estrategia" loading="lazy">
-                        <img class="nav-img" data-idx="6" src="assets/infotemporal/img/lidia_m7.webp" alt="Lid.IA — Proyecto final" loading="lazy">
+            <!-- Plató: la tele reproduce el vídeo del módulo y Lid.IA y Nyxia lo presentan -->
+            <div class="plato" id="plato">
+                <div class="plato-studio">
+                    <div class="plato-host plato-host-left">
+                        <img class="on" data-i="0" src="assets/infotemporal/img/lidia_m1.webp" alt="Lid.IA &#8212; Crea tu personaje" loading="lazy">
+                        <img data-i="1" data-src="assets/infotemporal/img/lidia_m2.webp" alt="Lid.IA &#8212; Direcci&#243;n de arte">
+                        <img data-i="2" data-src="assets/infotemporal/img/lidia_m3.webp" alt="Lid.IA &#8212; Voz y expresi&#243;n">
+                        <img data-i="3" data-src="assets/infotemporal/img/lidia_m4.webp" alt="Lid.IA &#8212; Herramientas">
+                        <img data-i="4" data-src="assets/infotemporal/img/lidia_m5.webp" alt="Lid.IA &#8212; V&#237;deo y contenido">
+                        <img data-i="5" data-src="assets/infotemporal/img/lidia_m6.webp" alt="Lid.IA &#8212; Estrategia y monetizaci&#243;n">
+                        <img data-i="6" data-src="assets/infotemporal/img/lidia_m7.webp" alt="Lid.IA &#8212; Tu proyecto final">
+                        <span class="plato-tag">LID.IA</span>
                     </div>
-                    <span class="narrative-label">Lid.IA</span>
-                </div>
-
-                <!-- Paneles centrales -->
-                <div class="narrative-panels">
-                    <div class="narrative-panel" data-idx="0">
-                        <span class="narrative-mod-num">01</span>
-                        <h3 class="orbitron narrative-mod-title">Crea tu personaje</h3>
-                        <p class="inter narrative-mod-desc">Decides c&oacute;mo crear al personaje: a partir de una imagen o de una descripci&oacute;n. Generas su primera imagen y defines qui&eacute;n es: prop&oacute;sito, audiencia y personalidad.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo1_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 1 — Crea tu personaje"><source src="assets/modulos/modulo1.mp4" type="video/mp4"></video>
+                    <div class="plato-tv">
+                        <div class="plato-screen">
+                            <video class="plato-video" width="1280" height="720" poster="assets/modulos/modulo1_poster.webp" muted playsinline preload="none" aria-label="V&iacute;deo del m&oacute;dulo"></video>
+                            <canvas class="plato-static" width="320" height="180" aria-hidden="true"></canvas>
+                            <span class="plato-live" aria-hidden="true">EN EMISI&Oacute;N</span>
+                            <span class="plato-osd" aria-hidden="true">CH 01</span>
+                            <div class="plato-lower" aria-live="polite"><span class="plato-num">01</span><span class="plato-ttl">Crea tu personaje</span><div class="plato-ticker"><span>Decides c&#243;mo crear al personaje: a partir de una imagen o de una descripci&#243;n. Generas su primera imagen y defines qui&#233;n es: prop&#243;sito, audiencia y personalidad.</span></div></div>
                         </div>
                     </div>
-                    <div class="narrative-panel" data-idx="1">
-                        <span class="narrative-mod-num">02</span>
-                        <h3 class="orbitron narrative-mod-title">Direcci&oacute;n de Arte</h3>
-                        <p class="inter narrative-mod-desc">Dale personalidad visual a tu avatar: elige su estilo, sus colores, c&oacute;mo se viste y d&oacute;nde aparece. Controla la iluminaci&oacute;n, los &aacute;ngulos y los planos para que se vea profesional y reconocible en cada imagen que generes.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo2_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 2 — Direcci&oacute;n de Arte"><source src="assets/modulos/modulo2.mp4" type="video/mp4"></video>
-                        </div>
+                    <div class="plato-host plato-host-right">
+                        <img class="on" data-i="0" src="assets/infotemporal/img/nyxia_m1.webp" alt="Nyxia &#8212; Crea tu personaje" loading="lazy">
+                        <img data-i="1" data-src="assets/infotemporal/img/nyxia_m2.webp" alt="Nyxia &#8212; Direcci&#243;n de arte">
+                        <img data-i="2" data-src="assets/infotemporal/img/nyxia_m3.webp" alt="Nyxia &#8212; Voz y expresi&#243;n">
+                        <img data-i="3" data-src="assets/infotemporal/img/nyxia_m4.webp" alt="Nyxia &#8212; Herramientas">
+                        <img data-i="4" data-src="assets/infotemporal/img/nyxia_m5.webp" alt="Nyxia &#8212; V&#237;deo y contenido">
+                        <img data-i="5" data-src="assets/infotemporal/img/nyxia_m6.webp" alt="Nyxia &#8212; Estrategia y monetizaci&#243;n">
+                        <img data-i="6" data-src="assets/infotemporal/img/nyxia_m7.webp" alt="Nyxia &#8212; Tu proyecto final">
+                        <span class="plato-tag">NYXIA</span>
                     </div>
-                    <div class="narrative-panel" data-idx="2">
-                        <span class="narrative-mod-num">03</span>
-                        <h3 class="orbitron narrative-mod-title">Voz y Expresi&oacute;n</h3>
-                        <p class="inter narrative-mod-desc">Tu avatar habla y se mueve. Elige o crea su voz, an&iacute;malo para que sus labios se muevan al hablar y controla sus gestos. La diferencia entre una imagen est&aacute;tica y un avatar con vida real.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo3_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 3 — Voz y Expresi&oacute;n"><source src="assets/modulos/modulo3.mp4" type="video/mp4"></video>
-                        </div>
-                    </div>
-                    <div class="narrative-panel" data-idx="3">
-                        <span class="narrative-mod-num">04</span>
-                        <h3 class="orbitron narrative-mod-title">Herramientas</h3>
-                        <p class="inter narrative-mod-desc">Aprende a elegir la opci&oacute;n adecuada para cada paso del proceso. C&oacute;mo fluir de la idea al resultado final y c&oacute;mo evaluar las nuevas opciones que van saliendo sin perderte.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo4_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 4 — Herramientas"><source src="assets/modulos/modulo4.mp4" type="video/mp4"></video>
-                        </div>
-                    </div>
-                    <div class="narrative-panel" data-idx="4">
-                        <span class="narrative-mod-num">05</span>
-                        <h3 class="orbitron narrative-mod-title">V&iacute;deo y Contenido</h3>
-                        <p class="inter narrative-mod-desc">Edita y monta todo sin experiencia previa. Aprende a crear guiones que enganchen desde el primer segundo y adapta tu contenido a distintas plataformas sin agotarte.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo5_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 5 — V&iacute;deo y Contenido"><source src="assets/modulos/modulo5.mp4" type="video/mp4"></video>
-                        </div>
-                    </div>
-                    <div class="narrative-panel" data-idx="5">
-                        <span class="narrative-mod-num">06</span>
-                        <h3 class="orbitron narrative-mod-title">Estrategia y Monetizaci&oacute;n</h3>
-                        <p class="inter narrative-mod-desc">Aprende a monetizar tu presencia en redes: afiliados, colaboraciones y c&oacute;mo generar ingresos con el contenido que ya est&aacute;s creando.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo6_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 6 — Estrategia y Monetizaci&oacute;n"><source src="assets/modulos/modulo6.mp4" type="video/mp4"></video>
-                        </div>
-                    </div>
-                    <div class="narrative-panel" data-idx="6">
-                        <span class="narrative-mod-num" style="color: rgba(167,139,250,0.25);">07</span>
-                        <h3 class="orbitron narrative-mod-title">Tu proyecto final</h3>
-                        <p class="inter narrative-mod-desc">Aqu&iacute; lo juntas todo. Dise&ntilde;as el personaje desde cero, lo construyes visualmente, le das voz y movimiento, y generas tu primer v&iacute;deo completo. Lo presentas en la comunidad y recibes feedback real.</p>
-                        <div class="narrative-video-wrap">
-                            <video class="module-video" width="1280" height="720" poster="assets/modulos/modulo7_poster.webp" muted loop playsinline preload="none" aria-label="M&oacute;dulo 7 — Tu proyecto final"><source src="assets/modulos/modulo7.mp4" type="video/mp4"></video>
-                        </div>
+                    <div class="plato-remote" role="group" aria-label="M&oacute;dulos del curso">
+                    <button type="button" class="plato-ch on" style="--cc: #67e8f9;" data-i="0" data-title="Crea tu personaje" data-desc="Decides c&#243;mo crear al personaje: a partir de una imagen o de una descripci&#243;n. Generas su primera imagen y defines qui&#233;n es: prop&#243;sito, audiencia y personalidad." aria-pressed="true"><span class="plato-led"></span><b>01</b> Personaje</button>
+                    <button type="button" class="plato-ch" style="--cc: #5fb8f4;" data-i="1" data-title="Direcci&#243;n de arte" data-desc="Dale personalidad visual a tu avatar: elige su estilo, sus colores, c&#243;mo se viste y d&#243;nde aparece. Controla la iluminaci&#243;n, los &#225;ngulos y los planos para que se vea profesional y reconocible en cada imagen que generes." aria-pressed="false"><span class="plato-led"></span><b>02</b> Arte</button>
+                    <button type="button" class="plato-ch" style="--cc: #a78bfa;" data-i="2" data-title="Voz y expresi&#243;n" data-desc="Tu avatar habla y se mueve. Elige o crea su voz, an&#237;malo para que sus labios se muevan al hablar y controla sus gestos. La diferencia entre una imagen est&#225;tica y un avatar con vida real." aria-pressed="false"><span class="plato-led"></span><b>03</b> Voz</button>
+                    <button type="button" class="plato-ch" style="--cc: #c084fc;" data-i="3" data-title="Herramientas" data-desc="Aprende a elegir la opci&#243;n adecuada para cada paso del proceso. C&#243;mo fluir de la idea al resultado final y c&#243;mo evaluar las nuevas opciones que van saliendo sin perderte." aria-pressed="false"><span class="plato-led"></span><b>04</b> Herramientas</button>
+                    <button type="button" class="plato-ch" style="--cc: #e879f9;" data-i="4" data-title="V&#237;deo y contenido" data-desc="Edita y monta todo sin experiencia previa. Aprende a crear guiones que enganchen desde el primer segundo y adapta tu contenido a distintas plataformas sin agotarte." aria-pressed="false"><span class="plato-led"></span><b>05</b> V&#237;deo</button>
+                    <button type="button" class="plato-ch" style="--cc: #67e8f9;" data-i="5" data-title="Estrategia y monetizaci&#243;n" data-desc="Aprende a monetizar tu presencia en redes: afiliados, colaboraciones y c&#243;mo generar ingresos con el contenido que ya est&#225;s creando." aria-pressed="false"><span class="plato-led"></span><b>06</b> Estrategia</button>
+                    <button type="button" class="plato-ch" style="--cc: #fcd34d;" data-i="6" data-title="Tu proyecto final" data-desc="Aqu&#237; lo juntas todo. Dise&#241;as el personaje desde cero, lo construyes visualmente, le das voz y movimiento, y generas tu primer v&#237;deo completo. Lo presentas en la comunidad y recibes feedback real." aria-pressed="false"><span class="plato-led"></span><b>07</b> Proyecto final</button>
                     </div>
                 </div>
-
-                <!-- Nyxia — sticky derecha -->
-                <div class="narrative-col-side narrative-col-right">
-                    <div class="narrative-avatar-wrap">
-                        <img class="nav-img-r active" data-idx="0" src="assets/infotemporal/img/nyxia_m1.webp" alt="Nyxia — Crea tu personaje" loading="lazy">
-                        <img class="nav-img-r" data-idx="1" src="assets/infotemporal/img/nyxia_m2.webp" alt="Nyxia — Direcci&oacute;n de Arte" loading="lazy">
-                        <img class="nav-img-r" data-idx="2" src="assets/infotemporal/img/nyxia_m3.webp" alt="Nyxia — Voz y Expresi&oacute;n" loading="lazy">
-                        <img class="nav-img-r" data-idx="3" src="assets/infotemporal/img/nyxia_m4.webp" alt="Nyxia — Herramientas" loading="lazy">
-                        <img class="nav-img-r" data-idx="4" src="assets/infotemporal/img/nyxia_m5.webp" alt="Nyxia — V&iacute;deo y Contenido" loading="lazy">
-                        <img class="nav-img-r" data-idx="5" src="assets/infotemporal/img/nyxia_m6.webp" alt="Nyxia — Estrategia" loading="lazy">
-                        <img class="nav-img-r" data-idx="6" src="assets/infotemporal/img/nyxia_m7.webp" alt="Nyxia — Proyecto final" loading="lazy">
-                    </div>
-                    <span class="narrative-label">Nyxia</span>
-                </div>
-
             </div>
+            <p class="plato-auto"><i class="fa-solid fa-tower-broadcast"></i> <span>Zapping autom&aacute;tico: cambia de canal al terminar cada v&iacute;deo</span></p>
+
+            <ol class="plato-sr">
+                    <li><strong>Crea tu personaje</strong>: Decides c&#243;mo crear al personaje: a partir de una imagen o de una descripci&#243;n. Generas su primera imagen y defines qui&#233;n es: prop&#243;sito, audiencia y personalidad.</li>
+                    <li><strong>Direcci&#243;n de arte</strong>: Dale personalidad visual a tu avatar: elige su estilo, sus colores, c&#243;mo se viste y d&#243;nde aparece. Controla la iluminaci&#243;n, los &#225;ngulos y los planos para que se vea profesional y reconocible en cada imagen que generes.</li>
+                    <li><strong>Voz y expresi&#243;n</strong>: Tu avatar habla y se mueve. Elige o crea su voz, an&#237;malo para que sus labios se muevan al hablar y controla sus gestos. La diferencia entre una imagen est&#225;tica y un avatar con vida real.</li>
+                    <li><strong>Herramientas</strong>: Aprende a elegir la opci&#243;n adecuada para cada paso del proceso. C&#243;mo fluir de la idea al resultado final y c&#243;mo evaluar las nuevas opciones que van saliendo sin perderte.</li>
+                    <li><strong>V&#237;deo y contenido</strong>: Edita y monta todo sin experiencia previa. Aprende a crear guiones que enganchen desde el primer segundo y adapta tu contenido a distintas plataformas sin agotarte.</li>
+                    <li><strong>Estrategia y monetizaci&#243;n</strong>: Aprende a monetizar tu presencia en redes: afiliados, colaboraciones y c&#243;mo generar ingresos con el contenido que ya est&#225;s creando.</li>
+                    <li><strong>Tu proyecto final</strong>: Aqu&#237; lo juntas todo. Dise&#241;as el personaje desde cero, lo construyes visualmente, le das voz y movimiento, y generas tu primer v&#237;deo completo. Lo presentas en la comunidad y recibes feedback real.</li>
+            </ol>
         </section>
 
         <!-- ③ SOBRE MÍ -->
@@ -799,7 +764,7 @@
     </footer>
     </main>
 
-    <script src="script.js?v=20261028e"></script>
+    <script src="script.js?v=20261028f"></script>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 

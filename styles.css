@@ -3817,198 +3817,346 @@ main {
 }
 
 /* ===============================
-   Scroll Narrative — avatares sticky + módulos
+   Ruta del curso — el plató
+   La tele reproduce el vídeo de cada módulo (canal) y Lid.IA y Nyxia lo presentan.
    =============================== */
 
-.scroll-narrative-section { overflow: visible; }
-
-.narrative-track {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+.plato-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
 
-.narrative-track {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
+.plato {
+    --c: #67e8f9;
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    padding: 2.5rem 1rem 0;
+    background:
+        radial-gradient(ellipse 60% 40% at 50% 100%, color-mix(in srgb, var(--c) 22%, transparent), transparent 70%),
+        radial-gradient(ellipse 50% 70% at 50% -10%, rgba(167, 139, 250, 0.22), transparent 60%),
+        linear-gradient(#0b1224, #070a14);
+    border: 1px solid #243049;
 }
 
-.narrative-col-side {
-    flex: 0 0 20%;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    align-self: flex-start;
-    overflow: visible;
+/* focos de techo */
+.plato::before,
+.plato::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    width: 260px;
+    height: 520px;
+    background: linear-gradient(rgba(255, 255, 255, 0.10), transparent 75%);
+    filter: blur(6px);
     pointer-events: none;
 }
 
-.narrative-avatar-wrap {
+.plato::before { left: 8%; transform: rotate(18deg); }
+.plato::after { right: 8%; transform: rotate(-18deg); }
+
+.plato-studio {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 720px) 1fr;
+    align-items: end;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plato-tv {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 120px;
+    padding: 16px;
+    border-radius: 34px;
+    background: linear-gradient(145deg, #1e293b, #0b1120);
+    box-shadow: 0 0 0 2px #334155, 0 0 40px color-mix(in srgb, var(--c) 35%, transparent), 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* patas de la tele */
+.plato-tv::after {
+    content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: visible;
+    left: 50%;
+    bottom: -60px;
+    width: 46%;
+    height: 60px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent 0 6%, #1e293b 6% 10%, transparent 10% 90%, #1e293b 90% 94%, transparent 94%);
+    clip-path: polygon(0 100%, 12% 0, 88% 0, 100% 100%);
 }
 
-.narrative-col-left .nav-img,
-.narrative-col-left .nav-img-intro {
-    bottom: 0;
-    left: auto;
-    right: 0;
-    height: 70vh;
-    width: auto;
-    max-width: none;
-}
-
-.narrative-col-right .nav-img-r,
-.narrative-col-right .nav-img-r-intro {
-    bottom: 0;
-    left: 0;
-    height: 70vh;
-    width: auto;
-    max-width: none;
-}
-
-.nav-img,
-.nav-img-r,
-.nav-img-intro,
-.nav-img-r-intro {
-    position: absolute;
-    bottom: 0;
-    height: 70vh;
-    width: auto;
-    max-width: none;
-    object-fit: contain;
-    object-position: bottom;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.nav-img.active,
-.nav-img-r.active,
-.nav-img-intro.active,
-.nav-img-r-intro.active { opacity: 1; }
-
-.narrative-label {
-    display: none;
-    font-family: var(--font-code);
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-.narrative-panels {
-    flex: 1;
-    min-width: 0;
-}
-
-.narrative-panel {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 2.5rem;
-    border-bottom: 1px solid rgba(148,163,184,0.07);
-}
-
-.narrative-panel:last-child { border-bottom: none; }
-
-.panel-mobile-img { display: none; }
-
-.narrative-mod-num {
-    display: block;
-    font-family: var(--font-code);
-    font-size: 4rem;
-    font-weight: 700;
-    color: rgba(255,255,255,0.18);
-    line-height: 1;
-    margin-bottom: 0.4rem;
-    user-select: none;
-}
-
-.narrative-mod-title {
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    color: var(--text);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.narrative-mod-desc {
-    font-size: 1.05rem;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 680px;
-    margin-bottom: 1.25rem;
-}
-
-.narrative-cta {
-    align-self: flex-start;
-    background: rgba(167,139,250,0.1);
-    color: var(--purple);
-    border: 1px solid rgba(167,139,250,0.35);
-    padding: 0.65rem 1.4rem;
-    font-size: 0.88rem;
-    transition: background 0.25s, color 0.25s;
-}
-
-.narrative-cta:hover {
-    background: var(--purple);
-    color: var(--black);
-}
-
-.narrative-video-wrap {
-    width: 100%;
-    max-width: 680px;
-    margin-top: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 12px;
+.plato-screen {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 22px;
     overflow: hidden;
-    border: 1px solid rgba(103,232,249,0.25);
-    box-shadow: 0 0 20px rgba(103,232,249,0.08);
+    background: #000;
 }
 
-.narrative-video-wrap .module-video {
-    width: 100%;
-    height: auto;
+.plato-video {
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* líneas de barrido y viñeta de tubo */
+.plato-screen::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(transparent 0 2px, rgba(0, 0, 0, 0.18) 2px 3px),
+        radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.55));
+}
+
+.plato-static {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.plato-static.on { opacity: 1; }
+
+.plato-osd {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    z-index: 3;
+    font-family: var(--font-code);
+    font-weight: 700;
+    font-size: clamp(1rem, 2.4vw, 1.6rem);
+    color: #4ade80;
+    text-shadow: 0 0 8px rgba(74, 222, 128, 0.8);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.plato-osd.on { opacity: 1; }
+
+.plato-live {
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 3;
+    font-family: var(--font-code);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: #fff;
+    background: rgba(239, 68, 68, 0.85);
+    border-radius: 6px;
+    padding: 0.1rem 0.45rem;
+}
+
+.plato-live::before { content: '● '; animation: plato-rec 1s steps(2) infinite; }
+
+@keyframes plato-rec { 50% { opacity: 0.2; } }
+
+/* rótulo inferior, como en la tele */
+.plato-lower {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    align-items: stretch;
+    background: linear-gradient(90deg, rgba(7, 10, 20, 0.92), rgba(7, 10, 20, 0.75));
+    border-top: 2px solid var(--c);
+    font-size: clamp(0.75rem, 1.5vw, 0.95rem);
+    line-height: 1.5;
+}
+
+.plato-num {
+    display: grid;
+    place-items: center;
+    padding: 0 0.9rem;
+    background: var(--c);
+    color: #070a14;
+    font: 700 1.1em var(--font-code);
+}
+
+.plato-ttl {
+    padding: 0.35rem 0.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.plato-ticker {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #cbd5e1;
+    padding: 0.35rem 0;
+    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+
+.plato-ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: plato-tick 16s linear infinite;
+}
+
+@keyframes plato-tick { to { transform: translateX(-100%); } }
+
+/* presentadoras */
+.plato-host {
+    position: relative;
+    z-index: 2;
+    height: 520px;
+}
+
+.plato-host img {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    max-width: 150%;
+    object-fit: contain;
+    opacity: 0;
+    filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.7));
+    transition: opacity 0.35s ease;
+}
+
+.plato-host-left img { right: -18%; }
+.plato-host-right img { left: -18%; }
+
+.plato-host img.on { opacity: 1; }
+
+.plato-host.flick img.on { animation: plato-flick 0.35s steps(3); }
+
+@keyframes plato-flick {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; filter: brightness(2) drop-shadow(0 0 20px var(--c)); }
+    100% { opacity: 1; }
+}
+
+.plato-tag {
+    position: absolute;
+    bottom: 14px;
+    z-index: 2;
+    font: 700 0.75rem var(--font-code);
+    letter-spacing: 0.12em;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    background: rgba(7, 10, 20, 0.85);
+}
+
+.plato-host-left .plato-tag { left: 6%; color: #fb7185; border: 1px solid #fb7185; }
+.plato-host-right .plato-tag { right: 6%; color: #a78bfa; border: 1px solid #a78bfa; }
+
+/* mando */
+.plato-remote {
+    position: relative;
+    z-index: 3;
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 -1rem;
+    padding: 1.1rem 1rem 1.6rem;
+    background: linear-gradient(transparent, rgba(7, 10, 20, 0.9) 30%);
+}
+
+.plato-ch {
+    --cc: #67e8f9;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.85rem 0.45rem 0.6rem;
     border-radius: 12px;
+    border: 1px solid #334155;
+    background: linear-gradient(#1e293b, #111827);
+    box-shadow: 0 3px 0 #020617;
+    color: #cbd5e1;
+    font: 600 0.82rem var(--font-main);
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.1s;
 }
 
-@media (max-width: 900px) {
-    .narrative-video-wrap { max-width: 100%; }
+.plato-ch b { font-family: var(--font-code); color: var(--cc); }
+
+.plato-led { width: 7px; height: 7px; border-radius: 50%; background: #334155; }
+
+.plato-ch.on { border-color: var(--cc); color: #fff; }
+
+.plato-ch.on .plato-led { background: var(--cc); box-shadow: 0 0 8px var(--cc); }
+
+.plato-ch:active { transform: translateY(2px); box-shadow: none; }
+
+.plato-ch:focus-visible { outline: 2px solid var(--cc); outline-offset: 2px; }
+
+.plato-auto {
+    margin-top: 0.8rem;
+    text-align: center;
+    font: 0.75rem var(--font-code);
+    color: #94a3b8;
 }
 
-@media (max-width: 1200px) {
-    .narrative-col-side { display: none; }
+/* lista de módulos solo para lectores de pantalla y buscadores */
+.plato-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
 
-    .panel-mobile-img {
-        display: block;
-        width: 55%;
-        margin: 0 auto 1.5rem;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(167,139,250,0.2);
+/* Pantallas medianas y móvil: tele arriba, mando justo debajo y las presentadoras al final,
+   para que los módulos estén siempre a la vista bajo la tele */
+@media (max-width: 1100px) {
+    .plato { padding-top: 1.5rem; }
+    .plato-studio { grid-template-columns: 1fr 1fr; max-width: 760px; }
+    .plato-tv { grid-column: 1 / -1; grid-row: 1; margin-bottom: 0; padding: 10px; border-radius: 22px; }
+    .plato-tv::after { display: none; }
+    .plato-screen { border-radius: 14px; }
+    .plato-remote {
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 0.45rem;
+        margin: 0;
+        padding: 1rem 0 0.5rem;
+        background: none;
     }
-
-    .panel-mobile-img img { width: 100%; height: auto; display: block; }
-
-    .narrative-panel {
-        min-height: auto;
-        padding: 2rem 1rem;
+    .plato-ch {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.15rem;
+        padding: 0.55rem 0.2rem 0.5rem;
+        font-size: 0.72rem;
+        line-height: 1.1;
         text-align: center;
-        align-items: center;
     }
+    .plato-ch b { font-size: 1.05rem; }
+    .plato-led { order: -1; }
+    .plato-host { grid-row: 3; height: 300px; }
+    .plato-host-left img { right: auto; left: 0; }
+    .plato-host-right img { left: auto; right: 0; }
+}
 
-    .narrative-mod-num { font-size: 2.5rem; }
-    .narrative-cta { align-self: center; }
-    .narrative-mod-desc { max-width: 100%; }
+@media (max-width: 560px) {
+    /* en el móvil el mando pasa a teclado de 4 + 3 teclas */
+    .plato-remote { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .plato-ch { padding: 0.5rem 0.15rem; }
+    .plato-host { height: 220px; }
+    .plato-host img { max-width: 100%; }
+    .plato-live { font-size: 0.6rem; top: 8px; left: 8px; }
+    .plato-osd { top: 6px; right: 10px; }
+}
+
+/* sin animaciones: el rótulo se queda quieto en una línea en vez de desplazarse */
+@media (prefers-reduced-motion: reduce) {
+    .plato-ticker span { display: block; animation: none; padding: 0 0.8rem 0 0; overflow: hidden; text-overflow: ellipsis; }
+    .plato-host.flick img.on { animation: none; }
 }
 
 /* =============================================

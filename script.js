@@ -529,32 +529,87 @@ document.addEventListener('click', (e) => {
   btn.replaceWith(iframe);
 });
 
-// Scroll narrative — crossfade de avatares por módulo
+// Ruta del curso — el plató: cada módulo es un canal de la tele
 (function () {
-    document.addEventListener('DOMContentLoaded', function () {
-        var panels = document.querySelectorAll('.narrative-panel');
-        if (!panels.length) return;
+  const plato = document.getElementById('plato');
+  if (!plato) return;
 
-        var imgsL = document.querySelectorAll('.nav-img');
-        var imgsR = document.querySelectorAll('.nav-img-r');
+  const video = plato.querySelector('.plato-video');
+  const noise = plato.querySelector('.plato-static');
+  const nctx = noise.getContext('2d');
+  const osd = plato.querySelector('.plato-osd');
+  const hosts = plato.querySelectorAll('.plato-host');
+  const channels = [...plato.querySelectorAll('.plato-ch')];
+  const autoText = document.querySelector('.plato-auto span');
+  let current = 0, tuning = 0, manual = false, started = false;
 
-        function setActive(idx) {
-            imgsL.forEach(function (img) {
-                img.classList.toggle('active', +img.dataset.idx === idx);
-            });
-            imgsR.forEach(function (img) {
-                img.classList.toggle('active', +img.dataset.idx === idx);
-            });
-        }
+  // carga las imágenes de un módulo solo cuando hacen falta
+  const loadImgs = (i) => hosts.forEach((h) => {
+    const img = h.querySelector(`img[data-i="${i}"]`);
+    if (img && img.dataset.src) { img.src = img.dataset.src; img.removeAttribute('data-src'); }
+  });
 
-        var observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    setActive(+entry.target.dataset.idx);
-                }
-            });
-        }, { threshold: 0, rootMargin: '-45% 0px -45% 0px' });
+  // ruido de tele; con temporizador para que termine aunque la pestaña esté en segundo plano
+  const snow = (ms) => new Promise((resolve) => {
+    noise.classList.add('on');
+    const img = nctx.createImageData(noise.width, noise.height);
+    const iv = setInterval(() => {
+      for (let p = 0; p < img.data.length; p += 4) {
+        const v = Math.random() * 255;
+        img.data[p] = img.data[p + 1] = img.data[p + 2] = v;
+        img.data[p + 3] = 255;
+      }
+      nctx.putImageData(img, 0, 0);
+    }, 40);
+    setTimeout(() => { clearInterval(iv); noise.classList.remove('on'); resolve(); }, ms);
+  });
 
-        panels.forEach(function (panel) { observer.observe(panel); });
+  const tune = async (i) => {
+    current = i;
+    const id = ++tuning;
+    const ch = channels[i];
+    const n = String(i + 1).padStart(2, '0');
+    channels.forEach((b, k) => { b.classList.toggle('on', k === i); b.setAttribute('aria-pressed', k === i); });
+    loadImgs(i);
+    osd.textContent = `CH ${n}`;
+    osd.classList.add('on');
+    await snow(380);
+    if (id !== tuning) return;  // manda el cambio de canal más reciente
+
+    plato.style.setProperty('--c', getComputedStyle(ch).getPropertyValue('--cc'));
+    video.poster = `assets/modulos/modulo${i + 1}_poster.webp`;
+    video.src = `assets/modulos/modulo${i + 1}.mp4`;
+    video.play().catch(() => {});
+    plato.querySelector('.plato-num').textContent = n;
+    plato.querySelector('.plato-ttl').textContent = ch.dataset.title;
+    const tick = plato.querySelector('.plato-ticker span');
+    tick.textContent = ch.dataset.desc;
+    tick.style.animation = 'none'; void tick.offsetHeight; tick.style.animation = '';
+    hosts.forEach((h) => {
+      h.querySelectorAll('img').forEach((im) => im.classList.toggle('on', +im.dataset.i === i));
+      h.classList.remove('flick'); void h.offsetHeight; h.classList.add('flick');
     });
+    setTimeout(() => osd.classList.remove('on'), 1600);
+    loadImgs((i + 1) % channels.length);  // adelanta las del siguiente canal
+  };
+
+  channels.forEach((b, i) => b.addEventListener('click', () => {
+    manual = true;
+    autoText.textContent = 'Zapping automático en pausa: has cogido el mando';
+    tune(i);
+  }));
+
+  // zapping: al acabar cada vídeo pasa al siguiente canal, salvo que se haya usado el mando
+  video.addEventListener('ended', () => {
+    if (manual) video.play().catch(() => {});
+    else tune((current + 1) % channels.length);
+  });
+
+  // empieza al llegar a la sección y se pausa al salir de ella
+  new IntersectionObserver((entries) => {
+    const visible = entries[0].isIntersecting;
+    if (visible && !started) { started = true; tune(0); }
+    else if (visible) video.play().catch(() => {});
+    else video.pause();
+  }, { threshold: 0.35 }).observe(plato);
 })();
