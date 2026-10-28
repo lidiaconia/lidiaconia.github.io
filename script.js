@@ -391,6 +391,21 @@ if (!isMobile) {
     triggerWave();
 }
 
+// Pausa el fondo animado mientras hay un vídeo en pantalla (plató o tráiler):
+// repintar la cuadrícula en cada fotograma hace que los vídeos vayan a saltos
+(function () {
+    var videos = document.querySelectorAll('.plato, .trailer-wrap');
+    if (!videos.length) return;
+    var onScreen = new Set();
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.isIntersecting ? onScreen.add(e.target) : onScreen.delete(e.target); });
+        if (isMobile) return;
+        if (onScreen.size && rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        else if (!onScreen.size && !rafId) { rafId = requestAnimationFrame(tick); }
+    }, { threshold: 0.2 });
+    videos.forEach(function (el) { observer.observe(el); });
+})();
+
 // Waitlist Form Validation and Submission
 const waitlistForm = document.getElementById('waitlistForm');
 if (waitlistForm) {
