@@ -471,7 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
    Video Autoplay on Scroll
    =============================== */
 document.addEventListener('DOMContentLoaded', () => {
-  const videos = document.querySelectorAll('video.module-video, video.community-video, video.lidera-video');
+  const videos = document.querySelectorAll('video.module-video, video.community-video, video.lidera-video, video.trailer-video');
 
   const ensureMobileAutoplayAttrs = (video) => {
     video.muted = true;
@@ -528,21 +528,6 @@ document.addEventListener('click', (e) => {
   iframe.allowFullscreen = true;
   btn.replaceWith(iframe);
 });
-
-// TikTok: carga embed.js solo al acercarse a la sección de vídeos
-(function () {
-  const grid = document.querySelector('.tiktok-grid');
-  if (!grid) return;
-  const obs = new IntersectionObserver((entries) => {
-    if (!entries.some((e) => e.isIntersecting)) return;
-    obs.disconnect();
-    const s = document.createElement('script');
-    s.src = 'https://www.tiktok.com/embed.js';
-    s.async = true;
-    document.body.appendChild(s);
-  }, { rootMargin: '800px 0px' });
-  obs.observe(grid);
-})();
 
 // Scroll narrative — crossfade de avatares por módulo
 (function () {
