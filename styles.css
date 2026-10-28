@@ -2151,6 +2151,9 @@ footer {
 }
 
 /* Nuevo Estilo de Titulos Webbonita */
+/* Que el título no quede bajo la cabecera fija al saltar a una sección */
+section[id] { scroll-margin-top: 100px; }
+
 .section-header {
     display: flex;
     align-items: center;
@@ -2187,6 +2190,25 @@ body[class*="theme-"] .title-bracket {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Móvil: el título ocupa todo el ancho y fluye como texto en vez de partirse en columna */
+@media (max-width: 768px) {
+    .section-header {
+        flex-wrap: wrap;
+        gap: 0.25rem 0.75rem;
+    }
+
+    .section-header .section-line { display: none; }
+
+    body[class*="theme-"] .section-title {
+        display: block;
+        flex: 1 1 100%;
+        font-size: clamp(1.3rem, 6.2vw, 1.7rem);
+        line-height: 1.25;
+    }
+
+    .section-title > span { display: inline; }
 }
 
 .section-line {
