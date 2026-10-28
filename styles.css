@@ -3818,7 +3818,10 @@ main {
         top: unset;
         left: unset;
         transform: none;
-        max-width: 90%;
+        /* en columna la tarjeta no se encoge sola: se fija al ancho de la pantalla
+           (!important porque el HTML lleva max-width: 700px en línea) */
+        width: 90%;
+        max-width: 90% !important;
         margin-top: 70px;
     }
     body.theme-home .hero-logo {
