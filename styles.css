@@ -3631,6 +3631,8 @@ main {
     border-bottom-right-radius: 0 !important;
 }
 
+.hero-combo-pic { display: block; }
+
 .hero-combo-img {
     display: block;
     width: 100%;
@@ -3790,11 +3792,26 @@ main {
 }
 
 @media (max-width: 860px) {
-    .hero-combo-img { display: none; }
+    /* en el móvil Lid.IA y Nyxia van debajo de la tarjeta del título, con la versión vertical */
     .hero-combo {
         min-height: 100vh !important;
         display: flex !important;
+        flex-direction: column;
+        align-items: center;
         padding-top: 80px !important;
+    }
+    .hero-combo-pic {
+        order: 2;
+        width: 100%;
+        max-width: 520px;
+        margin-top: -1rem;
+    }
+    /* funde los bordes de arriba y de los lados para que la imagen no se vea como un recuadro */
+    .hero-combo-img {
+        -webkit-mask-image: linear-gradient(transparent, #000 18%, #000 94%, transparent), linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+        -webkit-mask-composite: source-in;
+        mask-image: linear-gradient(transparent, #000 18%, #000 94%, transparent), linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+        mask-composite: intersect;
     }
     .hero-combo-content {
         position: relative;
