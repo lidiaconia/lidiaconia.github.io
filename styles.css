@@ -4372,6 +4372,114 @@ main {
     border-color: rgba(var(--c-rgb), 0.5);
 }
 
+/* módulos extra en las listas de los planes: enlazan a su tarjeta */
+.tier-features a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--c-rgb), 0.5);
+    text-underline-offset: 3px;
+}
+
+.tier-features a:hover { color: var(--c); }
+
+.tier-features .tier-extra i { color: #94a3b8; }
+
+.tier-tag {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.05rem 0.5rem;
+    border: 1px solid #475569;
+    border-radius: 999px;
+    font: normal 600 0.68rem var(--font-code);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    white-space: nowrap;
+    vertical-align: 1px;
+}
+
+/* =============================================
+   MÓDULOS EXTRA
+   ============================================= */
+.extra-intro {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.extra-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(var(--c-rgb), 0.06);
+    border: 1px solid rgba(var(--c-rgb), 0.3);
+    scroll-margin-top: 100px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extra-card:hover { border-color: rgba(var(--c-rgb), 0.6); }
+
+/* al llegar desde un enlace (#modulo-animaciones, #modulo-disco) la tarjeta se ilumina */
+.extra-card:target {
+    border-color: var(--c);
+    box-shadow: 0 0 28px rgba(var(--c-rgb), 0.35);
+}
+
+.extra-soon {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid rgba(var(--c-rgb), 0.5);
+    border-radius: 999px;
+    background: rgba(var(--c-rgb), 0.1);
+    font: 600 0.72rem var(--font-code);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--c);
+}
+
+.extra-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: rgba(var(--c-rgb), 0.14);
+    font-size: 1.5rem;
+    color: var(--c);
+}
+
+.extra-card h3.orbitron {
+    margin: 0;
+    font-size: 1.35rem;
+    color: var(--c);
+}
+
+.extra-card p {
+    margin: 0;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+
+.extra-note {
+    margin-top: 1.75rem;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.extra-note i { color: var(--purple); margin-right: 0.3rem; }
+
 /* =============================================
    MOBILE PERFORMANCE: desactiva canvas en móvil
    ============================================= */
