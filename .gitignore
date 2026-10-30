@@ -5,3 +5,6 @@ assets/musica/nyxia-origen/nyxia_cover_releasedate_storie-Cover.jpg
 
 # GIFs originales de los módulos (en la web se usan los MP4 de assets/modulos)
 assets/gifs/
+
+# Panel privado de analíticas (contiene el token de Cloudflare y datos)
+_analiticas/
