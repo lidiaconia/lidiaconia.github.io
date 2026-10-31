@@ -96,6 +96,43 @@
     abrirPrompt();
     window.addEventListener('hashchange', abrirPrompt);
 
+    // Vídeo de YouTube: se carga al pulsar y, al acabar, nuestra tarjeta tapa las sugerencias de YouTube
+    var ytCola = [];
+    var cargarYT = function (cb) {
+        if (window.YT && window.YT.Player) return cb();
+        ytCola.push(cb);
+        if (ytCola.length > 1) return;
+        window.onYouTubeIframeAPIReady = function () { ytCola.forEach(function (f) { f(); }); };
+        var s = document.createElement('script');
+        s.src = 'https://www.youtube.com/iframe_api';
+        document.head.appendChild(s);
+    };
+    document.querySelectorAll('.rec-video').forEach(function (box) {
+        var btn = box.querySelector('.rec-video-play');
+        var fin = box.querySelector('.rec-video-end');
+        var player;
+        btn.addEventListener('click', function () {
+            var hueco = document.createElement('div');
+            btn.replaceWith(hueco);
+            cargarYT(function () {
+                player = new YT.Player(hueco, {
+                    videoId: btn.dataset.yt,
+                    host: 'https://www.youtube-nocookie.com',
+                    playerVars: { autoplay: 1, rel: 0, playsinline: 1, modestbranding: 1 },
+                    events: {
+                        onReady: function (e) { e.target.playVideo(); },
+                        onStateChange: function (e) { if (e.data === YT.PlayerState.ENDED) fin.hidden = false; }
+                    }
+                });
+            });
+        });
+        box.querySelector('.rec-video-replay').addEventListener('click', function () {
+            fin.hidden = true;
+            player.seekTo(0);
+            player.playVideo();
+        });
+    });
+
     document.querySelectorAll('.rec-copy').forEach(function (b) {
         b.addEventListener('click', function () {
             var txt = b.parentNode.querySelector('pre').textContent;

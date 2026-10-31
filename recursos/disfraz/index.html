@@ -54,7 +54,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="/styles.css?v=20261031b">
+    <link rel="stylesheet" href="/styles.css?v=20261031c">
 </head>
 <body class="theme-recursos">
     <canvas id="particleCanvas"></canvas> <!-- Background -->
@@ -123,6 +123,7 @@
                     <p class="rec-lead">Cambia tu ropa, tu maquillaje y tu habitaci&oacute;n en un solo v&iacute;deo, paso a paso.</p>
                     <div class="rec-actions">
                         <a class="btn rec-main" href="/assets/recursos/2026-10-31_tutorial_disfrazate-con-ia.pdf" download><i class="fa-solid fa-download"></i> Descargar el tutorial (PDF)</a>
+                        <a class="rec-secondary" href="#video">Ver el resultado &darr;</a>
                         <a class="rec-secondary" href="https://motivaiprivatelimited.sjv.io/7XyWbg" target="_blank" rel="sponsored nofollow noopener">Prueba PixVerse <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                     <p class="rec-meta">PDF gratis &middot; 12 p&aacute;ginas &middot; 9 MB</p>
@@ -140,6 +141,31 @@
                     </div>
 
                     <a class="rec-wl" href="#waitlist"><span>&iquest;Quieres aprenderlo paso a paso, en v&iacute;deo y con mi ayuda?</span> <strong>Lista de espera &rarr;</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VÍDEO DEL RESULTADO (YouTube se carga al pulsar; al acabar lo tapa nuestra tarjeta) -->
+        <section id="video" class="process-section" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">As&iacute; queda</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="inter text-center" style="color: #ccc; margin-bottom: 1.5rem;">El mismo v&iacute;deo, con otro traje, otro maquillaje y otra habitaci&oacute;n. Todo con IA, siguiendo el tutorial.</p>
+            <div class="rec-video">
+                <button type="button" class="rec-video-play" data-yt="vYIiXGzOnaU" aria-label="Reproducir: Disfrázate con IA, el resultado">
+                    <img src="/assets/recursos/disfraz-video.webp" width="1280" height="720" loading="lazy" alt="Resultado del tutorial: disfraz de arlequina hecho con IA">
+                    <span class="yt-lite-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+                </button>
+                <div class="rec-video-end" hidden>
+                    <p>&iquest;Te ha picado el gusanillo?</p>
+                    <a class="btn rec-main" href="/assets/recursos/2026-10-31_tutorial_disfrazate-con-ia.pdf" download><i class="fa-solid fa-download"></i> Descargar el tutorial (PDF)</a>
+                    <a class="rec-secondary" href="#waitlist">Aprenderlo paso a paso: lista de espera &rarr;</a>
+                    <button type="button" class="rec-video-replay"><i class="fa-solid fa-rotate-left"></i> Verlo otra vez</button>
                 </div>
             </div>
         </section>
@@ -239,7 +265,7 @@
     </footer>
 
     <script src="/script.js?v=20261030a"></script>
-    <script src="/recursos.js?v=20261031b"></script>
+    <script src="/recursos.js?v=20261031c"></script>
     <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
