@@ -45,7 +45,8 @@
 
     var grids = document.querySelectorAll('[data-recursos]');
     if (grids.length) {
-        fetch('/recursos.json').then(function (res) { return res.json(); }).then(function (lista) {
+        // no-cache: el navegador pregunta siempre si hay versión nueva, así un recurso recién publicado sale al momento
+        fetch('/recursos.json', { cache: 'no-cache' }).then(function (res) { return res.json(); }).then(function (lista) {
             lista = lista.filter(publicado).sort(function (a, b) { return b.fecha.localeCompare(a.fecha); });
             grids.forEach(function (grid) { pintar(grid, lista); });
         }).catch(function () {
