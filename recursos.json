@@ -1,5 +1,15 @@
 [
   {
+    "id": "halloween",
+    "tipo": "prompt",
+    "fecha": "2026-10-31",
+    "titulo": "Halloween con IA",
+    "descripcion": "4 vídeos virales con mis avatares y todos sus prompts, para que los hagas tú.",
+    "etiquetas": ["PixVerse", "Seedance 2.5", "Wan 3.0"],
+    "imagen": "/assets/recursos/halloween.webp",
+    "url": "/recursos/halloween/"
+  },
+  {
     "id": "disfraz",
     "tipo": "tutorial",
     "fecha": "2026-10-31",

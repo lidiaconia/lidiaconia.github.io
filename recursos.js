@@ -137,11 +137,14 @@
         b.addEventListener('click', function () {
             var txt = b.parentNode.querySelector('pre').textContent;
             var done = function () {
-                var s = b.querySelector('span'); s.textContent = '¡Copiado!';
-                setTimeout(function () { s.textContent = 'Copiar prompt'; }, 1800);
+                var s = b.querySelector('span'), txtBoton = s.dataset.txt || (s.dataset.txt = s.textContent);
+                s.textContent = '¡Copiado!';
+                setTimeout(function () { s.textContent = txtBoton; }, 1800);
             };
-            if (navigator.clipboard) { navigator.clipboard.writeText(txt).then(done); }
-            else { var t = document.createElement('textarea'); t.value = txt; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); }
+            // Respaldo para navegadores que bloquean el portapapeles (p. ej. el de Instagram o TikTok)
+            var viejo = function () { var t = document.createElement('textarea'); t.value = txt; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); done(); };
+            if (navigator.clipboard) { navigator.clipboard.writeText(txt).then(done, viejo); }
+            else { viejo(); }
         });
     });
 })();

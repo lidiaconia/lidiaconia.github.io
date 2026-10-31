@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween con IA: 4 vídeos virales y todos sus prompts | Lidia Contreras - LID.IA</title>
+    <meta name="description" content="Así creé 4 vídeos virales de Halloween con mis avatares en PixVerse (Seedance 2.5 y Wan 3.0). Copia todos los prompts gratis y hazlos tú.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lidiaconia.com/recursos/halloween/">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Halloween con IA: 4 vídeos virales y todos sus prompts | Lidia Contreras - LID.IA">
+    <meta property="og:description" content="Así creé 4 vídeos virales de Halloween con mis avatares en PixVerse (Seedance 2.5 y Wan 3.0). Copia todos los prompts gratis y hazlos tú.">
+    <meta property="og:image" content="https://lidiaconia.com/assets/recursos/halloween-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://lidiaconia.com/recursos/halloween/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Comunidad LID.IA">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lidiaconia">
+    <meta name="twitter:title" content="Halloween con IA: 4 vídeos virales y todos sus prompts | Lidia Contreras - LID.IA">
+    <meta name="twitter:description" content="Así creé 4 vídeos virales de Halloween con mis avatares en PixVerse (Seedance 2.5 y Wan 3.0). Copia todos los prompts gratis y hazlos tú.">
+    <meta name="twitter:image" content="https://lidiaconia.com/assets/recursos/halloween-og.jpg">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Lidia Contreras">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/assets/logo_negro_128.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css?v=20261031e">
+</head>
+<body class="theme-recursos">
+    <canvas id="particleCanvas"></canvas> <!-- Background -->
+
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/logo_negro_128.webp" alt="Lidia Contreras Logo"></a>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="center-menu">
+                <div class="nav-dropdown">
+                    <a href="/index.html" class="nav-dropdown-trigger">Curso <span class="nav-caret">&#9662;</span></a>
+                    <div class="nav-dropdown-panel">
+                        <a href="/index.html#comunidad">La Comunidad</a>
+                        <a href="/index.html#scroll-modulos">Los M&oacute;dulos</a>
+                        <a href="/index.html#tiers">Planes y precios</a>
+                        <a href="/index.html#recursos">Recursos</a>
+                        <a href="/index.html#waitlist">Lista de espera</a>
+                    </div>
+                </div> |
+                <a href="/recursos/" style="color: #67e8f9; text-shadow: 0 0 10px rgba(103, 232, 249, 0.5);">Recursos gratis</a> |
+                <a href="/cv.html">CV</a> |
+                <a href="/libros.html">Libros</a> |
+                <a href="/musica.html">M&uacute;sica</a>
+            </nav>
+            <a href="#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
+        </div>
+        <nav class="mobile-menu">
+            <div class="mobile-nav-group">
+            <button class="mobile-nav-trigger" aria-expanded="false">Curso <span class="nav-caret">&#9662;</span></button>
+            <div class="mobile-nav-submenu">
+                <a href="/index.html#comunidad">La Comunidad</a>
+                <a href="/index.html#scroll-modulos">Los M&oacute;dulos</a>
+                <a href="/index.html#tiers">Planes y precios</a>
+                <a href="/index.html#recursos">Recursos</a>
+                <a href="/index.html#waitlist">Lista de espera</a>
+            </div>
+        </div>
+            <a href="/recursos/" style="color: #67e8f9;">Recursos gratis</a>
+            <a href="/cv.html">CV</a>
+            <a href="/libros.html">Libros</a>
+            <a href="/musica.html">M&uacute;sica</a>
+            <a href="#waitlist" class="btn skool-btn-nav" style="display: block; text-align: center;">Comunidad LID.IA</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="rec-detail">
+            <a class="rec-back" href="/recursos/">&larr; Todos los recursos gratis</a>
+            <div class="rec-detail-grid">
+                <img class="rec-detail-img" src="/assets/recursos/halloween.webp" width="800" height="1000" alt="Nyxia con el disfraz de bailarina de caja de m&uacute;sica, del v&iacute;deo del ventilador">
+                <div>
+                    <span class="rec-kicker"><i class="fa-solid fa-terminal"></i> Prompts gratis</span>
+                    <h1>Halloween con IA: 4 v&iacute;deos virales y todos sus prompts</h1>
+                    <div class="rec-tags">
+                        <span class="rec-tag rec-tag-tipo">Prompts</span>
+                        <span class="rec-tag">PixVerse</span>
+                        <span class="rec-tag">Seedance 2.5</span>
+                        <span class="rec-tag">Wan 3.0</span>
+                    </div>
+                    <p class="rec-lead">As&iacute; cre&eacute; estos v&iacute;deos con mis avatares en PixVerse. Copia los prompts y hazlos t&uacute;.</p>
+                    <nav class="rec-index" aria-label="&Iacute;ndice">
+                        <a href="#baile"><b>01</b> Vampira y hombre lobo en la discoteca</a>
+                        <a href="#ventilador"><b>02</b> El ventilador: cinco disfraces estilo Tim Burton</a>
+                        <a href="#paseo"><b>03</b> Paseo g&oacute;tico de pareja</a>
+                        <a href="#mascara"><b>04</b> La m&aacute;scara</a>
+                    </nav>
+                    <a class="rec-wl" href="#waitlist"><span>&iquest;Quieres aprenderlo paso a paso, con cada modelo y cada plataforma?</span> <strong>Lista de espera &rarr;</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="baile" class="process-section rec-hw">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Vampira y hombre lobo en la discoteca</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-hw-grid">
+                <video class="rec-hw-video" src="/assets/recursos/halloween/baile.mp4" poster="/assets/recursos/halloween/baile-poster.webp" width="720" height="1280" controls muted loop playsinline preload="metadata"></video>
+                <div>
+                    <span class="rec-tag rec-tag-modelo">Wan 3.0</span>
+                    <h3 class="rec-sub">C&oacute;mo hacerlo</h3>
+                    <ol class="rec-steps">
+                        <li>Crea las dos im&aacute;genes con estos prompts, adjuntando la hoja de personaje de tu avatar (o una foto tuya) como referencia.</li>
+                        <li>En PixVerse, elige <strong>Wan 3.0</strong> en modo Referencia (fusi&oacute;n) y sube el v&iacute;deo de movimiento como <code>@video1</code>, la vampira como <code>@image1</code> y el hombre lobo como <code>@image2</code>.</li>
+                        <li>Pega el prompt del v&iacute;deo y genera.</li>
+                    </ol>
+                    
+                </div>
+            </div>
+            <h3 class="rec-sub">Las im&aacute;genes y sus prompts</h3>
+            <div class="rec-gallery">
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_vampira-guerrera.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_vampira-guerrera.webp" width="670" height="1200" loading="lazy" alt="Nyxia, vampira guerrera"></a>
+                    <figcaption><strong>Nyxia, vampira guerrera</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, standing in a confident pose, facing the camera, neutral dark grey studio background, cold cinematic lighting with a subtle blue tint, photorealistic.
+Outfit: modern gothic vampire warrior — form-fitting glossy black leather bodysuit with a black leather corset over it, moderate neckline, a long black leather trench coat flowing open to her ankles with a high collar, black fingerless leather gloves, a slim silver chain belt, tall black combat boots with buckles.
+Look: porcelain skin, glowing ice-blue eyes, dark smoky eyeshadow, deep red lips, small sharp fangs visible in a slight smirk. Powerful, cold, magnetic expression, arms crossed. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/kaian_hombre-lobo.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/kaian_hombre-lobo.webp" width="670" height="1200" loading="lazy" alt="Kaian, hombre lobo"></a>
+                    <figcaption><strong>Kaian, hombre lobo</strong>
+                    <div class="rec-code"><pre>Use the man from the reference image: keep his eye shape, facial structure and dark hair recognizable. Full-body photo, neutral dark grey studio background with soft coloured club lights, cinematic, photorealistic.
+Transformation: clearly mid-transformation werewolf — thick dark grey fur growing along his jaw, cheeks and neck, tall pointed furry wolf ears rising through his hair, a slightly wolfish nose bridge, glowing amber eyes, long sharp fangs, both hands turned into furry wolf paws with long black claws, thick fur on his forearms and chest, a bushy dark grey wolf tail.
+Outfit: torn black shirt hanging open and ripped by the transformation, fur-lined black leather jacket, ripped dark jeans shredded at the knees, heavy black boots, a silver full-moon pendant.
+Pose: mid dance move, one paw raised, head tilted back howling with a big grin. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+            </div>
+            <h3 class="rec-sub">Prompt del v&iacute;deo</h3>
+            <div class="rec-code"><pre>Replace the figures in @video1 with those from @image1 and @image2: replace the first person (who is leaning/resting against a railing) with the woman from @image1 — fully replacing their appearance and clothing with her long straight dark purple hair, black leather vampire outfit, long leather coat, glowing ice-blue eyes and fangs — including shots where she is seen from behind or facing away from the camera, where her long purple hair and leather coat must be visible. Replace the second person (the dancer) with the man from @image2 — fully replacing their appearance and clothing with his werewolf look: furry wolf ears, fur on his face and chest, wolf paws with claws, bushy tail, torn black shirt, fur-lined leather jacket and ripped jeans. Retain the background, lighting, camera movement and facial expressions from @video1; the figures from @image1 and @image2 should mimic the actions in @video1 without including the backgrounds from the source images. Keep both faces consistent with @image1 and @image2 throughout. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div>
+        </section>
+
+        <section id="ventilador" class="process-section rec-hw">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">El ventilador: cinco disfraces estilo Tim Burton</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-hw-grid">
+                <video class="rec-hw-video" src="/assets/recursos/halloween/ventilador.mp4" poster="/assets/recursos/halloween/ventilador-poster.webp" width="720" height="1280" controls muted loop playsinline preload="metadata"></video>
+                <div>
+                    <span class="rec-tag rec-tag-modelo">Seedance 2.5</span>
+                    <h3 class="rec-sub">C&oacute;mo hacerlo</h3>
+                    <ol class="rec-steps">
+                        <li>Crea la habitaci&oacute;n y los cinco disfraces con estos prompts, adjuntando la hoja de personaje de tu avatar (o una foto tuya) en los disfraces.</li>
+                        <li>En PixVerse, elige <strong>Seedance 2.5</strong> y sube el v&iacute;deo de movimiento como <code>@video1</code>, la habitaci&oacute;n como <code>@image1</code> y los disfraces como <code>@image2</code> a <code>@image6</code>, en este orden: rayas, porcelana, bailarina, jard&iacute;n marchito y circo.</li>
+                        <li>Pega el prompt del v&iacute;deo y genera.</li>
+                    </ol>
+                    <p class="rec-refnote"><i class="fa-solid fa-circle-info"></i> El v&iacute;deo de referencia solo se usa como gu&iacute;a de movimiento. Usa uno tuyo o uno con permiso.</p>
+                </div>
+            </div>
+            <h3 class="rec-sub">Las im&aacute;genes y sus prompts</h3>
+            <div class="rec-gallery">
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/habitacion-gotica-ventilador.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/habitacion-gotica-ventilador.webp" width="670" height="1200" loading="lazy" alt="La habitación gótica"></a>
+                    <figcaption><strong>La habitación gótica</strong>
+                    <div class="rec-code"><pre>Top-down overhead photo looking straight down from the ceiling, vertical 9:16, photorealistic, cinematic.
+Foreground, top of the frame: an ornate gothic ceiling fan seen from below, close to the camera and softly out of focus, with a dark wrought-iron centre and four long blades shaped like carved moth wings in black wood with silver filigree.
+Below, the floor of a gothic Victorian parlour: polished black marble with fine violet veins, inlaid with a large geometric pattern of deep purple and silver marble around an empty central area where a person could lie down.
+Left side: a long tufted deep purple velvet chaise sofa with carved black wooden legs, a black remote control lying on the floor next to it.
+Corners: tall black iron candelabras with lit candles, scattered dark purple and black roses, a few small silver moths resting on the floor, faint moonlight coming through a tall gothic window on one side, casting soft blue window-shaped light across the marble.
+Moody, elegant, dark fairy-tale atmosphere, warm candlelight mixed with cool moonlight. No people, no text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_rayas-y-espirales.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_rayas-y-espirales.webp" width="670" height="1200" loading="lazy" alt="Rayas y espirales"></a>
+                    <figcaption><strong>Rayas y espirales</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: whimsical gothic Tim Burton style — fitted black and white vertical-striped corset dress with a moderate neckline, a short skirt shaped like a curling spiral with layered black tulle underneath, black and white striped stockings, pointed black buckle boots, a tiny crooked top hat with a spiral feather.
+Makeup: pale porcelain skin, dark sunken eye shadows, thin spiral drawn on one cheek, deep plum lips. Slightly eerie, playful look. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_muneca-porcelana.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_muneca-porcelana.webp" width="670" height="1200" loading="lazy" alt="Muñeca de porcelana rota"></a>
+                    <figcaption><strong>Muñeca de porcelana rota</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: Tim Burton style "broken porcelain doll" — antique ivory and dusty-lilac Victorian lace dress with puffed sleeves and a moderate neckline, short layered petticoat, white frilly socks with black Mary Jane shoes, an oversized faded lilac bow in her hair.
+Makeup: glossy white porcelain skin with fine painted cracks across one cheek and forehead, round rosy doll cheeks, dark shadows around big doll-like eyes, small heart-shaped dark red lips. Still, slightly unsettling expression. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_bailarina-caja-musica.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_bailarina-caja-musica.webp" width="670" height="1200" loading="lazy" alt="Bailarina de la caja de música"></a>
+                    <figcaption><strong>Bailarina de la caja de música</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: Tim Burton style "macabre music box ballerina" — black velvet bodice with a moderate neckline, a stiff black and violet tutu with torn edges, a large silver wind-up key on her back, painted doll joint lines at her elbows and knees, black satin pointe shoes with ribbons crossing up her legs, a small cracked silver tiara.
+Makeup: pale skin, dark ringed eyes, tiny black teardrop, deep violet lips. Graceful but eerie pose. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_jardin-marchito.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_jardin-marchito.webp" width="670" height="1200" loading="lazy" alt="Reina del jardín marchito"></a>
+                    <figcaption><strong>Reina del jardín marchito</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: Tim Burton style "withered garden queen" — long tattered grey-violet chiffon gown with a moderate neckline, bodice wrapped in dry black thorny vines and wilted dark roses, petals falling from the skirt, a crown of dead roses and twisted twigs, fingerless black lace gloves.
+Makeup: pale grey-tinged skin, dark smudged eyes, faint vein-like lines on her temples, dried-rose lips. Melancholic, haunting look. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_circo-de-la-luna.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_circo-de-la-luna.webp" width="670" height="1200" loading="lazy" alt="Maestra de ceremonias del circo de la luna"></a>
+                    <figcaption><strong>Maestra de ceremonias del circo de la luna</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: Tim Burton style "moon circus ringmistress" — black and deep purple striped tailcoat with silver crescent-moon buttons, fitted black corset vest with a moderate neckline, short black shorts with sheer black tights, tall black boots, a crooked tall top hat with a tiny glowing moon hanging from its brim, a thin silver cane topped with a star.
+Makeup: pale skin, dark dramatic eyes with silver stars at the corners, deep berry lips. Mischievous, theatrical smile. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+            </div>
+            <h3 class="rec-sub">Prompt del v&iacute;deo</h3>
+            <div class="rec-code"><pre>Faithfully follow the motion paths and timing from @video1. Use @video1 only as a motion and timing guide; never copy its person, outfits or room.
+
+Format: 9:16, 1080p, 15 seconds. Fixed 90-degree overhead camera with no camera movement.
+
+Use @image1 as the permanent Gothic room, exactly as shown: purple velvet sofa on the left, marble floor, candles, and the ornate ceiling fan in the foreground at the top of the frame.
+
+FACE LOCK — HIGHEST PRIORITY:
+@image2, @image3, @image4, @image5 and @image6 all show the same woman: long straight dark purple hair and black choker. Keep her exact face, face shape, skin tone and body proportions identical in every look. Only the outfit, makeup and accessories change; her facial structure never changes. Keep her face clearly visible in every look. Never use the poses or grey studio backgrounds from the images.
+
+Preserve the opening action from @video1: the woman rolls off the sofa, lands flat on her back, and presses the remote. The ceiling fan remains still before the click and rotates steadily afterward.
+
+After landing, she stays on her back, head toward the top of the frame, feet toward the bottom, legs extended, and full outfit visible.
+
+Timeline:
+
+0–5s — @image2:
+The complete black and white striped look: striped corset dress with a spiral skirt and black tulle, striped tights, black buckle boots, tiny top hat with a spiral feather, spiral drawn on her cheek. Reproduce the rolling, falling, landing and remote-control action from @video1.
+
+6–7s — @image3:
+A passing fan blade completely hides the transition and reveals the complete broken porcelain doll look: ivory and lilac lace dress with puffed sleeves, big lilac bow, white frilly socks, black Mary Jane shoes, cracked porcelain makeup with rosy cheeks and small heart-shaped red lips. She opens both hands outward and blinks slowly like a doll.
+
+8–10s — @image4:
+The next blade reveals the complete music box ballerina look: black velvet bodice, black and purple torn tutu, silver wind-up key on her back, painted doll joints on elbows and knees, black pointe shoes with crossed ribbons, small silver tiara. She lifts both arms gracefully above her head and gives a slow, eerie smile.
+
+11–13s — @image5:
+The next blade reveals the complete withered garden queen look: long tattered grey-violet gown wrapped in black thorny vines and dried roses, crown of thorns and dead roses, black lace fingerless gloves, petals scattered on the floor around her. She slowly crosses her hands over her chest and turns her head slightly.
+
+14–15s — @image6:
+The final blade reveals the complete moon circus ringmistress look: black and purple striped tailcoat with silver crescent-moon buttons, black corset, black shorts with sheer tights, tall lace-up boots, tall black top hat with a purple band and a small hanging moon, silver star cane. She holds the cane across her body, gives a mischievous smile and taps the hat brim with one finger.
+
+Every transformation must be completely concealed by a passing fan blade. Never blend outfits, makeup or accessories.
+
+Audio: remote click, soft fan sound, and a light whoosh at each transition. No dialogue or background music.
+
+No facial drift, face replacement, mannequin face, hidden face, plastic skin, body deformation, extra limbs, missing accessories, mixed outfits, camera movement, or background changes.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div>
+        </section>
+
+        <section id="paseo" class="process-section rec-hw">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Paseo g&oacute;tico de pareja</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-hw-grid">
+                <video class="rec-hw-video" src="/assets/recursos/halloween/paseo.mp4" poster="/assets/recursos/halloween/paseo-poster.webp" width="720" height="1280" controls muted loop playsinline preload="metadata"></video>
+                <div>
+                    <span class="rec-tag rec-tag-modelo">Seedance 2.5</span>
+                    <h3 class="rec-sub">C&oacute;mo hacerlo</h3>
+                    <ol class="rec-steps">
+                        <li>Crea las dos im&aacute;genes con estos prompts, adjuntando la hoja de personaje de tu avatar (o una foto tuya) como referencia.</li>
+                        <li>En PixVerse, elige <strong>Seedance 2.5</strong> y sube el v&iacute;deo de movimiento como <code>@video1</code>, la viuda de las polillas como <code>@image1</code> y el guardi&aacute;n del reloj como <code>@image2</code>.</li>
+                        <li>Pega el prompt del v&iacute;deo y genera.</li>
+                    </ol>
+                    <p class="rec-refnote"><i class="fa-solid fa-circle-info"></i> El v&iacute;deo de referencia solo se usa como gu&iacute;a de movimiento. Usa uno tuyo o uno con permiso.</p>
+                </div>
+            </div>
+            <h3 class="rec-sub">Las im&aacute;genes y sus prompts</h3>
+            <div class="rec-gallery">
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_viuda-polillas.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_viuda-polillas.webp" width="670" height="1200" loading="lazy" alt="Nyxia, la viuda de las polillas"></a>
+                    <figcaption><strong>Nyxia, la viuda de las polillas</strong>
+                    <div class="rec-code"><pre>Use the woman from the reference image: keep her exact face, long straight dark purple hair and black choker. Full-body photo, standing, facing the camera, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: elegant gothic "moth widow" look — black sheer lace corset gown with tiny silver moths embroidered across the bodice, moderate neckline, long flowing skirt with a high side slit, translucent dusty-grey moth-wing cape attached at the shoulders, delicate black lace gloves, a short black mourning veil pinned with a silver moth brooch.
+Makeup: pale skin, smoky charcoal eyes with silver shimmer, dark burgundy lips. Calm, magnetic gaze. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/kaian_guardian-del-reloj.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/kaian_guardian-del-reloj.webp" width="670" height="1200" loading="lazy" alt="Kaian, el guardián del reloj"></a>
+                    <figcaption><strong>Kaian, el guardián del reloj</strong>
+                    <div class="rec-code"><pre>Use the man from the reference image: keep his exact face and dark hair. Full-body photo, standing, facing the camera, neutral grey studio background, soft cinematic lighting, photorealistic.
+Outfit: gothic "clockwork guardian" — black velvet tailcoat with deep purple lining, high black collar, silver clock gears embroidered along the lapels, a broken pocket watch hanging from a long chain, black leather gloves, a black ribbon tied at the neck.
+Makeup: pale skin, dark shadow around the eyes, a thin crack line painted down one cheek like broken porcelain. Composed, intense look. No text, no logos.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+            </div>
+            <h3 class="rec-sub">Prompt del v&iacute;deo</h3>
+            <div class="rec-code"><pre>@image1 Gothic moth widow woman with long straight purple hair, black lace corset gown with silver moths, sheer grey veil; @image2 Gothic clockwork gentleman with black hair, black velvet tailcoat with silver gear embroidery, pocket watch. Match @video1 Cosplay Walk camera: shoes first, walk forward, pan up to faces, wider two-shot, deadpan. Night Halloween street with fog and candlelight. Keep faces and costumes exactly from images.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div>
+        </section>
+
+        <section id="mascara" class="process-section rec-hw">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">La m&aacute;scara</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-hw-grid">
+                <video class="rec-hw-video" src="/assets/recursos/halloween/mascara.mp4" poster="/assets/recursos/halloween/mascara-poster.webp" width="720" height="1280" controls muted loop playsinline preload="metadata"></video>
+                <div>
+                    <span class="rec-tag rec-tag-modelo">Plantilla de PixVerse</span>
+                    <h3 class="rec-sub">C&oacute;mo hacerlo</h3>
+                    <ol class="rec-steps">
+                        <li>Busca la plantilla de efecto en la secci&oacute;n de plantillas de PixVerse.</li>
+                        <li>Sube una imagen de tu personaje. Yo us&eacute; esta de Nyxia.</li>
+                        <li>Genera: esta no necesita prompt.</li>
+                    </ol>
+                    
+                </div>
+            </div>
+            <h3 class="rec-sub">La imagen</h3>
+            <div class="rec-gallery">
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/halloween/nyxia_referencia.webp" target="_blank" rel="noopener"><img src="/assets/recursos/halloween/nyxia_referencia.webp" width="670" height="1200" loading="lazy" alt="Nyxia, imagen de referencia"></a>
+                    <figcaption><strong>Nyxia, imagen de referencia</strong>
+                    <p class="rec-meta">Sin prompt: se sube tal cual a la plantilla.</p></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="process-section rec-pixverse">
+            <h2>Todos estos v&iacute;deos est&aacute;n hechos en PixVerse</h2>
+            <a class="btn rec-main" href="https://motivaiprivatelimited.sjv.io/7XyWbg" target="_blank" rel="sponsored nofollow noopener">Probar PixVerse <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <p class="rec-meta">Enlace de afiliada</p>
+        </section>
+        <!-- LISTA DE ESPERA -->
+        <section id="waitlist" class="waitlist-section" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Aprende a hacerlo paso a paso</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center waitlist-subtitle">En mi curso ense&ntilde;o a hacer esto paso a paso, con cada modelo y cada plataforma. Plazas de fundador/a limitadas.</p>
+            <p class="subtitle inter text-center waitlist-subtitle">Las primeras <strong style="color: var(--page-primary);">100 personas</strong> entran con <strong style="color: var(--page-primary);">precio de fundador/a en LIDERA: 29&euro;/mes en lugar de 39&euro;</strong>.</p>
+
+            <div class="waitlist-container" data-shape-mask>
+                <div class="waitlist-benefits">
+                    <ul>
+                        <li>Precio de fundador/a bloqueado para siempre</li>
+                        <li>Acceso prioritario antes de la apertura general</li>
+                        <li>Todos los tutoriales completos, en v&iacute;deo y paso a paso</li>
+                        <li>Resuelvo tus dudas directamente en la comunidad</li>
+                    </ul>
+                </div>
+
+                <div class="waitlist-form-wrapper">
+                    <form id="waitlistForm" class="waitlist-form" action="https://formspree.io/f/mwvwblkv" method="POST">
+                        <input type="hidden" name="origen" value="recurso-halloween">
+                        <div class="input-group">
+                            <input type="text" id="waitlistName" name="nombre" placeholder="Tu nombre..." required class="neon-input">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="waitlistEmail" name="email" placeholder="Tu mejor email..." required class="neon-input">
+                        </div>
+                        <div class="input-group">
+                            <select id="waitlistReason" name="motivo" required class="neon-input" style="appearance: none; cursor: pointer;">
+                                <option value="" disabled selected>&iquest;Para qu&eacute; quieres crear con IA?</option>
+                                <option value="Marca Personal">Crear mi Marca Personal</option>
+                                <option value="Vender Servicios">Vender a Clientes/Empresas</option>
+                                <option value="Docencia">Material Educativo / Alumnos</option>
+                                <option value="Hobby">Hobby y Curiosidad</option>
+                            </select>
+                            <div class="legal-checkbox" style="display: flex; align-items: flex-start; gap: 0.5rem; text-align: left; font-size: 0.8rem; color: #ccc; margin-top: 1rem;">
+                                <input type="checkbox" id="privacy" required style="margin-top: 0.2rem; transform: scale(1.2); accent-color: var(--blue);">
+                                <label for="privacy">He le&iacute;do y acepto la <a href="/legal.html" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">Pol&iacute;tica de Privacidad</a>.</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn danger-btn submit-btn" style="margin-top: 1rem;">RESERVAR MI PRECIO DE FUNDADOR/A</button>
+                    </form>
+
+                    <div id="waitlistSuccess" class="success-message" style="display: none;">
+                        &iexcl;Est&aacute;s dentro! Te escribiremos en cuanto abramos plazas &mdash; revisa tu bandeja de entrada.
+                    </div>
+                    <div id="waitlistError" class="error-message" style="display: none;">
+                        Por favor, escribe un email v&aacute;lido.
+                    </div>
+
+                    <div class="urgency-counter" style="color: #aaa; font-size: 0.9rem;">
+                        <i>Solo 100 plazas con precio de fundador/a.</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÁS RECURSOS -->
+        <section class="process-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">M&aacute;s recursos gratis</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-grid" data-recursos="3" data-excluir="halloween"></div>
+            <p class="rec-more"><a href="/recursos/" class="btn primary-btn">Ver todos los recursos &rarr;</a></p>
+        </section>
+
+        <section class="process-section">
+            <p class="rec-credits"><img src="/assets/logo_negro_128.webp" width="40" height="40" alt="Lid.IA"> V&iacute;deos generados con IA. Personajes: Nyxia y Kaian, avatares de Lid.IA.</p>
+            <p class="inter text-center tools-disclosure">Algunos enlaces de esta p&aacute;gina son de afiliada: si te registras con ellos no pagas nada extra y me ayudas a seguir creando recursos gratis.</p>
+        </section>
+    </main>
+
+    <footer class="text-center" style="padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+        <div class="footer-socials" style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+            <a href="https://www.tiktok.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link tiktok"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a href="https://www.youtube.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link youtube"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            <a href="https://www.instagram.com/lidia.conia" target="_blank" rel="noopener noreferrer" class="footer-link instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/in/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/liconoc" target="_blank" rel="noopener noreferrer" class="footer-link github"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://x.com/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link twitter"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+        </div>
+        <p class="inter" style="color: #666;">&copy; 2026 Lidia Contreras - Todos los derechos reservados. | <a href="/legal.html" style="color: #888;">Legal y Privacidad</a></p>
+    </footer>
+
+    <script src="/script.js?v=20261030a"></script>
+    <script src="/recursos.js?v=20261031e"></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
