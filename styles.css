@@ -5236,6 +5236,10 @@ body[class*="theme-"] .rec-sub {
     border-radius: 8px; padding: 0.7rem 0.9rem;
 }
 .rec-refnote i { color: #67e8f9; margin-right: 0.3rem; }
+.rec-refnote.rec-music { background: rgba(251, 113, 133, 0.07); border-left-color: #fb7185; }
+.rec-refnote.rec-music i { color: #fb7185; }
+.rec-refnote.rec-music a { color: #fb7185; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.rec-refnote.rec-music a:hover { text-decoration: underline; }
 .rec-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
