@@ -27,9 +27,9 @@
         var tags = [t.nombre].concat(r.etiquetas || []).map(function (e, i) {
             return '<span class="rec-tag' + (i === 0 ? ' rec-tag-tipo' : '') + '">' + esc(e) + '</span>';
         }).join('');
-        var boton = r.pdf
-            ? '<a class="btn rec-main" href="' + esc(r.pdf) + '" download><i class="fa-solid fa-download"></i> Descargar PDF</a>'
-            : '<a class="btn rec-main" href="' + esc(r.url) + '"><i class="fa-regular fa-copy"></i> ' + esc(r.boton || 'Copiar prompt') + '</a>';
+        // El botón lleva siempre a la página del recurso (ahí está la descarga y la lista de espera)
+        var boton = '<a class="btn rec-main" href="' + esc(r.url) + '"><i class="fa-solid ' + t.icono + '"></i> ' +
+            esc(r.boton || (r.tipo === 'tutorial' ? 'Ver el tutorial' : 'Ver los prompts')) + '</a>';
         return '<article class="rec-card" id="' + esc(r.id) + '" data-tipo="' + esc(r.tipo) + '">' +
             '<a class="rec-thumb" href="' + esc(r.url) + '"><img src="' + esc(r.imagen) + '" alt="' + esc(r.titulo) + '" width="800" height="1000" loading="lazy">' +
             '<span class="rec-badge"><i class="fa-solid ' + t.icono + '"></i> ' + t.nombre + '</span></a>' +
