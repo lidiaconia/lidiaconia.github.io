@@ -1,0 +1,24 @@
+[
+  {
+    "id": "disfraz",
+    "tipo": "tutorial",
+    "fecha": "2026-10-31",
+    "titulo": "Disfrázate con IA",
+    "descripcion": "Cambia tu ropa, tu maquillaje y tu habitación en un solo vídeo, paso a paso.",
+    "etiquetas": ["PixVerse", "Seedance 2.5"],
+    "imagen": "/assets/recursos/disfraz.webp",
+    "url": "/recursos/disfraz/",
+    "pdf": "/assets/recursos/2026-10-31_tutorial_disfrazate-con-ia.pdf"
+  },
+  {
+    "id": "gta",
+    "tipo": "prompt",
+    "fecha": "2026-10-17",
+    "titulo": "Tu versión estilo GTA VI",
+    "descripcion": "21 prompts para convertir tu foto en una ilustración tipo pantalla de carga.",
+    "etiquetas": ["ChatGPT", "GPT-6 Astra Ligero"],
+    "imagen": "/assets/gta/01.webp",
+    "url": "/recursos/gta/",
+    "boton": "Ver los 21 prompts"
+  }
+]
