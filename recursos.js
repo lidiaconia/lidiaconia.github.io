@@ -1,5 +1,57 @@
 // Recursos gratis: pinta las tarjetas desde recursos.json (hub, portada y "Más recursos"),
 // filtra por tipo, ordena por fecha y gestiona los botones de copiar prompt.
+
+// Contador de visitas y clics con GoatCounter (sin cookies). Vacío = desactivado.
+var GOATCOUNTER = 'lidiaconia';
+
+(function () {
+    if (!GOATCOUNTER) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://gc.zgo.at/count.js';
+    s.dataset.goatcounter = 'https://' + GOATCOUNTER + '.goatcounter.com/count';
+    document.head.appendChild(s);
+
+    // Nombre del recurso según la página: /recursos/fuego/ → "fuego"; /recursos/ → "recursos"; portada → "inicio"
+    var m = location.pathname.match(/^\/recursos\/([^/]+)\//);
+    var pagina = m ? m[1] : /^\/recursos\/?$/.test(location.pathname) ? 'recursos' : 'inicio';
+
+    var contar = function (accion, titulo) {
+        if (!window.goatcounter || !window.goatcounter.count) return;
+        window.goatcounter.count({ path: pagina + '/' + accion, title: titulo || accion, event: true });
+    };
+
+    document.addEventListener('click', function (e) {
+        var a = e.target.closest('a, button');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        if (a.classList.contains('rec-copy')) {
+            var n = [].indexOf.call(document.querySelectorAll('.rec-copy'), a) + 1;
+            var caja = a.closest('details, figure');
+            var nombre = caja && caja.querySelector('.ttl, figcaption strong');
+            contar('copiar-' + n, 'Copiar prompt ' + n + (nombre ? ': ' + nombre.textContent.trim() : ''));
+        } else if (a.hasAttribute('download') || /\.pdf(\?|$)/.test(href)) {
+            contar('pdf', 'Descargar PDF');
+        } else if (/sjv\.io|pixverse/.test(href)) {
+            contar('pixverse', 'Probar PixVerse');
+        } else if (/elevenlabs/.test(href)) {
+            contar('elevenlabs', 'Probar ElevenLabs');
+        } else if (/#waitlist$/.test(href)) {
+            contar('lista-espera', 'Ir a la lista de espera');
+        } else if (a.classList.contains('rec-video-play')) {
+            contar('video', 'Reproducir el vídeo');
+        } else if (a.closest('.rec-card')) {
+            contar('tarjeta-' + a.closest('.rec-card').id, 'Tarjeta: ' + a.closest('.rec-card').querySelector('h3').textContent.trim());
+        }
+    });
+
+    document.querySelectorAll('video').forEach(function (v) {
+        v.addEventListener('play', function () { contar('video', 'Reproducir el vídeo'); }, { once: true });
+    });
+    var form = document.getElementById('waitlistForm');
+    if (form) form.addEventListener('submit', function () { contar('formulario', 'Enviar el formulario de la lista de espera'); });
+})();
+
 (function () {
     var TIPOS = {
         tutorial: { nombre: 'Tutorial', icono: 'fa-file-pdf' },
