@@ -1,5 +1,15 @@
 [
   {
+    "id": "wow",
+    "tipo": "tutorial",
+    "fecha": "2026-11-02",
+    "titulo": "Personajes de WoW pegados a la cámara",
+    "descripcion": "Crea a tus personajes y haz que peguen la nariz a la cámara con una plantilla de PixVerse.",
+    "etiquetas": ["Nano Banana 2.1", "PixVerse"],
+    "imagen": "/assets/recursos/wow.webp",
+    "url": "/recursos/wow/"
+  },
+  {
     "id": "halloween",
     "tipo": "prompt",
     "fecha": "2026-10-31",

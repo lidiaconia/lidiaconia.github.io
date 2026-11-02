@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes de WoW pegados a la cámara: tutorial gratis | Lidia Contreras - LID.IA</title>
+    <meta name="description" content="Crea a tus personajes de World of Warcraft con Nano Banana 2.1 y haz que peguen la nariz a la cámara con una plantilla de PixVerse. Tutorial gratis en PDF y todos los prompts.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lidiaconia.com/recursos/wow/">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Personajes de WoW pegados a la cámara: tutorial gratis | Lidia Contreras - LID.IA">
+    <meta property="og:description" content="Crea a tus personajes de World of Warcraft con Nano Banana 2.1 y haz que peguen la nariz a la cámara con una plantilla de PixVerse. Tutorial gratis en PDF y todos los prompts.">
+    <meta property="og:image" content="https://lidiaconia.com/assets/recursos/wow-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://lidiaconia.com/recursos/wow/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Comunidad LID.IA">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lidiaconia">
+    <meta name="twitter:title" content="Personajes de WoW pegados a la cámara: tutorial gratis | Lidia Contreras - LID.IA">
+    <meta name="twitter:description" content="Crea a tus personajes de World of Warcraft con Nano Banana 2.1 y haz que peguen la nariz a la cámara con una plantilla de PixVerse. Tutorial gratis en PDF y todos los prompts.">
+    <meta name="twitter:image" content="https://lidiaconia.com/assets/recursos/wow-og.jpg">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Lidia Contreras">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Personajes de WoW pegados a la cámara",
+      "description": "Crea a tus personajes con Nano Banana 2.1 y haz que se acerquen hasta pegar la nariz al objetivo con una plantilla de PixVerse.",
+      "image": "https://lidiaconia.com/assets/recursos/wow.webp",
+      "url": "https://lidiaconia.com/recursos/wow/",
+      "inLanguage": "es",
+      "author": { "@type": "Person", "name": "Lidia Contreras", "url": "https://lidiaconia.com/" }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/assets/logo_negro_128.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css?v=20261102a">
+</head>
+<body class="theme-recursos">
+    <canvas id="particleCanvas"></canvas> <!-- Background -->
+
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/logo_negro_128.webp" alt="Lidia Contreras Logo"></a>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="center-menu">
+                <div class="nav-dropdown">
+                    <a href="/index.html" class="nav-dropdown-trigger">Curso <span class="nav-caret">&#9662;</span></a>
+                    <div class="nav-dropdown-panel">
+                        <a href="/index.html#comunidad">La Comunidad</a>
+                        <a href="/index.html#scroll-modulos">Los M&oacute;dulos</a>
+                        <a href="/index.html#tiers">Planes y precios</a>
+                        <a href="/index.html#recursos">Recursos</a>
+                        <a href="/index.html#waitlist">Lista de espera</a>
+                    </div>
+                </div> |
+                <a href="/recursos/" style="color: #67e8f9; text-shadow: 0 0 10px rgba(103, 232, 249, 0.5);">Recursos gratis</a> |
+                <a href="/cv.html">CV</a> |
+                <a href="/libros.html">Libros</a> |
+                <a href="/musica.html">M&uacute;sica</a>
+            </nav>
+            <a href="#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
+        </div>
+        <nav class="mobile-menu">
+            <div class="mobile-nav-group">
+            <button class="mobile-nav-trigger" aria-expanded="false">Curso <span class="nav-caret">&#9662;</span></button>
+            <div class="mobile-nav-submenu">
+                <a href="/index.html#comunidad">La Comunidad</a>
+                <a href="/index.html#scroll-modulos">Los M&oacute;dulos</a>
+                <a href="/index.html#tiers">Planes y precios</a>
+                <a href="/index.html#recursos">Recursos</a>
+                <a href="/index.html#waitlist">Lista de espera</a>
+            </div>
+        </div>
+            <a href="/recursos/" style="color: #67e8f9;">Recursos gratis</a>
+            <a href="/cv.html">CV</a>
+            <a href="/libros.html">Libros</a>
+            <a href="/musica.html">M&uacute;sica</a>
+            <a href="#waitlist" class="btn skool-btn-nav" style="display: block; text-align: center;">Comunidad LID.IA</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="rec-detail">
+            <a class="rec-back" href="/recursos/">&larr; Todos los recursos gratis</a>
+            <div class="rec-detail-grid rec-split">
+                <div class="rec-head">
+                    <span class="rec-kicker"><i class="fa-solid fa-file-pdf"></i> Tutorial gratis &middot; PDF</span>
+                    <h1>Personajes de WoW pegados a la c&aacute;mara</h1>
+                    <div class="rec-tags">
+                        <span class="rec-tag rec-tag-tipo">Tutorial</span>
+                        <span class="rec-tag">Nano Banana 2.1</span>
+                        <span class="rec-tag">PixVerse</span>
+                    </div>
+                    <p class="rec-lead">Crea a tus personajes con Nano Banana 2.1 y haz que se acerquen hasta pegar la nariz al objetivo con una plantilla de PixVerse.</p>
+                </div>
+                <video class="rec-media" src="/assets/recursos/wow/wow.mp4" poster="/assets/recursos/wow/wow-poster.webp" width="720" height="1280" controls loop playsinline preload="metadata"></video>
+                <div class="rec-body">
+                    <div class="rec-actions">
+                        <a class="btn rec-main" href="/assets/recursos/2026-11-04_tutorial_ojo-de-pez-wow.pdf" download><i class="fa-solid fa-download"></i> Descargar el tutorial (PDF)</a>
+                        <a class="rec-secondary" href="#prompts">Ver los prompts &darr;</a>
+                        <a class="rec-secondary" href="https://motivaiprivatelimited.sjv.io/7XyWbg" target="_blank" rel="sponsored nofollow noopener">Prueba PixVerse <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <p class="rec-meta">PDF gratis &middot; 13 p&aacute;ginas &middot; 8 MB</p>
+                    <a class="rec-wl" href="#waitlist"><span>&iquest;Quieres aprenderlo paso a paso, en v&iacute;deo y con mi ayuda?</span> <strong>Lista de espera &rarr;</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pasos" class="process-section rec-hw">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">C&oacute;mo se hace, en 4 pasos</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <ol class="rec-pasos">
+                <li><span class="rec-paso-n">1</span><div>
+                    <h3>Crea a cada personaje</h3>
+                    <p>Crea la imagen de cada personaje en <strong>Google Flow con Nano Banana 2.1</strong>, adjuntando una imagen cualquiera del personaje como referencia. De cuerpo entero, de frente y con fondo liso.</p>
+                    <a class="rec-secondary" href="#prompts-personajes">Ver los prompts de los personajes &darr;</a>
+                </div></li>
+                <li><span class="rec-paso-n">2</span><div>
+                    <h3>Junta a la pareja en su escenario</h3>
+                    <p>Adjunta las <strong>dos im&aacute;genes que has creado</strong> y escribe el prompt de la escena: los dos mirando a c&aacute;mara y cerca del objetivo.</p>
+                    <a class="rec-secondary" href="#prompts-escenarios">Ver los prompts de los escenarios &darr;</a>
+                </div></li>
+                <li><span class="rec-paso-n">3</span><div>
+                    <h3>Busca la plantilla en PixVerse</h3>
+                    <p>App de PixVerse &rarr; <strong>Plantilla</strong> &rarr; <strong>Tendencias</strong> &rarr; <strong>&laquo;Huele el Ojo de Pez&raquo;</strong> &rarr; <strong>Usar esta plantilla</strong>.</p>
+                    <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> Las plantillas cambian de sitio según las tendencias. Si no la ves, búscala con la <strong>lupa</strong> por su nombre.</p>
+                    <div class="rec-strip rec-strip-app"><a href="/assets/recursos/wow/pv_galeria.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/pv_galeria.webp" loading="lazy" alt="Pestaña Tendencias de la app de PixVerse"></a><a href="/assets/recursos/wow/pv_plantilla.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/pv_plantilla.webp" loading="lazy" alt="Plantilla Huele el Ojo de Pez y botón Usar esta plantilla"></a></div>
+                </div></li>
+                <li><span class="rec-paso-n">4</span><div>
+                    <h3>Sube tu imagen y genera</h3>
+                    <p>Sube la imagen de la escena y genera: <strong>no hace falta prompt</strong>. Cada v&iacute;deo cuesta <strong>40 cr&eacute;ditos</strong>.</p>
+                    <div class="rec-strip"><a href="/assets/recursos/wow/fin_thrall.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/fin_thrall.webp" loading="lazy" alt="Resultado: Thrall y Jaina"></a><a href="/assets/recursos/wow/fin_sylvanas.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/fin_sylvanas.webp" loading="lazy" alt="Resultado: Sylvanas y Arthas"></a><a href="/assets/recursos/wow/fin_murloc.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/fin_murloc.webp" loading="lazy" alt="Resultado: Hogger y el murloc"></a></div>
+                </div></li>
+            </ol>
+        </section>
+
+        <section id="prompts" class="process-section rec-hw">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Los prompts</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <h3 class="rec-sub" id="prompts-personajes">Paso 1 &middot; La imagen de cada personaje</h3>
+            <p class="rec-intro">Usa esta plantilla y cambia <strong>[PERSONAJE]</strong> por la descripción que quieras:</p>
+            <div class="rec-code"><pre>Photorealistic cinematic full-body character reference of [PERSONAJE]. Standing facing the camera, neutral relaxed pose, arms slightly away from the body, both hands fully visible, whole body visible from head to feet. Plain dark charcoal studio background, no props, no scenery, no text, no logos, no writing on clothes. Soft even studio lighting with a subtle rim light, sharp details on face, hair, skin and costume. Realistic materials and textures, film still quality, 9:16 vertical.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div>
+            <p class="rec-intro">Y estas son las descripciones de mis seis personajes:</p>
+            <div class="rec-gallery">
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/ref_thrall.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/ref_thrall.webp" width="670" height="1200" loading="lazy" alt="Thrall"></a>
+                    <figcaption><strong>Thrall</strong>
+                    <div class="rec-code"><pre>Thrall, the young orc warchief from Warcraft III, green skin, strong jaw with small tusks, bright blue eyes, long black hair, heavy black plate armor with large spiked shoulder pauldrons and gold trim, holding a huge stone warhammer, confident and serious expression, stylized high-detail fantasy 3D art in the style of Warcraft III Reforged</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/ref_jaina.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/ref_jaina.webp" width="670" height="1200" loading="lazy" alt="Jaina"></a>
+                    <figcaption><strong>Jaina</strong>
+                    <div class="rec-code"><pre>Jaina Proudmoore sorceress from Warcraft III, stylized high-detail fantasy 3D art in the style of Warcraft III Reforged</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/ref_sylvanas.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/ref_sylvanas.webp" width="670" height="1200" loading="lazy" alt="Sylvanas"></a>
+                    <figcaption><strong>Sylvanas</strong>
+                    <div class="rec-code"><pre>Sylvanas Windrunner, the undead banshee queen from World of Warcraft: tall elegant female elf, pale grey-blue skin, long pointed ears, glowing red eyes, long silver-white hair, dark hooded cloak, black and dark silver spiked armor with a corset, long dark gloves</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/ref_arthas.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/ref_arthas.webp" width="670" height="1200" loading="lazy" alt="Arthas"></a>
+                    <figcaption><strong>Arthas</strong>
+                    <div class="rec-code"><pre>Arthas the Lich King from World of Warcraft: tall man in heavy dark steel spiked armor with glowing icy blue runes, horned crowned helmet that covers the face except glowing icy blue eyes, long tattered dark cape, frost particles around him, runic greatsword strapped to his back</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/ref_hogger.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/ref_hogger.webp" width="670" height="1200" loading="lazy" alt="Hogger"></a>
+                    <figcaption><strong>Hogger</strong>
+                    <div class="rec-code"><pre>Hogger, a huge brown-furred gnoll from classic World of Warcraft, hyena-like snout with sharp teeth, small fierce eyes, crude leather and rusty metal armor, holding a big wooden club, a bit funny and menacing, stylized fantasy 3D MMORPG art style</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/ref_murloc.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/ref_murloc.webp" width="670" height="1200" loading="lazy" alt="Murloc"></a>
+                    <figcaption><strong>Murloc</strong>
+                    <div class="rec-code"><pre>A classic World of Warcraft style murloc, small green fish-like creature standing on two legs, huge round black eyes, wide open mouth with tiny sharp teeth, orange fins on its head and back, shiny wet scales, cute and slightly crazy expression, stylized fantasy 3D MMORPG art style</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+            </div>
+            <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> Si el personaje es muy conocido, basta con el nombre y el estilo: la imagen de referencia hace el resto (mira Jaina).</p>
+            <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> El murloc y Hogger no son humanos: si salen demasiado realistas, quita «Photorealistic» y deja «stylized fantasy 3D».</p>
+
+            <h3 class="rec-sub" id="prompts-escenarios">Paso 2 &middot; Los escenarios</h3>
+            <p class="rec-intro">Un prompt por pareja. Adjunta las dos imágenes que has creado de los personajes antes de enviarlo:</p>
+            <div class="rec-gallery">
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/esc_puerta.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/esc_puerta.webp" width="670" height="1200" loading="lazy" alt="Mirilla · Thrall y Jaina"></a>
+                    <figcaption><strong>Mirilla · Thrall y Jaina</strong>
+                    <div class="rec-code"><pre>Thrall and Jaina Proudmoore standing side by side in a torch-lit fantasy corridor in front of a heavy wooden door with iron rivets and stone walls, orcish red banners and warm candlelight, both looking straight into the camera with curious expressions, as if peeking at someone, medium close-up from chest up, faces close to the lens, stylized high-detail fantasy 3D art in the style of Warcraft III Reforged, cinematic lighting, no text, no logos. Seen through the peephole of the door.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/esc_ascensor.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/esc_ascensor.webp" width="670" height="1200" loading="lazy" alt="Ascensor · Sylvanas y Arthas"></a>
+                    <figcaption><strong>Ascensor · Sylvanas y Arthas</strong>
+                    <div class="rec-code"><pre>Sylvanas Windrunner the banshee queen and Arthas the Lich King standing side by side inside an old gothic stone and dark iron elevator platform, eerie green glow, chains and gears, both looking straight into the camera with a menacing stare, medium close-up from chest up, faces close to the lens, stylized high-detail fantasy 3D art, cinematic lighting, no text, no logos. The elevator is closed, with walls and ceiling. View from a camera mounted high on the wall.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+                <figure class="rec-shotcard">
+                    <a href="/assets/recursos/wow/esc_drive.webp" target="_blank" rel="noopener"><img src="/assets/recursos/wow/esc_drive.webp" width="670" height="1200" loading="lazy" alt="Drive-thru · Hogger y el murloc"></a>
+                    <figcaption><strong>Drive-thru · Hogger y el murloc</strong>
+                    <div class="rec-code"><pre>Hogger, a huge brown-furred gnoll from classic World of Warcraft with a hyena-like snout, sharp teeth, crude leather and rusty metal armor, and a small green murloc with huge round black eyes, wide open mouth with tiny sharp teeth and orange head fins, standing side by side outside a fast food drive-thru window at night, glowing neon menu board, tall green fantasy trees in the background, both looking straight into the camera with funny hungry expressions, leaning toward the lens, medium close-up from chest up, faces close to the lens, stylized fantasy 3D MMORPG art, no text, no logos</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div></figcaption>
+                </figure>
+            </div>
+            <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> Puedes añadir la última frase en español (yo lo hice): Nano Banana la entiende igual.</p>
+            <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> Si los personajes salen pequeños, añade «faces filling most of the frame».</p>
+        </section>
+
+        <section class="process-section rec-pixverse">
+            <h2>La plantilla est&aacute; en PixVerse</h2>
+            <a class="btn rec-main" href="https://motivaiprivatelimited.sjv.io/7XyWbg" target="_blank" rel="sponsored nofollow noopener">Probar PixVerse <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <p class="rec-meta">Enlace de afiliada</p>
+        </section>
+        <!-- LISTA DE ESPERA -->
+        <section id="waitlist" class="waitlist-section" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Aprende a crear esto paso a paso</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center waitlist-subtitle">Esto es solo una muestra. En la <strong style="color: var(--page-primary);">Comunidad LID.IA</strong> te ense&ntilde;o paso a paso a crear v&iacute;deos, personajes y efectos con IA. Explicado despacio y para todo el mundo.</p>
+            <p class="subtitle inter text-center waitlist-subtitle">Las primeras <strong style="color: var(--page-primary);">100 personas</strong> entran con <strong style="color: var(--page-primary);">precio de fundador/a en LIDERA: 29&euro;/mes en lugar de 39&euro;</strong>.</p>
+
+            <div class="waitlist-container" data-shape-mask>
+                <div class="waitlist-benefits">
+                    <ul>
+                        <li>Precio de fundador/a bloqueado para siempre</li>
+                        <li>Acceso prioritario antes de la apertura general</li>
+                        <li>Todos los tutoriales completos, en v&iacute;deo y paso a paso</li>
+                        <li>Resuelvo tus dudas directamente en la comunidad</li>
+                    </ul>
+                </div>
+
+                <div class="waitlist-form-wrapper">
+                    <form id="waitlistForm" class="waitlist-form" action="https://formspree.io/f/mwvwblkv" method="POST">
+                        <input type="hidden" name="origen" value="recurso-wow">
+                        <div class="input-group">
+                            <input type="text" id="waitlistName" name="nombre" placeholder="Tu nombre..." required class="neon-input">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="waitlistEmail" name="email" placeholder="Tu mejor email..." required class="neon-input">
+                        </div>
+                        <div class="input-group">
+                            <select id="waitlistReason" name="motivo" required class="neon-input" style="appearance: none; cursor: pointer;">
+                                <option value="" disabled selected>&iquest;Para qu&eacute; quieres crear con IA?</option>
+                                <option value="Marca Personal">Crear mi Marca Personal</option>
+                                <option value="Vender Servicios">Vender a Clientes/Empresas</option>
+                                <option value="Docencia">Material Educativo / Alumnos</option>
+                                <option value="Hobby">Hobby y Curiosidad</option>
+                            </select>
+                            <div class="legal-checkbox" style="display: flex; align-items: flex-start; gap: 0.5rem; text-align: left; font-size: 0.8rem; color: #ccc; margin-top: 1rem;">
+                                <input type="checkbox" id="privacy" required style="margin-top: 0.2rem; transform: scale(1.2); accent-color: var(--blue);">
+                                <label for="privacy">He le&iacute;do y acepto la <a href="/legal.html" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">Pol&iacute;tica de Privacidad</a>.</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn danger-btn submit-btn" style="margin-top: 1rem;">RESERVAR MI PRECIO DE FUNDADOR/A</button>
+                    </form>
+
+                    <div id="waitlistSuccess" class="success-message" style="display: none;">
+                        &iexcl;Est&aacute;s dentro! Te escribiremos en cuanto abramos plazas &mdash; revisa tu bandeja de entrada.
+                    </div>
+                    <div id="waitlistError" class="error-message" style="display: none;">
+                        Por favor, escribe un email v&aacute;lido.
+                    </div>
+
+                    <div class="urgency-counter" style="color: #aaa; font-size: 0.9rem;">
+                        <i>Solo 100 plazas con precio de fundador/a.</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÁS RECURSOS -->
+        <section class="process-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">M&aacute;s recursos gratis</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-grid" data-recursos="3" data-excluir="wow"></div>
+            <p class="rec-more"><a href="/recursos/" class="btn primary-btn">Ver todos los recursos &rarr;</a></p>
+        </section>
+
+        <section class="process-section">
+            <p class="rec-credits"><img src="/assets/logo_negro_128.webp" width="40" height="40" alt="Lid.IA"> Fan art no oficial. World of Warcraft, Warcraft y sus personajes &copy; Blizzard Entertainment.</p>
+            <p class="inter text-center tools-disclosure">Algunos enlaces de esta p&aacute;gina son de afiliada: si te registras con ellos no pagas nada extra y me ayudas a seguir creando recursos gratis.</p>
+        </section>
+    </main>
+
+    <footer class="text-center" style="padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+        <div class="footer-socials" style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+            <a href="https://www.tiktok.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link tiktok"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a href="https://www.youtube.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link youtube"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            <a href="https://www.instagram.com/lidia.conia" target="_blank" rel="noopener noreferrer" class="footer-link instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/in/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/liconoc" target="_blank" rel="noopener noreferrer" class="footer-link github"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://x.com/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link twitter"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+        </div>
+        <p class="inter" style="color: #666;">&copy; 2026 Lidia Contreras - Todos los derechos reservados. | <a href="/legal.html" style="color: #888;">Legal y Privacidad</a></p>
+    </footer>
+
+    <script src="/script.js?v=20261030a"></script>
+    <script src="/recursos.js?v=20261031g"></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
