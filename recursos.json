@@ -1,5 +1,16 @@
 [
   {
+    "id": "fuego",
+    "tipo": "prompt",
+    "fecha": "2026-11-02",
+    "titulo": "Nyxia quema un comentario hater",
+    "descripcion": "Imagen, vídeo y voz: los 3 prompts para que tu personaje queme el comentario de un hater.",
+    "etiquetas": ["Nano Banana 2.1", "PixVerse", "MiniMax"],
+    "imagen": "/assets/recursos/fuego.webp",
+    "url": "/recursos/fuego/",
+    "boton": "Ver los 3 prompts"
+  },
+  {
     "id": "wow",
     "tipo": "tutorial",
     "fecha": "2026-11-02",
