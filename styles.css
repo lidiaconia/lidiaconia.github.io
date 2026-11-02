@@ -5265,6 +5265,7 @@ body[class*="theme-"] .rec-sub {
 .rec-pixverse { text-align: center; }
 body[class*="theme-"] .rec-pixverse h2 { font-size: clamp(1.3rem, 3vw, 1.8rem); margin-bottom: 1.25rem; }
 .rec-pixverse .btn.rec-main { display: inline-block; font-size: 1rem; padding: 1rem 1.6rem; }
+.rec-pixverse-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
 .rec-credits {
     display: flex; align-items: center; justify-content: center; gap: 0.75rem;
     color: #94a3b8; font-size: 0.9rem; text-align: center; flex-wrap: wrap;
