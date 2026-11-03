@@ -36,6 +36,8 @@ var GOATCOUNTER = 'lidiaconia';
             contar('pixverse', 'Probar PixVerse');
         } else if (/elevenlabs/.test(href)) {
             contar('elevenlabs', 'Probar ElevenLabs');
+        } else if (/#modulo-/.test(href)) {
+            contar('modulo', 'Ver el módulo del curso');
         } else if (/#waitlist$/.test(href)) {
             contar('lista-espera', 'Ir a la lista de espera');
         } else if (a.classList.contains('rec-video-play')) {

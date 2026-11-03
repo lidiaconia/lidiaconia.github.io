@@ -1,5 +1,16 @@
 [
   {
+    "id": "animacion",
+    "tipo": "tutorial",
+    "fecha": "2026-11-03",
+    "titulo": "Haz una animación con Claude",
+    "descripcion": "De un audio a un vídeo animado con tu estilo, sin programar. Guía gratis y un prompt para probar.",
+    "etiquetas": ["Claude", "Sin programar"],
+    "imagen": "/assets/recursos/animacion.webp",
+    "url": "/recursos/animacion/",
+    "boton": "Ver la guía"
+  },
+  {
     "id": "fuego",
     "tipo": "prompt",
     "fecha": "2026-11-02",

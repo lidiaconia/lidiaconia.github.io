@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haz una animación con Claude: guía gratis | Lidia Contreras - LID.IA</title>
+    <meta name="description" content="De un audio a un vídeo animado con tu estilo, sin programar: se lo pides a Claude con palabras. Guía gratis en PDF y un prompt para probarlo.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://lidiaconia.com/recursos/animacion/">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Haz una animación con Claude: guía gratis | Lidia Contreras - LID.IA">
+    <meta property="og:description" content="De un audio a un vídeo animado con tu estilo, sin programar: se lo pides a Claude con palabras. Guía gratis en PDF y un prompt para probarlo.">
+    <meta property="og:image" content="https://lidiaconia.com/assets/recursos/animacion-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://lidiaconia.com/recursos/animacion/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Comunidad LID.IA">
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lidiaconia">
+    <meta name="twitter:title" content="Haz una animación con Claude: guía gratis | Lidia Contreras - LID.IA">
+    <meta name="twitter:description" content="De un audio a un vídeo animado con tu estilo, sin programar: se lo pides a Claude con palabras. Guía gratis en PDF y un prompt para probarlo.">
+    <meta name="twitter:image" content="https://lidiaconia.com/assets/recursos/animacion-og.jpg">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Lidia Contreras">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "Haz una animación con Claude",
+      "description": "De un audio a un vídeo animado con tu estilo. Sin programar: se lo pides a Claude con palabras.",
+      "image": "https://lidiaconia.com/assets/recursos/animacion.webp",
+      "url": "https://lidiaconia.com/recursos/animacion/",
+      "inLanguage": "es",
+      "author": { "@type": "Person", "name": "Lidia Contreras", "url": "https://lidiaconia.com/" }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/assets/logo_negro_128.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css?v=20261103a">
+</head>
+<body class="theme-recursos">
+    <canvas id="particleCanvas"></canvas> <!-- Background -->
+
+    <header class="sticky-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="/index.html"><img src="/assets/logo_negro_128.webp" alt="Lidia Contreras Logo"></a>
+            </div>
+            <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="center-menu">
+                <div class="nav-dropdown">
+                    <a href="/index.html" class="nav-dropdown-trigger">Curso <span class="nav-caret">&#9662;</span></a>
+                    <div class="nav-dropdown-panel">
+                        <a href="/index.html#comunidad">La Comunidad</a>
+                        <a href="/index.html#scroll-modulos">Los M&oacute;dulos</a>
+                        <a href="/index.html#tiers">Planes y precios</a>
+                        <a href="/index.html#recursos">Recursos</a>
+                        <a href="/index.html#waitlist">Lista de espera</a>
+                    </div>
+                </div> |
+                <a href="/recursos/" style="color: #67e8f9; text-shadow: 0 0 10px rgba(103, 232, 249, 0.5);">Recursos gratis</a> |
+                <a href="/cv.html">CV</a> |
+                <a href="/libros.html">Libros</a> |
+                <a href="/musica.html">M&uacute;sica</a>
+            </nav>
+            <a href="#waitlist" class="btn skool-btn-nav">Comunidad LID.IA</a>
+        </div>
+        <nav class="mobile-menu">
+            <div class="mobile-nav-group">
+            <button class="mobile-nav-trigger" aria-expanded="false">Curso <span class="nav-caret">&#9662;</span></button>
+            <div class="mobile-nav-submenu">
+                <a href="/index.html#comunidad">La Comunidad</a>
+                <a href="/index.html#scroll-modulos">Los M&oacute;dulos</a>
+                <a href="/index.html#tiers">Planes y precios</a>
+                <a href="/index.html#recursos">Recursos</a>
+                <a href="/index.html#waitlist">Lista de espera</a>
+            </div>
+        </div>
+            <a href="/recursos/" style="color: #67e8f9;">Recursos gratis</a>
+            <a href="/cv.html">CV</a>
+            <a href="/libros.html">Libros</a>
+            <a href="/musica.html">M&uacute;sica</a>
+            <a href="#waitlist" class="btn skool-btn-nav" style="display: block; text-align: center;">Comunidad LID.IA</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="rec-detail">
+            <a class="rec-back" href="/recursos/">&larr; Todos los recursos gratis</a>
+            <div class="rec-detail-grid rec-split">
+                <div class="rec-head">
+                    <span class="rec-kicker"><i class="fa-solid fa-file-pdf"></i> Gu&iacute;a gratis &middot; PDF</span>
+                    <h1>Haz una animaci&oacute;n con Claude</h1>
+                    <div class="rec-tags">
+                        <span class="rec-tag rec-tag-tipo">Tutorial</span>
+                        <span class="rec-tag">Claude</span>
+                        <span class="rec-tag">Sin programar</span>
+                    </div>
+                    <p class="rec-lead">De un audio a un v&iacute;deo animado con tu estilo. Sin programar: se lo pides a Claude con palabras.</p>
+                </div>
+                <video class="rec-media" src="/assets/recursos/animacion/animacion.mp4" poster="/assets/recursos/animacion/animacion-poster.webp" width="720" height="1280" controls loop playsinline preload="metadata"></video>
+                <div class="rec-body">
+                    <div class="rec-actions">
+                        <a class="btn rec-main" href="/assets/recursos/2026-11-0X_tutorial_animacion-con-claude.pdf" download><i class="fa-solid fa-download"></i> Descargar la gu&iacute;a (PDF)</a>
+                        <a class="rec-secondary" href="#prompt">Ver el prompt &darr;</a>
+                    </div>
+                    <p class="rec-meta">PDF gratis &middot; 9 p&aacute;ginas &middot; 7 MB</p>
+                    <a class="rec-wl" href="#waitlist"><span>&iquest;Quieres hacer tus propios v&iacute;deos animados, de principio a fin?</span> <strong>Lista de espera &rarr;</strong></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="necesitas" class="process-section rec-hw">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Solo necesitas 3 cosas</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-needs">
+                <div class="rec-need"><span class="rec-need-ico">🤖</span><h3>Claude</h3><p>Con la versión gratis ya puedes probar escenas sueltas.</p></div>
+                <div class="rec-need"><span class="rec-need-ico">💡</span><h3>Una idea corta</h3><p>Un dato curioso que se cuente en <strong>menos de un minuto</strong>.</p></div>
+                <div class="rec-need"><span class="rec-need-ico">🎙️</span><h3>Tu voz</h3><p>Grabada con el móvil vale. O clonada (yo uso <a href="https://try.elevenlabs.io/dd23u6m4sdub" target="_blank" rel="sponsored nofollow noopener">ElevenLabs</a>).</p></div>
+            </div>
+            <p class="rec-refnote"><i class="fa-solid fa-circle-check"></i> <strong>No necesitas imágenes ni vídeos</strong>: Claude dibuja y anima todo a partir de tu audio. Yo añadí unas grabaciones del juego y mis emotes de Twitch, pero son opcionales.</p>
+        </section>
+
+        <section id="pasos" class="process-section rec-hw">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">C&oacute;mo se hace, en 3 pasos</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <ol class="rec-pasos">
+                <li><span class="rec-paso-n">1</span><div>
+                    <h3>De tu audio a escenas</h3>
+                    <ul class="rec-puntos"><li>Graba tu audio con <strong>frases cortas</strong>: cada frase será una escena.</li><li>Escribe al lado de cada frase <strong>qué quieres ver</strong>: una ventana, un número que sube, un sello…</li><li>Pásale a Claude el texto con esas notas: así sabe qué animar en cada momento.</li></ul>
+                    <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> Piensa en objetos sencillos que se muevan: un contador, una casilla que se rellena, un aviso que salta. Funcionan mejor que escenas complicadas.</p>
+                    <div class="rec-strip"><a href="/assets/recursos/animacion/a_8_9.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_8_9.webp" loading="lazy" alt="Escena de ejemplo: …y apellido"></a><a href="/assets/recursos/animacion/a_19_0.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_19_0.webp" loading="lazy" alt="Escena de ejemplo: Palabras prohibidas"></a><a href="/assets/recursos/animacion/a_33_5.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_33_5.webp" loading="lazy" alt="Escena de ejemplo: Dos de cada mil"></a></div>
+                </div></li>
+                <li><span class="rec-paso-n">2</span><div>
+                    <h3>Dale tu estilo</h3>
+                    <ul class="rec-puntos"><li>Describe el estilo con <strong>4 o 5 rasgos concretos</strong>: colores, contornos, fondo, tipografía.</li><li>Si tienes personajes (como mis emotes), úsalos: tu animación <strong>no se parecerá a ninguna otra</strong>.</li><li>Repite siempre las mismas palabras de estilo: así todas las escenas casan.</li></ul>
+                    <p class="rec-refnote"><i class="fa-solid fa-triangle-exclamation"></i> No copies el estilo de otro creador: inspírate en un género (pizarra, papel recortado, neón, cómic…) y mézclalo con lo tuyo hasta que nadie más lo tenga.</p>
+                    <div class="rec-strip"><a href="/assets/recursos/animacion/a_13_6.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_13_6.webp" loading="lazy" alt="Escena de ejemplo: Ventanas"></a><a href="/assets/recursos/animacion/a_33_5.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_33_5.webp" loading="lazy" alt="Escena de ejemplo: Datos"></a><a href="/assets/recursos/animacion/a_43_5.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_43_5.webp" loading="lazy" alt="Escena de ejemplo: Personajes"></a></div>
+                </div></li>
+                <li><span class="rec-paso-n">3</span><div>
+                    <h3>Revisa escena a escena</h3>
+                    <ul class="rec-puntos"><li>Pide <strong>una escena de prueba</strong> antes de hacer el vídeo entero.</li><li>Corrige con frases cortas y concretas: Claude aplica los cambios al momento.</li><li>Cuando te guste una escena, úsala como modelo para las demás.</li></ul>
+                    
+                    <div class="rec-strip rec-strip-2"><a href="/assets/recursos/animacion/a_16_2.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_16_2.webp" loading="lazy" alt="Escena de ejemplo: Antes de montar"></a><a href="/assets/recursos/animacion/a_28_5.webp" target="_blank" rel="noopener"><img src="/assets/recursos/animacion/a_28_5.webp" loading="lazy" alt="Escena de ejemplo: Ajusta lo que no te guste"></a></div>
+                </div></li>
+            </ol>
+        </section>
+
+        <section id="prompt" class="process-section rec-hw">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Pru&eacute;balo: tu primera escena</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="rec-intro">Pega esto en Claude y mira cómo se anima. Luego cambia el texto por tu idea:</p>
+            <div class="rec-code"><pre>Crea una animación vertical (1080×1920) en un solo archivo HTML, de unos 15 segundos y en bucle.
+
+ESTILO: Pizarra de clase: fondo verde oscuro con textura de pizarra, todo dibujado con trazo de tiza blanca y amarilla, letras escritas a mano y algún borrón de tiza.
+
+ESCENA: Un formulario dibujado con tiza con el título «Crear personaje» y dos casillas: «Nombre» y «Apellido».
+
+0–5 s: Se escribe «Aitor» en la primera casilla, letra a letra.
+
+5–9 s: Se escribe «Tilla» en la segunda. Las dos palabras se iluminan en verde: «válido».
+
+9–15 s: Aparece un tachón rojo de tiza con la palabra «¡CENSURADO!» y debajo, en grande: «EL CHISTE ESTÁ EN JUNTARLAS».
+
+Añade subtítulos grandes abajo, en mayúsculas, con letra de tiza. Que las cosas aparezcan como si se dibujaran a mano.</pre><button type="button" class="rec-copy"><i class="fa-regular fa-copy"></i> <span>Copiar</span></button></div>
+            <p class="rec-refnote"><i class="fa-solid fa-lightbulb"></i> Cambia solo la línea de ESTILO (papel recortado, neón, acuarela, píxel art…) y tendrás la misma escena con otra cara. Si algo no te gusta, dile solo lo que quieres cambiar.</p>
+        </section>
+
+        <section id="en-el-curso" class="process-section rec-hw rec-curso">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Lo que no cabe aqu&iacute;</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="rec-intro">Esto lo ves en el m&oacute;dulo de animaciones de la Comunidad Lid.IA:</p>
+            <ul class="rec-locks"><li><span>&#128274;</span> Sincronizar con tu voz</li><li><span>&#128274;</span> Convertirlo en vídeo</li><li><span>&#128274;</span> Usar tus grabaciones</li><li><span>&#128274;</span> Personajes que reaccionan</li><li><span>&#128274;</span> Un sistema que se repite</li></ul>
+            <p class="rec-more"><a href="/#modulo-animaciones" class="btn primary-btn">Ver el m&oacute;dulo Animaciones con Claude &rarr;</a></p>
+        </section>
+        <!-- LISTA DE ESPERA -->
+        <section id="waitlist" class="waitlist-section" style="scroll-margin-top: 80px;">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">Aprende a crear esto paso a paso</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="subtitle inter text-center waitlist-subtitle">En la <strong style="color: var(--page-primary);">Comunidad LID.IA</strong> tienes el módulo completo de animaciones con Claude: del guion al vídeo terminado, paso a paso. Explicado despacio y para todo el mundo.</p>
+            <p class="subtitle inter text-center waitlist-subtitle">Las primeras <strong style="color: var(--page-primary);">100 personas</strong> entran con <strong style="color: var(--page-primary);">precio de fundador/a en LIDERA: 29&euro;/mes en lugar de 39&euro;</strong>.</p>
+
+            <div class="waitlist-container" data-shape-mask>
+                <div class="waitlist-benefits">
+                    <ul>
+                        <li>Precio de fundador/a bloqueado para siempre</li>
+                        <li>Acceso prioritario antes de la apertura general</li>
+                        <li>Todos los tutoriales completos, en v&iacute;deo y paso a paso</li>
+                        <li>Resuelvo tus dudas directamente en la comunidad</li>
+                    </ul>
+                </div>
+
+                <div class="waitlist-form-wrapper">
+                    <form id="waitlistForm" class="waitlist-form" action="https://formspree.io/f/mwvwblkv" method="POST">
+                        <input type="hidden" name="origen" value="recurso-animacion">
+                        <div class="input-group">
+                            <input type="text" id="waitlistName" name="nombre" placeholder="Tu nombre..." required class="neon-input">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" id="waitlistEmail" name="email" placeholder="Tu mejor email..." required class="neon-input">
+                        </div>
+                        <div class="input-group">
+                            <select id="waitlistReason" name="motivo" required class="neon-input" style="appearance: none; cursor: pointer;">
+                                <option value="" disabled selected>&iquest;Para qu&eacute; quieres crear con IA?</option>
+                                <option value="Marca Personal">Crear mi Marca Personal</option>
+                                <option value="Vender Servicios">Vender a Clientes/Empresas</option>
+                                <option value="Docencia">Material Educativo / Alumnos</option>
+                                <option value="Hobby">Hobby y Curiosidad</option>
+                            </select>
+                            <div class="legal-checkbox" style="display: flex; align-items: flex-start; gap: 0.5rem; text-align: left; font-size: 0.8rem; color: #ccc; margin-top: 1rem;">
+                                <input type="checkbox" id="privacy" required style="margin-top: 0.2rem; transform: scale(1.2); accent-color: var(--blue);">
+                                <label for="privacy">He le&iacute;do y acepto la <a href="/legal.html" target="_blank" rel="noopener noreferrer" style="color: var(--blue);">Pol&iacute;tica de Privacidad</a>.</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn danger-btn submit-btn" style="margin-top: 1rem;">RESERVAR MI PRECIO DE FUNDADOR/A</button>
+                    </form>
+
+                    <div id="waitlistSuccess" class="success-message" style="display: none;">
+                        &iexcl;Est&aacute;s dentro! Te escribiremos en cuanto abramos plazas &mdash; revisa tu bandeja de entrada.
+                    </div>
+                    <div id="waitlistError" class="error-message" style="display: none;">
+                        Por favor, escribe un email v&aacute;lido.
+                    </div>
+
+                    <div class="urgency-counter" style="color: #aaa; font-size: 0.9rem;">
+                        <i>Solo 100 plazas con precio de fundador/a.</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÁS RECURSOS -->
+        <section class="process-section">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-bracket">&lt;</span>
+                    <span class="title-text">M&aacute;s recursos gratis</span>
+                    <span class="title-bracket">/&gt;</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="rec-grid" data-recursos="3" data-excluir="animacion"></div>
+            <p class="rec-more"><a href="/recursos/" class="btn primary-btn">Ver todos los recursos &rarr;</a></p>
+        </section>
+
+        <section class="process-section">
+            <p class="rec-credits"><img src="/assets/logo_negro_128.webp" width="40" height="40" alt="Lid.IA"> Animaci&oacute;n hecha con Claude &middot; voz clonada con <a href="https://try.elevenlabs.io/dd23u6m4sdub" target="_blank" rel="sponsored nofollow noopener">ElevenLabs</a>. Im&aacute;genes del juego: World of Warcraft &copy; Blizzard Entertainment.</p>
+            <p class="inter text-center tools-disclosure">Algunos enlaces de esta p&aacute;gina son de afiliada: si te registras con ellos no pagas nada extra y me ayudas a seguir creando recursos gratis.</p>
+        </section>
+    </main>
+
+    <footer class="text-center" style="padding: 4rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+        <div class="footer-socials" style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+            <a href="https://www.tiktok.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link tiktok"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a href="https://www.youtube.com/@lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link youtube"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            <a href="https://www.instagram.com/lidia.conia" target="_blank" rel="noopener noreferrer" class="footer-link instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com/in/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link linkedin"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/liconoc" target="_blank" rel="noopener noreferrer" class="footer-link github"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://x.com/lidiaconia" target="_blank" rel="noopener noreferrer" class="footer-link twitter"><i class="fa-brands fa-x-twitter"></i> X (Twitter)</a>
+        </div>
+        <p class="inter" style="color: #666;">&copy; 2026 Lidia Contreras - Todos los derechos reservados. | <a href="/legal.html" style="color: #888;">Legal y Privacidad</a></p>
+    </footer>
+
+    <script src="/script.js?v=20261030a"></script>
+    <script src="/recursos.js?v=20261103a"></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "f8934614dd854373b2e4546ebebf8414"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

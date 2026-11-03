@@ -5318,6 +5318,31 @@ body[class*="theme-"] .rec-pasos h3 { font-size: 1.15rem; margin: 0.35rem 0 0.4r
     border-radius: 10px; border: 1px solid rgba(148, 163, 184, 0.2);
 }
 .rec-strip-app { grid-template-columns: repeat(2, minmax(0, 180px)); }
+.rec-strip-2 { grid-template-columns: repeat(2, minmax(0, 160px)); }
+.rec-puntos { padding-left: 1.2rem; margin: 0 0 0.6rem; color: #cbd5e1; }
+.rec-puntos li { margin-bottom: 0.4rem; line-height: 1.55; }
+.rec-puntos strong { color: #f1f5f9; }
+
+/* «Solo necesitas…» y «Lo que no cabe aquí» */
+.rec-needs { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.rec-need {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 16px;
+    padding: 1.1rem 1.2rem;
+}
+.rec-need-ico { font-size: 1.8rem; line-height: 1; }
+body[class*="theme-"] .rec-need h3 { font-size: 1.1rem; margin: 0.6rem 0 0.35rem; }
+.rec-need p { color: #cbd5e1; margin: 0; line-height: 1.5; }
+.rec-need a, .rec-credits a { color: #67e8f9; font-weight: 700; }
+.rec-locks { list-style: none; padding: 0; margin: 0 0 0.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.6rem; }
+.rec-locks li {
+    display: flex; gap: 0.6rem; align-items: center;
+    color: #e2e8f0; font-weight: 600;
+    background: rgba(167, 139, 250, 0.08);
+    border: 1px dashed rgba(167, 139, 250, 0.4);
+    border-radius: 12px; padding: 0.7rem 0.9rem;
+}
 .rec-strip-app img { aspect-ratio: auto; object-fit: contain; background: #000; }
 
 /* Lista de prompts */
